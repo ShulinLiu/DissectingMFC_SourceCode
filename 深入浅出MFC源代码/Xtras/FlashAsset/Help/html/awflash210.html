@@ -1,0 +1,96 @@
+
+<html>
+<head><title>Macromedia Authorware Attain - Flash Asset Xtra Command Reference: defaultRectMode</title>
+
+<script language="Javascript">
+
+function swapImage(imgName,newImg){
+  if ((navigator.appName == 'Netscape' && parseFloat(navigator.appVersion) >= 3) || (parseFloat(navigator.appVersion) >= 4)){		
+		eval('document.' + imgName + '.src = "' + newImg + '"');
+	}
+}
+
+</script>
+
+</head>
+
+<body link="#333399" vlink="#660033" alink="#000000" bgcolor="#FFFFFF">
+
+<table border="0" cellspacing="0" cellpadding="0" width="95%">
+<tr>
+<font face="Arial, Helvetica, sans-serif" size="+1"><b>defaultRectMode</b></font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b></font> </td>
+<td valign="top"><code>SetIconProperty(@"</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">IconTitle</font><code>", #defaultRectMode, </code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">rect</font><code>)</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"></font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b></font> </td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Icon property</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This property controls how the default size is set for all new sprites created from a Flash sprite icon. You specify the property value as a </font><code>Rect</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">; for example, </font><code>Rect(0,0,32,32)</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">.</font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">The </font><code>defaultRectMode</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property doesn't set the actual size of a Flash movie's default rect; it only determines how the default rect is set. The </font><code>defaultRectMode </code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">property can have these values:</font><p>
+
+<table cellspacing="0" cellpadding="4">
+<tr>
+<td valign="top" width="14"><img src="images/tri.gif" width="14" height="10" vspace="2"></td>
+<td valign="top"><code>#Flash</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> Set the default rect using the size of the movie as it was originally created in Flash.</font></td>
+</tr>
+
+<tr>
+<td valign="top" width="14"><img src="images/tri.gif" width="14" height="10" vspace="2"></td>
+<td valign="top"><code>#fixed</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> Set the default rect using the fixed size specified by the </font><code>defaultRect </code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">property.</font></td>
+</tr>
+
+</table>
+
+<p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">The </font><code>defaultRect </code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">property is affected by the icon's </font><code>defaultRectMode </code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">property. The </font><code>defaultRectMode</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property is always set to </font><code>#Flash</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> when a sprite icon is inserted, which means the original </font><code>defaultRect</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> setting is always the size of the movie as it was originally created in Flash. Setting the </font><code>defaultRect</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property after that implicitly changes the sprite icon's </font><code>defaultRectMode</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property to </font><code>#fixed</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">.</font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">You can get and set the value of the </font><code>defaultRectMode</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property. The default setting is </font><code>#Flash</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">.</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Example</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This statement sets the </font><code>defaultRectMode</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property to the original size of the imported Flash movie.</font><p>
+
+<pre>
+SetIconProperty(@"Flash Icon", #defaultRectMode, #Flash)
+</pre>
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Related&nbsp;Functions</b></font> </td>
+<td valign="top"><code><a href="awflash217.html">FlashRect</a></code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property, </font><code><a href="awflash29.html">defaultRect</a> </code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">property</font><p>
+
+
+
+<table border="0">
+<tr>
+<td><a href="awflash2.html" onmouseover="swapImage('back','images/contentsover.gif'); window.status='To Table of Contents';return true" onmouseout="swapImage('back','images/contents.gif')"><img src="images/contents.gif" name="back" border="0" vspace=1 alt="To Table of Contents"></a></td>
+
+<td><a href="awflash29.html" onmouseover="swapImage('prev','images/prevover.gif'); window.status='Back to previous document';return true" onmouseout="swapImage('prev','images/prev.gif')"><img src="images/prev.gif" name="prev" border="0" vspace=1 alt="Back to Previous document"></a></td>
+
+<td><a href="awflash211.html" onmouseover="swapImage('next','images/nextover.gif'); window.status='Forward to next document';return true" onmouseout="swapImage('next','images/next.gif')"><img src="images/next.gif" name="next" border="0" vspace=1 alt="Forward to next document"></a></td>
+</tr>
+</table>
+
+<br><p>
+</td>
+</tr>
+
+
+</table>
+
+<br><p>
+
+</body>
+</html>

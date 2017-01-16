@@ -1,0 +1,85 @@
+
+<html>
+<head><title>Macromedia Authorware Attain - Flash Asset Xtra Command Reference: originV</title>
+
+<script language="Javascript">
+
+function swapImage(imgName,newImg){
+  if ((navigator.appName == 'Netscape' && parseFloat(navigator.appVersion) >= 3) || (parseFloat(navigator.appVersion) >= 4)){		
+		eval('document.' + imgName + '.src = "' + newImg + '"');
+	}
+}
+
+</script>
+
+</head>
+
+<body link="#333399" vlink="#660033" alink="#000000" bgcolor="#FFFFFF">
+
+<table border="0" cellspacing="0" cellpadding="0" width="95%">
+<tr>
+<font face="Arial, Helvetica, sans-serif" size="+1"><b>originV</b></font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b></font> </td>
+<td valign="top"><code>SetIconProperty(@"</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">IconTitle</font><code>", #originV, </code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">number</font><code>)</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"></font><p>
+
+<code>SetIconProperty(@"</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">IconTitle</font><code>", #originV, </code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">number</font><code>)</code><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b></font> </td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Icon property, sprite property</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This property controls the vertical coordinate of a Flash movie's origin point. You set the </font><code>originV</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property in Flash movie pixel units; it can have a floating-point value.</font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">The origin point is the coordinate in a Flash movie around which scaling and rotation occur. The origin point can be set with floating-point precision using the separate </font><code>originH</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> and </font><code>originV</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> properties, or it can be set with integer precision using the single </font><code>originPoint</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property.</font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">You can set the </font><code>originV</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property only if the </font><code>originMode</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property is set to </font><code>#point</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">.</font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">You can get and set the </font><code>originV</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property. The default setting is 0.</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Example</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This example uses the </font><code>originMode</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property to set up a Flash movie sprite so its origin point can be set to a specific point. It then sets the horizontal and vertical origin points to the last point where the user clicked.</font><p>
+
+<pre>
+SetSpriteProperty(@"Flash Icon", #originMode, #point)
+SetSpriteProperty(@"Flash Icon", #originH, ClickX)
+SetSpriteProperty(@"Flash Icon", #originV, ClickY)
+</pre>
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Related&nbsp;Functions</b></font> </td>
+<td valign="top"><code><a href="awflash229.html">originH</a></code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property, </font><code><a href="awflash230.html">originMode</a></code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property, </font><code><a href="awflash231.html">originPoint</a></code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property</font><p>
+
+
+
+<table border="0">
+<tr>
+<td><a href="awflash2.html" onmouseover="swapImage('back','images/contentsover.gif'); window.status='To Table of Contents';return true" onmouseout="swapImage('back','images/contents.gif')"><img src="images/contents.gif" name="back" border="0" vspace=1 alt="To Table of Contents"></a></td>
+
+<td><a href="awflash231.html" onmouseover="swapImage('prev','images/prevover.gif'); window.status='Back to previous document';return true" onmouseout="swapImage('prev','images/prev.gif')"><img src="images/prev.gif" name="prev" border="0" vspace=1 alt="Back to Previous document"></a></td>
+
+<td><a href="awflash233.html" onmouseover="swapImage('next','images/nextover.gif'); window.status='Forward to next document';return true" onmouseout="swapImage('next','images/next.gif')"><img src="images/next.gif" name="next" border="0" vspace=1 alt="Forward to next document"></a></td>
+</tr>
+</table>
+
+<br><p>
+</td>
+</tr>
+
+
+</table>
+
+<br><p>
+
+</body>
+</html>

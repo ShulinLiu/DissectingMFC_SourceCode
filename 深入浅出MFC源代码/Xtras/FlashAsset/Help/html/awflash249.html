@@ -1,0 +1,77 @@
+
+<html>
+<head><title>Macromedia Authorware Attain - Flash Asset Xtra Command Reference: stageToFlash</title>
+
+<script language="Javascript">
+
+function swapImage(imgName,newImg){
+  if ((navigator.appName == 'Netscape' && parseFloat(navigator.appVersion) >= 3) || (parseFloat(navigator.appVersion) >= 4)){		
+		eval('document.' + imgName + '.src = "' + newImg + '"');
+	}
+}
+
+</script>
+
+</head>
+
+<body link="#333399" vlink="#660033" alink="#000000" bgcolor="#FFFFFF">
+
+<table border="0" cellspacing="0" cellpadding="0" width="95%">
+<tr>
+<font face="Arial, Helvetica, sans-serif" size="+1"><b>stageToFlash</b></font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b></font> </td>
+<td valign="top"><code>result:=CallSprite(@"</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">IconTitle</font><code>", #stageToFlash, </code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">point</font><code>)</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"></font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b></font> </td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Method</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This method returns the coordinate in a Flash movie sprite that corresponds to a specified coordinate in the Authorware Presentation window. The method accepts both the Presentation window coordinate and returns the Flash movie coordinate as point values; for example, </font><code>Point(300,300)</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">.</font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Flash movie coordinates are measured in Flash movie pixels, which are determined by a movie's original size when it was created in Flash. For the purposes of calculating Flash movie coordinates, </font><code>Point(0,0)</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> of a Flash movie is always at its upper-left corner. (The icon's </font><code>originPoint</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property isn't used to calculate movie coordinates; it's used only for rotation and scaling.)</font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">The </font><code>stageToFlash</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> and the corresponding </font><code>FlashToStage</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> methods are helpful for determining which Flash movie coordinate is directly over a Presentation window coordinate. A Flash movie's upper-left corner, expressed as </font><code>Point(0,0)</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, won't always be at the upper-left corner of the Presentation window, which is also expressed as </font><code>Point(0,0)</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">. As a Flash sprite is stretched, its </font><code>scaleMode</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property affects the way its coordinates shift over the Presentation window. Also, Flash movies can be scaled and rotated, further complicating the task of matching coordinates. The </font><code>FlashtoStage</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> and </font><code>stageToFlash</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> methods make it possible to determine with a high degree of accuracy which coordinate in a Flash movie is directly over a coordinate in the Presentation window.</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Example</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This statement returns the Flash window coordinates of the last point the user clicked.</font><p>
+
+<pre>
+result:=CallSprite(@"Flash Icon", #stageToFlash, Point(ClickX,ClickY))
+</pre>
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Related&nbsp;Functions</b></font> </td>
+<td valign="top"><code><a href="awflash214.html">flashToStage</a></code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> method</font><p>
+
+<table border="0">
+<tr>
+<td><a href="awflash2.html" onmouseover="swapImage('back','images/contentsover.gif'); window.status='To Table of Contents';return true" onmouseout="swapImage('back','images/contents.gif')"><img src="images/contents.gif" name="back" border="0" vspace=1 alt="To Table of Contents"></a></td>
+
+<td><a href="awflash248.html" onmouseover="swapImage('prev','images/prevover.gif'); window.status='Back to previous document';return true" onmouseout="swapImage('prev','images/prev.gif')"><img src="images/prev.gif" name="prev" border="0" vspace=1 alt="Back to Previous document"></a></td>
+
+<td><a href="awflash250.html" onmouseover="swapImage('next','images/nextover.gif'); window.status='Forward to next document';return true" onmouseout="swapImage('next','images/next.gif')"><img src="images/next.gif" name="next" border="0" vspace=1 alt="Forward to next document"></a></td>
+</tr>
+</table>
+
+<br><p>
+</td>
+</tr>
+
+
+</table>
+
+<br><p>
+
+</body>
+</html>

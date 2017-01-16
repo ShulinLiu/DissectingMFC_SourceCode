@@ -1,0 +1,72 @@
+
+<html>
+<head><title>Macromedia Authorware Attain - Flash Asset Xtra Command Reference: play</title>
+
+<script language="Javascript">
+
+function swapImage(imgName,newImg){
+  if ((navigator.appName == 'Netscape' && parseFloat(navigator.appVersion) >= 3) || (parseFloat(navigator.appVersion) >= 4)){		
+		eval('document.' + imgName + '.src = "' + newImg + '"');
+	}
+}
+
+</script>
+
+</head>
+
+<body link="#333399" vlink="#660033" alink="#000000" bgcolor="#FFFFFF">
+
+<table border="0" cellspacing="0" cellpadding="0" width="95%">
+<tr>
+<font face="Arial, Helvetica, sans-serif" size="+1"><b>play</b></font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b></font> </td>
+<td valign="top"><code>CallSprite(@"</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">IconTitle</font><code>", #play)</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"></font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b></font> </td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Method</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Use this method to play a Flash movie sprite. If the movie is stopped, it plays from the current frame. If the movie is at its last frame, it plays from the first frame.</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Example</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This routine checks to see if the Flash movie sprite is playing and, if it is not, it starts the movie.</font><p>
+
+<pre>
+If GetSpriteProperty(@"Flash Icon", #playing) 	= False then
+    CallSprite(@"Flash Icon", #play)
+end if
+</pre>
+<p>
+
+
+
+<table border="0">
+<tr>
+<td><a href="awflash2.html" onmouseover="swapImage('back','images/contentsover.gif'); window.status='To Table of Contents';return true" onmouseout="swapImage('back','images/contents.gif')"><img src="images/contents.gif" name="back" border="0" vspace=1 alt="To Table of Contents"></a></td>
+
+<td><a href="awflash236.html" onmouseover="swapImage('prev','images/prevover.gif'); window.status='Back to previous document';return true" onmouseout="swapImage('prev','images/prev.gif')"><img src="images/prev.gif" name="prev" border="0" vspace=1 alt="Back to Previous document"></a></td>
+
+<td><a href="awflash238.html" onmouseover="swapImage('next','images/nextover.gif'); window.status='Forward to next document';return true" onmouseout="swapImage('next','images/next.gif')"><img src="images/next.gif" name="next" border="0" vspace=1 alt="Forward to next document"></a></td>
+</tr>
+</table>
+
+<br><p>
+</td>
+</tr>
+
+
+</table>
+
+<br><p>
+
+</body>
+</html>

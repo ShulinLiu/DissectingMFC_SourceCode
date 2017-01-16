@@ -1,0 +1,83 @@
+
+<html>
+<head><title>Macromedia Authorware Attain - Flash Asset Xtra Command Reference: viewScale</title>
+
+<script language="Javascript">
+
+function swapImage(imgName,newImg){
+  if ((navigator.appName == 'Netscape' && parseFloat(navigator.appVersion) >= 3) || (parseFloat(navigator.appVersion) >= 4)){		
+		eval('document.' + imgName + '.src = "' + newImg + '"');
+	}
+}
+
+</script>
+
+</head>
+
+<body link="#333399" vlink="#660033" alink="#000000" bgcolor="#FFFFFF">
+
+<table border="0" cellspacing="0" cellpadding="0" width="95%">
+<tr>
+<font face="Arial, Helvetica, sans-serif" size="+1"><b>viewScale</b></font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b></font> </td>
+<td valign="top"><code>SetIconProperty(@"</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">IconTitle</font><code>", #viewScale, </code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">percent</font><code>)</code><p>
+
+<code>SetIconProperty(@"</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">IconTitle</font><code>", #viewScale, </code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">percent</font><code>)</code><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b></font> </td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Icon property, sprite property</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This property sets the overall amount to scale the view of a Flash movie sprite within the sprite's bounding rectangle. The </font><code>viewScale</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property is a specified as a percentage using a floating-point number.</font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">The sprite rectangle itself isn't scaled, only the view of the movie within the rectangle. Setting the </font><code>viewScale</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property of a sprite is like choosing a lens for a camera. As the </font><code>viewScale</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> decreases, the apparent size of the movie within the sprite increases, and vice versa. For example, setting the </font><code>viewScale</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property to 200 percent means the view inside the sprite now shows twice the area it once did, and the movie inside the sprite appears half its original size.</font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">One significant difference between the </font><code>viewScale</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> and </font><code>scale</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> properties is that the </font><code>viewScale</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> always scales from the center of the sprite's bounding rectangle, whereas the </font><code>scale</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property scales from a point determined by the Flash movie's </font><code>originMode</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property.</font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">You can get and set the value of the </font><code>viewScale</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property. The default setting is 100.</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Example</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This statement doubles the view scale of a Flash movie sprite.</font><p>
+
+<pre>
+SetSpriteProperty(@"Flash Icon", #viewScale, 200)
+</pre>
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Related&nbsp;Functions</b></font> </td>
+<td valign="top"><code><a href="awflash257.html">viewH</a></code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property, </font><code><a href="awflash260.html">viewV</a></code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property, </font><code><a href="awflash258.html">viewPoint</a></code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property</font><p>
+
+
+
+<table border="0">
+<tr>
+<td><a href="awflash2.html" onmouseover="swapImage('back','images/contentsover.gif'); window.status='To Table of Contents';return true" onmouseout="swapImage('back','images/contents.gif')"><img src="images/contents.gif" name="back" border="0" vspace=1 alt="To Table of Contents"></a></td>
+
+<td><a href="awflash258.html" onmouseover="swapImage('prev','images/prevover.gif'); window.status='Back to previous document';return true" onmouseout="swapImage('prev','images/prev.gif')"><img src="images/prev.gif" name="prev" border="0" vspace=1 alt="Back to Previous document"></a></td>
+
+<td><a href="awflash260.html" onmouseover="swapImage('next','images/nextover.gif'); window.status='Forward to next document';return true" onmouseout="swapImage('next','images/next.gif')"><img src="images/next.gif" name="next" border="0" vspace=1 alt="Forward to next document"></a></td>
+</tr>
+</table>
+
+<br><p>
+</td>
+</tr>
+
+
+</table>
+
+<br><p>
+
+</body>
+</html>

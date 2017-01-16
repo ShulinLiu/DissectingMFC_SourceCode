@@ -1,0 +1,97 @@
+
+<html>
+<head><title>Macromedia Authorware Attain - Using the Macromedia Flash Asset Xtra: Playback performance tips</title>
+
+<script language="Javascript">
+
+function swapImage(imgName,newImg){
+  if ((navigator.appName == 'Netscape' && parseFloat(navigator.appVersion) >= 3) || (parseFloat(navigator.appVersion) >= 4)){		
+		eval('document.' + imgName + '.src = "' + newImg + '"');
+	}
+}
+
+</script>
+
+</head>
+
+<body link="#333399" vlink="#660033" alink="#000000" bgcolor="#FFFFFF">
+
+<table border="0" cellspacing="0" cellpadding="0" width="95%">
+<tr>
+<font face="Arial, Helvetica, sans-serif" size="+1"><b>Playback performance tips</b></font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Performance can vary greatly depending on the options in effect and the playback environment. Following are tips for getting the best performance out of the Flash Asset Xtra:</font><p>
+
+<table cellspacing="0" cellpadding="4">
+<tr>
+<td valign="top" width="14"><img src="images/tri.gif" width="14" height="10" vspace="2"></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">If adequate for your needs, use the Low quality setting rather than High. Using Low turns off anti-aliasing, which speeds up Flash animation rendering. A handy technique is to switch the quality of the sprite to Low while displaying a fast-moving animation sequence (such as a spinning logo), and then switch the quality back to High on the fly as the animation slows down or comes to a stop. This way, performance can be improved during the part of the sequence where it would be more difficult to perceive the improved quality anyway, without sacrificing quality in the end result.</font></td>
+</tr>
+
+<tr>
+<td valign="top" width="14"><img src="images/tri.gif" width="14" height="10" vspace="2"></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Set your display depth to 8 bits (256 colors). Existing display drivers are still optimized for 8 bits, so performance can be considerably faster when running in this mode. </font></td>
+</tr>
+
+<tr>
+<td valign="top" width="14"><img src="images/tri.gif" width="14" height="10" vspace="2"></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Use Opaque mode if possible. Transparent mode requires much more processing time. If the Flash movie is in the background (no other images are behind it), use Opaque instead of Transparent, and create the Flash movie in such a way that its background color is the same as the background color you chose for the Presentation window.</font></td>
+</tr>
+
+<tr>
+<td valign="top" width="14"><img src="images/tri.gif" width="14" height="10" vspace="2"></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Use Direct to Screen if possible. Layering and transparency are not supported for Direct to Screen; however, if you just want to play a Flash movie "in a box" with the best performance possible, Direct to Screen may be the way to go.</font></td>
+</tr>
+
+<tr>
+<td valign="top" width="14"><img src="images/tri.gif" width="14" height="10" vspace="2"></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Make sure the value of the </font><code>GlobalTempo</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> variable is set high enough. Unless you're using Direct to Screen, a Flash movie can't play faster than the </font><code>GlobalTempo</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> value, regardless of its </font><code>frameRate</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> or </font><code>fixedRate</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> setting. For smoothest playback, set the </font><code>GlobalTempo</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> value to at least 30.</font></td>
+</tr>
+
+<tr>
+<td valign="top" width="14"><img src="images/tri.gif" width="14" height="10" vspace="2"></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Use the Lock-step or Fixed playback settings to adjust a Flash movie's frame rate. Lock-step gives the best performance, since playback of the Flash movie is synchronized to the </font><code>GlobalTempo</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> value. </font></td>
+</tr>
+
+<tr>
+<td valign="top" width="14"><img src="images/tri.gif" width="14" height="10" vspace="2"></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Set the </font><code>Static</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property of the Flash movie sprite to true if it contains no animation (for example, if it's a static block of text) and it doesn't overlap other moving images. This keeps Authorware from redrawing the Flash movie sprite unless it moves or changes in size. </font></td>
+</tr>
+
+<tr>
+<td valign="top" width="14"><img src="images/tri.gif" width="14" height="10" vspace="2"></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">When modifying Flash movie properties using a function, set the properties on the sprite rather than the sprite icon. Setting the property on the sprite icon modifies the sprite icon-level values and broadcasts the change to the movie displayed on the screen. This overhead can affect performance. </font></td>
+</tr>
+
+<tr>
+<td valign="top" width="14"><img src="images/tri.gif" width="14" height="10" vspace="2"></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Limit the amount of code Authorware executes while the Flash movie plays. Make sure there aren't other things going on that could affect performance. The usual Authorware performance optimizations apply when using the Flash Asset Xtra.</font></td>
+</tr>
+
+</table>
+
+<p>
+
+
+
+<table border="0">
+<tr>
+<td><a href="awflash1.html" onmouseover="swapImage('back','images/contentsover.gif'); window.status='To Table of Contents';return true" onmouseout="swapImage('back','images/contents.gif')"><img src="images/contents.gif" name="back" border="0" vspace=1 alt="To Table of Contents"></a></td>
+
+<td><a href="awflash109.html" onmouseover="swapImage('prev','images/prevover.gif'); window.status='Back to previous document';return true" onmouseout="swapImage('prev','images/prev.gif')"><img src="images/prev.gif" name="prev" border="0" vspace=1 alt="Back to Previous document"></a></td>
+
+<td><a href="awflash2.html" onmouseover="swapImage('next','images/nextover.gif'); window.status='Forward to next document';return true" onmouseout="swapImage('next','images/next.gif')"><img src="images/next.gif" name="next" border="0" vspace=1 alt="Forward to next document"></a></td>
+</tr>
+</table>
+
+<br><p>
+</td>
+</tr>
+
+
+</table>
+
+<br><p>
+
+</body>
+</html>

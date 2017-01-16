@@ -1,0 +1,88 @@
+
+<html>
+<head><title>Macromedia Authorware Attain - Flash Asset Xtra Command Reference: viewPoint</title>
+
+<script language="Javascript">
+
+function swapImage(imgName,newImg){
+  if ((navigator.appName == 'Netscape' && parseFloat(navigator.appVersion) >= 3) || (parseFloat(navigator.appVersion) >= 4)){		
+		eval('document.' + imgName + '.src = "' + newImg + '"');
+	}
+}
+
+</script>
+
+</head>
+
+<body link="#333399" vlink="#660033" alink="#000000" bgcolor="#FFFFFF">
+
+<table border="0" cellspacing="0" cellpadding="0" width="95%">
+<tr>
+<font face="Arial, Helvetica, sans-serif" size="+1"><b>viewPoint</b></font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b></font> </td>
+<td valign="top"><code>SetIconProperty(@"</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">IconTitle</font><code>", #viewPoint, </code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">point</font><code>)</code><p>
+
+<code>SetIconProperty(@"</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">IconTitle</font><code>", #viewPoint, </code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">point</font><code>)</code><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b></font> </td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Icon property, sprite property</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This property controls the point within a Flash movie that's displayed at the center of the sprite's bounding rectangle. This point is specified in Flash movie pixel units. The point values are integers.</font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Changing the view point of a Flash movie sprite doesn't change the location of the sprite in the Presentation window, only the view of the movie within the sprite's bounding rectangle. The view point is the coordinate within a Flash movie that is displayed at the center of the sprite's bounding rectangle. The view point is always expressed relative to the movie's origin (as set by the </font><code>originPoint</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, </font><code>originH</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, and </font><code>originV</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> properties). For example, if you set a movie's viewpoint at </font><code>Point(100,100)</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, the center of the sprite will display the point within the Flash movie that is 100 Flash movie pixel units to the right and 100 Flash movie pixel units down from the origin point, regardless of where you move the origin point.</font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">The </font><code>viewPoint</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property is specified as a point value; for example, </font><code>Point(100,200)</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">. Setting a Flash movie's view point with the </font><code>viewPoint</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property is the same as setting the </font><code>viewH</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> and </font><code>viewV</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> properties separately. For example, setting the </font><code>viewPoint</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property to </font><code>Point(50,75)</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> is the same as setting the </font><code>viewH</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property to 50 and the </font><code>viewV</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property to 75.</font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Point values specified for the </font><code>viewPoint</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property are restricted to integers, whereas </font><code>viewH</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> and </font><code>viewV</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> can be specified with floating-point numbers. When you test the </font><code>viewPoint</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property, the point values are truncated to integers. As a rule of thumb, use the </font><code>viewH</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> and </font><code>viewV</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> properties for precision; use the </font><code>viewPoint</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property for speed and convenience.</font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">You can get and set the value of the </font><code>viewPoint</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property. The default setting is </font><code>Point(0,0)</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">.</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Example</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This routine moves a Flash movie sprite down and to the right 100 Flash movie pixel units.</font><p>
+
+<pre>
+repeat with i := 1 to 100
+    NewPoint:=GetSpriteProperty(@"Flash Icon", #viewPoint)+i
+    SetSpriteProperty(@"Flash Icon", #viewPoint, NewPoint)
+end repeat
+</pre>
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Related&nbsp;Functions</b></font> </td>
+<td valign="top"><code><a href="awflash257.html">viewH</a></code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property, </font><code><a href="awflash260.html">viewV</a></code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property, </font><code><a href="awflash259.html">viewScale</a></code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property</font><p>
+
+
+
+<table border="0">
+<tr>
+<td><a href="awflash2.html" onmouseover="swapImage('back','images/contentsover.gif'); window.status='To Table of Contents';return true" onmouseout="swapImage('back','images/contents.gif')"><img src="images/contents.gif" name="back" border="0" vspace=1 alt="To Table of Contents"></a></td>
+
+<td><a href="awflash257.html" onmouseover="swapImage('prev','images/prevover.gif'); window.status='Back to previous document';return true" onmouseout="swapImage('prev','images/prev.gif')"><img src="images/prev.gif" name="prev" border="0" vspace=1 alt="Back to Previous document"></a></td>
+
+<td><a href="awflash259.html" onmouseover="swapImage('next','images/nextover.gif'); window.status='Forward to next document';return true" onmouseout="swapImage('next','images/next.gif')"><img src="images/next.gif" name="next" border="0" vspace=1 alt="Forward to next document"></a></td>
+</tr>
+</table>
+
+<br><p>
+</td>
+</tr>
+
+
+</table>
+
+<br><p>
+
+</body>
+</html>

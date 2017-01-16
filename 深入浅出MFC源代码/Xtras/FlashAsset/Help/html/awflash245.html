@@ -1,0 +1,82 @@
+
+<html>
+<head><title>Macromedia Authorware Attain - Flash Asset Xtra Command Reference: scale</title>
+
+<script language="Javascript">
+
+function swapImage(imgName,newImg){
+  if ((navigator.appName == 'Netscape' && parseFloat(navigator.appVersion) >= 3) || (parseFloat(navigator.appVersion) >= 4)){		
+		eval('document.' + imgName + '.src = "' + newImg + '"');
+	}
+}
+
+</script>
+
+</head>
+
+<body link="#333399" vlink="#660033" alink="#000000" bgcolor="#FFFFFF">
+
+<table border="0" cellspacing="0" cellpadding="0" width="95%">
+<tr>
+<font face="Arial, Helvetica, sans-serif" size="+1"><b>scale</b></font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b></font> </td>
+<td valign="top"><code>SetIconProperty(@"</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">IconTitle</font><code>", #scale, </code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">percent</font><code>)</code><p>
+
+<code>SetIconProperty(@"</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">IconTitle</font><code>", #scale, </code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">percent</font><code>)</code><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b></font> </td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Icon property, sprite property</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This property sets the amount to scale a Flash movie sprite within the sprite's bounding rectangle. The </font><code>scale</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property is specified as a floating-point number.</font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">The sprite rectangle itself is not scaled; instead, the Flash movie is scaled within the sprite's bounding rectangle. In effect, the sprite's bounding rectangle acts as a window through which you can see the Flash movie. The Flash movie is scaled from its origin point, as specified by its </font><code>originMode</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property.</font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">You can get and set the value of the </font><code>scale</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property. The default setting is 100.</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Example</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This routine reduces the movie's scale to 0 (so it disappears), and then scales it up in 5-percent increments until it's full size (100 percent).</font><p>
+
+<pre>
+SetSpriteProperty(@"Flash Icon", #scale, 0)
+repeat with i := 1 to 20
+    SetSpriteProperty(@"Flash Icon", #scale, i * 5)
+end repeat
+</pre>
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Related&nbsp;Functions</b></font> </td>
+<td valign="top"><code><a href="awflash246.html">scaleMode</a></code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property</font><p>
+
+<table border="0">
+<tr>
+<td><a href="awflash2.html" onmouseover="swapImage('back','images/contentsover.gif'); window.status='To Table of Contents';return true" onmouseout="swapImage('back','images/contents.gif')"><img src="images/contents.gif" name="back" border="0" vspace=1 alt="To Table of Contents"></a></td>
+
+<td><a href="awflash244.html" onmouseover="swapImage('prev','images/prevover.gif'); window.status='Back to previous document';return true" onmouseout="swapImage('prev','images/prev.gif')"><img src="images/prev.gif" name="prev" border="0" vspace=1 alt="Back to Previous document"></a></td>
+
+<td><a href="awflash246.html" onmouseover="swapImage('next','images/nextover.gif'); window.status='Forward to next document';return true" onmouseout="swapImage('next','images/next.gif')"><img src="images/next.gif" name="next" border="0" vspace=1 alt="Forward to next document"></a></td>
+</tr>
+</table>
+
+<br><p>
+</td>
+</tr>
+
+
+</table>
+
+<br><p>
+
+</body>
+</html>

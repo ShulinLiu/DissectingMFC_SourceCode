@@ -1,0 +1,63 @@
+
+<html>
+<head><title>Macromedia Authorware Attain - Using the Macromedia Flash Asset Xtra: Controlling a Flash movie using functions</title>
+
+<script language="Javascript">
+
+function swapImage(imgName,newImg){
+  if ((navigator.appName == 'Netscape' && parseFloat(navigator.appVersion) >= 3) || (parseFloat(navigator.appVersion) >= 4)){		
+		eval('document.' + imgName + '.src = "' + newImg + '"');
+	}
+}
+
+</script>
+
+</head>
+
+<body link="#333399" vlink="#660033" alink="#000000" bgcolor="#FFFFFF">
+
+<table border="0" cellspacing="0" cellpadding="0" width="95%">
+<tr>
+<font face="Arial, Helvetica, sans-serif" size="+1"><b>Controlling a Flash movie using functions</b></font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">The Flash Asset Xtra provides a rich set of properties and methods that give you precise control over the way Authorware displays a Flash movie and the interaction between Authorware and the Flash movie.</font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">When you add a Flash movie to a piece (either linked as an external file or imported into the piece), you can set some of the most common Flash movie properties in the Flash Asset Properties dialog box. The properties you select in the dialog box are used as defaults for the sprite you create from the sprite icon. For example, if you change the Rotation setting to 90 degrees in the Flash Asset Properties dialog box, Authorware displays the Flash movie rotated 90 degrees in the Presentation window.</font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">You can also change the properties of a Flash movie using the </font><code>SetIconProperty</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> and the </font><code>SetSpriteProperty</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> functions. To call methods of a Flash movie, use the </font><code>CallIcon</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> and the </font><code>CallSprite</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> functions.</font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Sprite Icon properties The </font><code>SetIconProperty</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> function affects sprite icon properties. When you set a sprite icon property, it's the same as changing the value of the property in the Flash Asset Properties dialog box. The new value becomes the default setting for the Flash Player Movie icon you've assigned it to. After you change the property, every time Authorware encounters the Flash Player Movie icon, it uses the new value when it plays the icon's Flash movie. Furthermore, changes made to a sprite icon property are immediately broadcast to the icon's Flash movie if it's on the screen. For example, if you use the </font><code>SetIconProperty</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> function to set the scale of a Flash Player Movie icon to 50 percent, the icon's Flash movie is immediately scaled to 50 percent. To prevent a change to a sprite icon property from being broadcast to its Flash movie, set the sprite icon's </font><code>broadcastProps</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property to false. (For more information, see </font><code><a href="awflash22.html">broadcastProps</a></code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">.)</font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Sprite properties The </font><code>SetSpriteProperty</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> function affects sprite properties. Setting a sprite property for a Flash movie sprite&#151;a Flash movie that's playing on the screen&#151;changes the property of the movie without affecting the default setting of the icon that contains the movie. The change takes place immediately.</font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Sprite Icon methods The </font><code>CallIcon</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> function calls a method of the sprite icon&#151;it executes a function of the Flash movie icon.</font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Sprite methods The </font><code>CallSprite</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> function calls a method of the sprite&#151;it executes a function of the Flash movie sprite that's playing on the screen.</font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Some properties and methods, such as those controlling the way a Flash movie streams from an external file, apply only to a Flash Player Movie icon. Many other properties and methods apply to both sprite icons and their sprites. The <a href="awflash2.html">Flash Asset Xtra Command Reference</a> indicates whether a property applies to sprite icons or sprites.</font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">In addition, some sprite icon properties, such as the </font><code>flashRect </code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">and the </font><code>frameRate</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, are valid only when the Flash movie's header has streamed into memory.</font><p>
+
+
+
+<table border="0">
+<tr>
+<td><a href="awflash1.html" onmouseover="swapImage('back','images/contentsover.gif'); window.status='To Table of Contents';return true" onmouseout="swapImage('back','images/contents.gif')"><img src="images/contents.gif" name="back" border="0" vspace=1 alt="To Table of Contents"></a></td>
+
+<td><a href="awflash107.html" onmouseover="swapImage('prev','images/prevover.gif'); window.status='Back to previous document';return true" onmouseout="swapImage('prev','images/prev.gif')"><img src="images/prev.gif" name="prev" border="0" vspace=1 alt="Back to Previous document"></a></td>
+
+<td><a href="awflash109.html" onmouseover="swapImage('next','images/nextover.gif'); window.status='Forward to next document';return true" onmouseout="swapImage('next','images/next.gif')"><img src="images/next.gif" name="next" border="0" vspace=1 alt="Forward to next document"></a></td>
+</tr>
+</table>
+
+<br><p>
+</td>
+</tr>
+
+
+</table>
+
+<br><p>
+
+</body>
+</html>

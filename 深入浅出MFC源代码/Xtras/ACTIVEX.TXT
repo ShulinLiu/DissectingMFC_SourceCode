@@ -1,0 +1,27 @@
+ACTIVEX XTRA 1.0 
+==================
+
+Copyright © 1997 Macromedia, Inc. All rights reserved. The
+information in this file may not be copied, photocopied,
+reproduced, translated, or converted to any printed, electronic
+or machine-readable form in whole or in part without prior
+written approval of Macromedia, Inc.
+
+Macromedia, Inc.
+600 Townsend St.
+San Francisco, CA 94103
+
+==================
+
+IMPORTANT NOTE:
+
+When using the ActiveXControlQuery() function you should note that
+it checks for the existence of a particular ClassID.  If that ID 
+is found, the function will return an affirmative response regardless
+of the version of the installed control.  This leaves open the 
+possibility that an older version of a control can coincidentally be 
+found on the target machine and produce unpredictable results.  For 
+this reason you should always force an install of your intended 
+controls unless you are certain that all machines on which your piece 
+will run would never have older versions of your controls already 
+installed.

@@ -1,0 +1,85 @@
+
+<html>
+<head><title>Macromedia Authorware Attain - Flash Asset Xtra Command Reference: viewH</title>
+
+<script language="Javascript">
+
+function swapImage(imgName,newImg){
+  if ((navigator.appName == 'Netscape' && parseFloat(navigator.appVersion) >= 3) || (parseFloat(navigator.appVersion) >= 4)){		
+		eval('document.' + imgName + '.src = "' + newImg + '"');
+	}
+}
+
+</script>
+
+</head>
+
+<body link="#333399" vlink="#660033" alink="#000000" bgcolor="#FFFFFF">
+
+<table border="0" cellspacing="0" cellpadding="0" width="95%">
+<tr>
+<font face="Arial, Helvetica, sans-serif" size="+1"><b>viewH</b></font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b></font> </td>
+<td valign="top"><code>SetIconProperty(@"</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">IconTitle</font><code>", #viewH, </code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">number</font><code>)</code><p>
+
+<code>SetIconProperty(@"</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">IconTitle</font><code>", #viewH, </code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">number</font><code>)</code><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b></font> </td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Icon property, sprite property</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This property controls the horizontal coordinate of a Flash movie's view point. This point is specified in Flash movie pixel units. The point values can be floating-point numbers.</font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">A Flash movie's view point is set relative to its origin point. For more information, see the </font><code><a href="awflash258.html">viewPoint</a></code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property.</font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Setting a positive value for </font><code>viewH</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> shifts the movie to the left inside the sprite; setting a negative value shifts the movie to the right. Therefore, changing the </font><code>viewH</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property can have the effect of cropping the movie, or even of removing the movie from view entirely.</font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">You can get and set the value of the </font><code>viewH</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property. The default setting is 0.</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Example</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This routine moves the view of a Flash movie sprite from left to right within the sprite's bounding rectangle.</font><p>
+
+<pre>
+repeat with i := 120 down to -120
+    SetSpriteProperty(@"Flash Icon", #viewH, i )
+end repeat
+</pre>
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Related&nbsp;Functions</b></font> </td>
+<td valign="top"><code><a href="awflash260.html">viewV</a></code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property, </font><code><a href="awflash258.html">viewPoint</a></code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property, </font><code><a href="awflash259.html">viewScale</a></code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property</font><p>
+
+
+
+<table border="0">
+<tr>
+<td><a href="awflash2.html" onmouseover="swapImage('back','images/contentsover.gif'); window.status='To Table of Contents';return true" onmouseout="swapImage('back','images/contents.gif')"><img src="images/contents.gif" name="back" border="0" vspace=1 alt="To Table of Contents"></a></td>
+
+<td><a href="awflash256.html" onmouseover="swapImage('prev','images/prevover.gif'); window.status='Back to previous document';return true" onmouseout="swapImage('prev','images/prev.gif')"><img src="images/prev.gif" name="prev" border="0" vspace=1 alt="Back to Previous document"></a></td>
+
+<td><a href="awflash258.html" onmouseover="swapImage('next','images/nextover.gif'); window.status='Forward to next document';return true" onmouseout="swapImage('next','images/next.gif')"><img src="images/next.gif" name="next" border="0" vspace=1 alt="Forward to next document"></a></td>
+</tr>
+</table>
+
+<br><p>
+</td>
+</tr>
+
+
+</table>
+
+<br><p>
+
+</body>
+</html>

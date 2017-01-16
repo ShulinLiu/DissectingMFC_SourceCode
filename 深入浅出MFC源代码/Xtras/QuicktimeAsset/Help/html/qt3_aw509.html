@@ -1,0 +1,127 @@
+
+<html>
+<head><title>Macromedia Authorware Attain - Using QuickTime Media: Controlling transformations with Authorware</title>
+
+<script language="Javascript">
+
+function swapImage(imgName,newImg){
+  if ((navigator.appName == 'Netscape' && parseFloat(navigator.appVersion) >= 3) || (parseFloat(navigator.appVersion) >= 4)){		
+		eval('document.' + imgName + '.src = "' + newImg + '"');
+	}
+}
+
+</script>
+
+</head>
+
+<body link="#333399" vlink="#660033" alink="#000000" bgcolor="#FFFFFF">
+
+
+
+
+<table border="0" cellspacing="0" cellpadding="0" width="95%">
+<tr>
+
+
+<font face="Arial, Helvetica, sans-serif" size="+1"><b>Controlling transformations with Authorware</b></font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">QuickTime provides the ability to rotate, scale, and offset a QuickTime movie's image within its sprite's bounding rectangle. You can take advantage of these new features by manipulating the sprite's </font><code>rotation</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, </font><code>scale</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, and </font><code>translation</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> properties.</font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">You can set the </font><code>rotation</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, </font><code>scale</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, and </font><code>translation</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> properties for either a QuickTime icon or its sprite. When you add a new QuickTime icon to the flowline, the sprite takes the current property values stored with the sprite icon. When you change the icon's properties, its sprite is affected even when it isn't currently playing in the Presentation window. Changing a sprite's properties with </font><code>SetSpriteProperty</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> will affect the sprite only if it appears in the Presentation window.</font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">For example, imagine that a sprite icon named "QuickTime" is on the flowline. The sprite from this sprite icon is currently playing in the Presentation window. The following commands in a calculation window show that the sprite has the same </font><code>rotation</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property setting as the sprite icon.</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td width="10%" align="right" valign="top"></td>
+<td width="90%" valign="top">
+
+<pre>
+IconRotation := GetIconProperty(IconID@"QuickTime", #rotation)
+-- IconRotation is 45
+SpriteRotation := GetSpriteProperty(IconID@"QuickTime", #rotation)
+-- SpriteRotation is 45
+</pre>
+</td>
+</tr>
+</table>
+
+<table border="0" cellspacing="0" cellpadding="0" width="95%">
+<tr>
+<td width="100%" valign="top">
+<p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">The following commands demonstrate that setting the rotation of the sprite icon broadcasts the change to its sprites.</font><br>&nbsp;</td>
+</tr>
+</table>
+
+<table border="0" cellspacing="0" cellpadding="0" width="95%">
+<tr>
+<td width="10%" align="right" valign="top"></td>
+<td width="90%" valign="top">
+
+<pre>
+SetIconProperty(IconID@"QuickTime", #rotation, 90)
+IconRotation := GetIconProperty(IconID@"QuickTime", #rotation)
+-- IconRotation is 90
+SpriteRotation := GetSpriteProperty(IconID@"QuickTime", #rotation)
+-- SpriteRotation is 90
+</pre>
+</td>
+</tr>
+</table>
+
+<table border="0" cellspacing="0" cellpadding="0" width="95%">
+<tr>
+<td width="100%" valign="top">
+<p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Now notice that setting the rotation of the sprite doesn't affect the sprite icon.</font><br>&nbsp;</td>
+</tr>
+</table>
+
+<table border="0" cellspacing="0" cellpadding="0" width="95%">
+<tr>
+<td width="10%" align="right" valign="top"></td>
+<td width="90%" valign="top">
+
+<pre>
+SetSpriteProperty(IconID@"QuickTime", #rotation, 180)
+IconRotation := GetIconProperty(IconID@"QuickTime", #rotation)
+-- IconRotation is 90
+SpriteRotation := GetSpriteProperty(IconID@"QuickTime", #rotation)
+-- SpriteRotation is 180
+</pre>
+</td>
+</tr>
+</table>
+
+<table border="0" cellspacing="0" cellpadding="0" width="95%">
+<tr>
+<td width="10%" align="right" valign="top"></td>
+<td width="90%" valign="top">
+<p>
+
+
+
+<table border="0">
+<tr>
+<td><a href="qt3_aw5.html" onmouseover="swapImage('back','images/contentsover.gif'); window.status='To Table of Contents';return true" onmouseout="swapImage('back','images/contents.gif')"><img src="images/contents.gif" name="back" border="0" vspace=1 alt="To Table of Contents"></a></td>
+
+<td><a href="qt3_aw508.html" onmouseover="swapImage('prev','images/prevover.gif'); window.status='Back to previous document';return true" onmouseout="swapImage('prev','images/prev.gif')"><img src="images/prev.gif" name="prev" border="0" vspace=1 alt="Back to Previous document"></a></td>
+
+<td><a href="qt3_aw510.html" onmouseover="swapImage('next','images/nextover.gif'); window.status='Forward to next document';return true" onmouseout="swapImage('next','images/next.gif')"><img src="images/next.gif" name="next" border="0" vspace=1 alt="Forward to next document"></a></td>
+</tr>
+</table>
+
+<br><p>
+</td>
+</tr>
+
+
+</table>
+
+<br><p>
+
+</body>
+</html>

@@ -1,0 +1,593 @@
+
+<html>
+<head><title>Macromedia Authorware Attain - Using QuickTime VR in Authorware: Scripting Reference</title>
+
+<script language="Javascript">
+
+function swapImage(imgName,newImg){
+  if ((navigator.appName == 'Netscape' && parseFloat(navigator.appVersion) >= 3) || (parseFloat(navigator.appVersion) >= 4)){		
+		eval('document.' + imgName + '.src = "' + newImg + '"');
+	}
+}
+
+</script>
+
+</head>
+
+<body link="#333399" vlink="#660033" alink="#000000" bgcolor="#FFFFFF">
+<table border="0" cellspacing="0" cellpadding="0" width="95%">
+  <tr> 
+    <p> <font face="Arial, Helvetica, sans-serif" size="+1"><b>QuickTime VR Scripting 
+      Reference</b></font> 
+    <p> <font face="Geneva, Arial, Helvetica, sans-serif" size="-1">The QuickTime 
+      Xtra provides the following new properties and functions to control QuickTime 
+      VR sprite icons and sprites.</font> 
+    <p> <br>
+      <font face="Arial, Helvetica, sans-serif"><b>isVRMovie</b></font><br>
+      &nbsp; 
+  <tr> 
+    <td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b>&nbsp;</font></td>
+    <td valign="top"><code>GetIconProperty(IconID@"IconTitle", #isVRMovie)</code> 
+      <p><code> GetSpriteProperty(IconID@"IconTitle", #isVRMovie)</code><br>
+        &nbsp; 
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b>&nbsp;</font></td>
+    <td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Icon 
+      property, Sprite property</font><br>
+      &nbsp; </td>
+  </tr>
+  <tr> 
+    <td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+    <td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This 
+      property tells whether a sprite icon or sprite is a QTVR movie:</font> 
+      <p> <font face="Geneva, Arial, Helvetica, sans-serif" size="-1"></font><code>TRUE</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> 
+        The cast member or sprite is a QTVR movie.</font> 
+      <p> <font face="Geneva, Arial, Helvetica, sans-serif" size="-1"></font><code>FALSE</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> 
+        The cast member or sprite isn't a QTVR movie.</font> 
+      <p> <font face="Geneva, Arial, Helvetica, sans-serif" size="-1">If the movie 
+        isn't downloaded yet, the </font><code>isVRMovie</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> 
+        property's value is </font><code>TRUE</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">.</font> 
+      <p> <font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This property 
+        can be tested but not set.</font><br>
+        &nbsp; 
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Example</b>&nbsp;</font></td>
+    <td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This 
+      statement sets the value of the </font><code>VRstate</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> 
+      variable to </font><code>TRUE</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> 
+      if the movie file in the specified sprite icon is a QuickTime VR movie:</font> 
+      <p> <font face="Geneva, Arial, Helvetica, sans-serif" size="-1"></font><code>VRstate 
+        := GetIconProperty(@"QT3", #isVRMovie)</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"></font> 
+      <p> <font face="Geneva, Arial, Helvetica, sans-serif" size="-1"></font> 
+      <p> <br>
+        <font face="Arial, Helvetica, sans-serif"><b>VREnableHotSpot</b></font><br>
+        &nbsp; 
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b>&nbsp;</font></td>
+    <td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"></font><code>CallSprite(IconID@"IconTitle", 
+      #VREnableHotSpot, </code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">hotSpotID</font><code>,</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> 
+      state</font><code>)</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"></font><br>
+      &nbsp; </td>
+  </tr>
+  <tr> 
+    <td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b>&nbsp;</font></td>
+    <td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Xtra 
+      function</font><br>
+      &nbsp; </td>
+  </tr>
+  <tr> 
+    <td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+    <td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This 
+      function enables or disables the specified hot spot for the specified QTVR 
+      sprite. </font> 
+      <p> <font face="Geneva, Arial, Helvetica, sans-serif" size="-1">The state 
+        parameter can have these values:</font> 
+      <p> <font face="Geneva, Arial, Helvetica, sans-serif" size="-1"></font><code>TRUE</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> 
+        Enables the hot spot.</font> 
+      <p> <font face="Geneva, Arial, Helvetica, sans-serif" size="-1"></font><code>FALSE</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> 
+        Disables the hot spot.</font> 
+      <p> <font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Hot spots 
+        and their ID numbers are set by the application used to create or edit 
+        the QuickTime VR movie.</font><br>
+        &nbsp; 
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Example</b>&nbsp;</font></td>
+    <td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This 
+      statement disables the specified hot spot in the QuickTime VR movie:</font> 
+      <p> <font face="Geneva, Arial, Helvetica, sans-serif" size="-1"></font><code>CallSprite(@"QT3", 
+        #VREnableHotSpot, 218, FALSE)</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"></font> 
+      <p> <font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This statement 
+        enables the specified hot spot in the QuickTime VR movie:</font> 
+      <p> 
+      <pre>
+<code>CallSprite(@"QT3", #VREnableHotSpot, 218, TRUE)</code>
+</pre>
+      <font face="Geneva, Arial, Helvetica, sans-serif" size="2"> 
+      <p> <br>
+        <font face="Arial, Helvetica, sans-serif"><b>VRFieldOfView</b></font><br>
+        &nbsp; 
+      </font></td>
+  </tr>
+  <tr> 
+    <td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b>&nbsp;</font></td>
+    <td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"></font><code>GetSpriteProperty(IconID@"IconTitle", 
+      #VRFieldOfView)</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"></font> 
+      <p> <font face="Geneva, Arial, Helvetica, sans-serif" size="-1"></font><code>SetSpriteProperty(IconID@"IconTitle", 
+        #VRFieldOfView, </code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">degrees</font><code>)</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"></font><br>
+        &nbsp; 
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b>&nbsp;</font></td>
+    <td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Sprite 
+      property</font><br>
+      &nbsp; </td>
+  </tr>
+  <tr> 
+    <td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+    <td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This 
+      property gives the specified sprite's current field of view. The value is 
+      in degrees. </font> 
+      <p> <font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This property 
+        can be tested and set.</font><br>
+        &nbsp; 
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Example</b>&nbsp;</font></td>
+    <td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">The 
+      following statements adjust the sprite's field of view by one degree:</font> 
+      <p> <font face="Geneva, Arial, Helvetica, sans-serif" size="-1"></font><code>currentFieldOfView 
+        := GetSpriteProperty(@"QT3", #VRFieldOfView)</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"></font> 
+      <p> 
+      <pre>
+<code>SetSpriteProperty(@"QT3", #VRFieldOfView, currentFieldOfView + 1)</code>
+</pre>
+      <font face="Geneva, Arial, Helvetica, sans-serif" size="2"> 
+      <p> <br>
+        <font face="Arial, Helvetica, sans-serif"><b>VRGetHotSpotRect</b></font><br>
+        &nbsp; 
+      </font></td>
+  </tr>
+  <tr> 
+    <td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b>&nbsp;</font></td>
+    <td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"></font><code>CallSprite(IconID@"IconTitle", 
+      #VRGetHotSpotRect, </code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">hotSpotID</font><code>) 
+      </code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"></font><br>
+      &nbsp; </td>
+  </tr>
+  <tr> 
+    <td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b>&nbsp;</font></td>
+    <td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Xtra 
+      function</font><br>
+      &nbsp; </td>
+  </tr>
+  <tr> 
+    <td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+    <td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This 
+      function returns an approximate bounding rectangle for the hot spot specified 
+      by hotSpotID. If the hot spot doesn't exist or isn't visible in the Presentation 
+      window, this function returns </font><code>rect(0, 0, 0, 0)</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">. 
+      If the hot spot is partially visible, this function returns the bounding 
+      rectangle for the visible portion. </font> 
+      <p> <font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Hot spots 
+        and their ID numbers are set by the application used to create or edit 
+        the QuickTime VR movie.</font><br>
+        &nbsp; 
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Example</b>&nbsp;</font></td>
+    <td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">The 
+      following statements enable the specified hot spot only if the hot spot 
+      is visible in the Presentation window:</font> 
+      <p> 
+      <pre>
+if <code>CallSprite(@"QT3", #VRGetHotSpotRect, 218) &lt;&gt; rect(0,0,0,0) then</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">
+</font></pre>
+  <tr> 
+    <td></td>
+    <td valign="top"> 
+      <pre>
+CallSprite(@"QT3", #VREnableHotSpot, 218, TRUE)
+
+end if
+</pre>
+      <p> <br>
+        <font face="Arial, Helvetica, sans-serif"><b>VRMotionQuality</b></font><br>
+        &nbsp; 
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b>&nbsp;</font></td>
+    <td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"></font><code>GetSpriteProperty(IconID@"IconTitle", 
+      #VRMotionQuality)</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"></font> 
+      <p> <font face="Geneva, Arial, Helvetica, sans-serif" size="-1"></font><code>SetSpriteProperty(IconID@"IconTitle", 
+        #VRMotionQuality, </code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">value</font><code>)</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"></font><br>
+        &nbsp; 
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b>&nbsp;</font></td>
+    <td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Sprite 
+      property</font><br>
+      &nbsp; </td>
+  </tr>
+  <tr> 
+    <td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+    <td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This 
+      property is the codec quality used when the user clicks and drags the QTVR 
+      sprite. This property's value can be </font><code>#minQuality</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, 
+      </font><code>#maxQuality</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, 
+      or </font><code>#normalQuality</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">. 
+      </font> 
+      <p> <font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This property 
+        can be tested and set.</font> 
+      <p> <br>
+        <font face="Arial, Helvetica, sans-serif"><b>VRNode</b></font><br>
+        &nbsp; 
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b>&nbsp;</font></td>
+    <td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"></font><code>GetSpriteProperty(IconID@"IconTitle", 
+      #VRNode)</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"></font> 
+      <p> <font face="Geneva, Arial, Helvetica, sans-serif" size="-1"></font><code>SetSpriteProperty(IconID@"IconTitle", 
+        #VRNode, </code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">nodeID</font><code>)</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"></font><br>
+        &nbsp; 
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b>&nbsp;</font></td>
+    <td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Sprite 
+      property</font><br>
+      &nbsp; </td>
+  </tr>
+  <tr> 
+    <td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+    <td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This 
+      property is the current node ID displayed by the sprite.</font> 
+      <p> <font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Nodes and 
+        their ID numbers are set by the application used to create or edit the 
+        QuickTime VR movie.</font> 
+      <p> <font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This property 
+        can be tested and set.</font><br>
+        &nbsp; 
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Example</b>&nbsp;</font></td>
+    <td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">The 
+      following statements increment the QuickTime VR movie's current node:</font> 
+      <p> 
+      <pre>
+<code>currentNode := GetSpriteProperty(@"QT3", #VRNode)</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">
+</font><code>SetSpriteProperty(@"QT3", #VRNode, currentNode+1)</code>
+</pre>
+      <font face="Geneva, Arial, Helvetica, sans-serif" size="2"> 
+      <p> <br>
+        <font face="Arial, Helvetica, sans-serif"><b>VRNodeType</b></font><br>
+        &nbsp; 
+      </font></td>
+  </tr>
+  <tr> 
+    <td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b>&nbsp;</font></td>
+    <td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">GetSpriteProperty(IconID@"IconTitle", 
+      </font><code>#VRNodeType)</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"></font><br>
+      &nbsp; </td>
+  </tr>
+  <tr> 
+    <td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b>&nbsp;</font></td>
+    <td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Sprite 
+      property</font><br>
+      &nbsp; </td>
+  </tr>
+  <tr> 
+    <td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+    <td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This 
+      property is the type of node that is currently in the Presentation window 
+      for the specified sprite. Possible values are </font><code>#object</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, 
+      </font><code>#panorama</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, 
+      or </font><code>#unknown</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">. 
+      (</font><code>#unknown</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> 
+      is the value for a sprite that isn't a QTVR sprite.)</font> 
+      <p> <font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This property 
+        can be tested but not set.</font> 
+      <p> <br>
+        <font face="Arial, Helvetica, sans-serif"><b>VRNudge</b></font><br>
+        &nbsp; 
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b>&nbsp;</font></td>
+    <td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"></font><code>CallSprite(IconID@"IconTitle", 
+      #VRNudge, </code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">direction</font><code>) 
+      </code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"></font><br>
+      &nbsp; </td>
+  </tr>
+  <tr> 
+    <td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b>&nbsp;</font></td>
+    <td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Xtra 
+      function</font><br>
+      &nbsp; </td>
+  </tr>
+  <tr> 
+    <td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+    <td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This 
+      command nudges the specified QTVR sprite in the direction specified by direction. 
+      Possible values for directionare </font><code>#down</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, 
+      </font><code>#downLeft</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, 
+      </font><code>#downRight</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, 
+      </font><code>#left</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, 
+      </font><code>#right</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, 
+      </font><code>#up</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, 
+      </font><code>#upLeft</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, 
+      and </font><code>#upRight</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">. 
+      </font> 
+      <p> <font face="Geneva, Arial, Helvetica, sans-serif" size="-1">The VRNudge 
+        function has no return value. </font><br>
+        &nbsp; 
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Example</b>&nbsp;</font></td>
+    <td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">The 
+      following statements nudge the QuickTime VR movie to the left 100 times 
+      to simulate a spinning view:</font> 
+      <p> 
+      <pre>
+repeat with counter := 1 to 360
+CallSprite(@"QT3", #VRNudge, #left)
+end repeat
+</pre>
+      <p> <br>
+        <font face="Arial, Helvetica, sans-serif"><b>VRPan</b></font><br>
+        &nbsp; 
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b>&nbsp;</font></td>
+    <td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"></font><code>GetSpriteProperty(IconID@"IconTitle", 
+      #VRPan)</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"></font> 
+      <p> <font face="Geneva, Arial, Helvetica, sans-serif" size="-1"></font><code>SetSpriteProperty(IconID@"IconTitle", 
+        #VRPan, </code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">degrees</font><code>)</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"></font><br>
+        &nbsp; 
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b>&nbsp;</font></td>
+    <td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Sprite 
+      property</font><br>
+      &nbsp; </td>
+  </tr>
+  <tr> 
+    <td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+    <td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This 
+      property is the current pan of the QTVR movie. The value is in degrees.</font> 
+      <p> <font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This property 
+        can be tested and set.</font><br>
+        &nbsp; 
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Example</b>&nbsp;</font></td>
+    <td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">The 
+      following statements adjust the sprite's pan angle by one degree:</font> 
+      <p> <font face="Geneva, Arial, Helvetica, sans-serif" size="-1"></font><code>currentPanAngle 
+        := GetSpriteProperty(@"QT3", #VRPan)</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"></font> 
+      <p> 
+      <pre>
+<code>SetSpriteProperty(@"QT3", #VRPan, currentPanAngle + 1)</code>
+</pre>
+      <font face="Geneva, Arial, Helvetica, sans-serif" size="2"> 
+      <p> <br>
+        <font face="Arial, Helvetica, sans-serif"><b>VRPtToHotSpotID</b></font><br>
+        &nbsp; 
+      </font></td>
+  </tr>
+  <tr> 
+    <td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b>&nbsp;</font></td>
+    <td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"></font><code>CallSprite(IconID@"IconTitle", 
+      #VRPtToHotSpotID, </code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">point</font><code>) 
+      </code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"></font><br>
+      &nbsp; </td>
+  </tr>
+  <tr> 
+    <td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b>&nbsp;</font></td>
+    <td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Xtra 
+      function</font><br>
+      &nbsp; </td>
+  </tr>
+  <tr> 
+    <td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+    <td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This 
+      function returns the ID of the hot spot, if any, that is at the specified 
+      point. If there is no hot spot, the function returns 0.</font> 
+      <p> <font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Hot spots 
+        and their ID numbers are set by the application used to create or edit 
+        the QuickTime VR movie.</font><br>
+        &nbsp; 
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Example</b>&nbsp;</font></td>
+    <td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">The 
+      following statement sets the value of </font><code>myHotSpot</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> 
+      to the ID of the hot spot that the user last clicked. If the user did not 
+      click a hot spot, </font><code>myHotSpot</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> 
+      is set to 0.</font> 
+      <p> 
+      <pre>
+myHotSpot := CallSprite(@"QT3", #VRPtToHotSpotID, point(clickX, clickY)) 
+</pre>
+      <p> <br>
+        <font face="Arial, Helvetica, sans-serif"><b>VRStaticQuality</b></font><br>
+        &nbsp; 
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b>&nbsp;</font></td>
+    <td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"></font><code>GetSpriteProperty(IconID@"IconTitle", 
+      #VRStaticQuality)</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"></font> 
+      <p> <font face="Geneva, Arial, Helvetica, sans-serif" size="-1"></font><code>SetSpriteProperty(IconID@"IconTitle", 
+        #VRStaticQuality, </code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">value</font><code>)</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"></font><br>
+        &nbsp; 
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b>&nbsp;</font></td>
+    <td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Sprite 
+      property</font><br>
+      &nbsp; </td>
+  </tr>
+  <tr> 
+    <td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+    <td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This 
+      property specifies the codec quality used when the panorama image is static. 
+      Possible values are </font><code>#minQuality</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, 
+      </font><code>#maxQuality</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, 
+      and </font><code>#normalQuality</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">. 
+      </font> 
+      <p> <font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This property 
+        can be tested and set.</font> 
+      <p> <br>
+        <font face="Arial, Helvetica, sans-serif"><b>VRSwing</b></font><br>
+        &nbsp; 
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b></font></td>
+    <td valign="top"> CallSprite(IconID@"IconTitle", #VRSwing, pan, tilt, FieldOfView, 
+      SpeedToSwing)<br>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b></font></td>
+    <td valign="top"><font face="Arial, Helvetica, sans-serif" size="-1"> Xtra 
+      function<br>
+      </font></td>
+  </tr>
+  <tr> 
+    <td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b></font></td>
+    <td valign="top"> <font face="Verdana, Arial, Helvetica, sans-serif" size="-1">The 
+      parameters </font>pan, tilt,<font face="Verdana, Arial, Helvetica, sans-serif" size="-1"> 
+      and </font>FieldOfView<font face="Verdana, Arial, Helvetica, sans-serif" size="-1"> 
+      are the settings you want the QTVR movie to swing from its current position. 
+      The parameter SpeedToSwing is the rate at which the swing takes place—specify 
+      an integer from 1 to 10 (slow to fast). QuickTime 1 When you finish selecting 
+      options, click OK. If you need to change the settings for your QuickTime 
+      sprite icon, double-click on the icon to edit it. Your settings are saved 
+      until you reopen the QuickTime Xtra Properties dialog box. When you open 
+      the QuickTime Xtra Properties dialog box, all settings revert to the defaults.</font> 
+      <p><font face="Arial, Helvetica, sans-serif"><b>VRTilt<br>
+        </b></font></p>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" align="right">&nbsp;</td>
+    <td valign="top"> 
+      <p>&nbsp;</p>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b>&nbsp;</font></td>
+    <td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"></font><code>GetSpriteProperty(IconID@"IconTitle", 
+      #VRTilt)</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"></font> 
+      <p> <font face="Geneva, Arial, Helvetica, sans-serif" size="-1"></font><code>SetSpriteProperty(IconID@"IconTitle", 
+        #VRTilt, </code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">degrees</font><code>)</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"></font><br>
+        &nbsp; 
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b>&nbsp;</font></td>
+    <td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Sprite 
+      property</font><br>
+      &nbsp; </td>
+  </tr>
+  <tr> 
+    <td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+    <td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This 
+      property is the current tilt, in degrees, of the QTVR movie. </font> 
+      <p> <font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This property 
+        can be tested and set.</font><br>
+        &nbsp; 
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Example</b>&nbsp;</font></td>
+    <td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">The 
+      following statements adjust the sprite's tilt angle by one degree:</font> 
+      <p> <font face="Geneva, Arial, Helvetica, sans-serif" size="-1"></font><code>currentTilt 
+        := GetSpriteProperty(@"QT3", #VRTilt)</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"></font> 
+      <p> 
+      <pre>
+<code>SetSpriteProperty(@"QT3", #VRTilt, currentTilt + 1)</code>
+</pre>
+      <font face="Geneva, Arial, Helvetica, sans-serif" size="2"> 
+      <p> <br>
+        <font face="Arial, Helvetica, sans-serif"><b>VRWarpMode</b></font><br>
+        &nbsp; 
+      </font></td>
+  </tr>
+  <tr> 
+    <td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b>&nbsp;</font></td>
+    <td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"></font><code>GetSpriteProperty(IconID@"IconTitle", 
+      #VRWarpMode)</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"></font> 
+      <p> <font face="Geneva, Arial, Helvetica, sans-serif" size="-1"></font><code>SetSpriteProperty(IconID@"IconTitle", 
+        #VRWarpMode, </code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">value</font><code>)</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"></font><br>
+        &nbsp; 
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b>&nbsp;</font></td>
+    <td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Sprite 
+      property</font><br>
+      &nbsp; </td>
+  </tr>
+  <tr> 
+    <td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+    <td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This 
+      property specifies the type of warping done on the panorama. </font> 
+      <p> <font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Possible 
+        values are </font><code>#full</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, 
+        </font><code>#partial</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, 
+        or </font><code>#none</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">. 
+        </font> 
+      <p> <font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Warping 
+        is the method used by QuickTime VR to integrate separate images to simulate 
+        a seamless view. The </font><code>VRWarpMode</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> 
+        setting determines how much QuickTime VR blends the images to achieve 
+        this effect. When </font><code>VRWarpMode </code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">is 
+        set to </font><code>#none</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, 
+        QuickTime VR does not blend the images.</font> 
+      <p> <font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This property 
+        can be tested and set. When the property is set, it determines the warping 
+        for both static and motion modes. When this property is tested and the 
+        values for static and motion modes are different, this property's value 
+        is the value for the current mode.</font> 
+      <p> <font face="Geneva, Arial, Helvetica, sans-serif" size="-1"></font> 
+      <p> 
+      <table border="0">
+        <tr> 
+          <td><a href="qt3_aw5.html" onMouseOver="swapImage('back','images/contentsover.gif'); window.status='To Table of Contents';return true" onMouseOut="swapImage('back','images/contents.gif')"><img src="images/contents.gif" name="back" border="0" vspace=1 alt="To Table of Contents"></a></td>
+          <td><a href="qtvr07.html" onMouseOver="swapImage('prev','images/prevover.gif'); window.status='Back to previous document';return true" onMouseOut="swapImage('prev','images/prev.gif')"><img src="images/prev.gif" name="prev" border="0" vspace=1 alt="Back to Previous document"></a></td>
+        </tr>
+      </table>
+      <br>
+      <p> 
+    </td>
+  </tr>
+</table>
+<br>
+<p>
+
+</body>
+</html>

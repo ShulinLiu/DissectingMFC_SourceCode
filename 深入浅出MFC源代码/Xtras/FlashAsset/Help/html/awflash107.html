@@ -1,0 +1,147 @@
+
+<html>
+<head><title>Macromedia Authorware Attain - Using the Macromedia Flash Asset Xtra: Flash movie options</title>
+
+<script language="Javascript">
+
+function swapImage(imgName,newImg){
+  if ((navigator.appName == 'Netscape' && parseFloat(navigator.appVersion) >= 3) || (parseFloat(navigator.appVersion) >= 4)){		
+		eval('document.' + imgName + '.src = "' + newImg + '"');
+	}
+}
+
+</script>
+
+</head>
+
+<body link="#333399" vlink="#660033" alink="#000000" bgcolor="#FFFFFF">
+
+<table border="0" cellspacing="0" cellpadding="0" width="95%">
+<tr>
+<font face="Arial, Helvetica, sans-serif" size="+1"><b>Flash movie options</b></font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">The following options are available for Flash movies from the Flash Asset Properties dialog box.</font><p>
+
+<br>
+<font face="Arial, Helvetica, sans-serif"><b>Media options</b></font><br>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Linked keeps the Flash movie stored in an external file. When Authorware encounters the sprite icon for the Flash movie, it loads the file into memory by looking in the location specified in the Link File field. If you deselect Linked, Authorware imports the Flash movie into the piece. (The next time you open the Flash Asset Properties dialog box for the movie, the Link File field is blank.)</font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Preload requires Authorware to load the entire Flash movie into memory before playing the Flash movie's first frame. If you deselect Preload, Authorware starts playing the movie immediately while continuing to stream the movie into memory. If you selected Linked, this option is available. </font><p>
+
+<br>
+<font face="Arial, Helvetica, sans-serif"><b>Playback options</b></font><br>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">These options control the way a Flash movie plays in a packaged or web-packaged Authorware piece and while you're authoring in Authorware.</font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Image displays images from the Flash movie when it plays. When Image is deselected, the images are invisible.</font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Sound enables any sound in the Flash movie to play. When Sound is deselected, the movie plays without sound.</font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Paused displays only the first frame of the movie. To start a paused Flash movie, use the </font><code><a href="awflash237.html">play</a></code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> method, </font><code>CallSprite(@"</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">IconTitle</font><code>", #play)</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">. When Paused is deselected, the movie begins playing immediately when it appears in the Presentation window.</font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Loop makes the movie play again from frame 1 once it finishes. When Loop is deselected, the movie plays once and stops.</font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Direct To Screen displays the movie immediately when it appears in the Presentation window. When Direct To Screen is deselected, Authorware draws the entire sprite first in memory before actually displaying it. The advantage of selecting Direct To Screen is that it provides the fastest, smoothest playback of a Flash movie. The disadvantage is that the movie always appears in front of everything else in the Presentation window (regardless of the layer you've assigned it to), and modes have no effect. Deselecting Direct To Screen allows Authorware to composite the movie with whatever else is in the Presentation window and to apply modes.</font><p>
+
+<br>
+<font face="Arial, Helvetica, sans-serif"><b>Additional options</b></font><br>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Scale specifies a scale value. Type a percentage to scale the movie.</font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Rotation specifies a rotation value. Drag the slider to specify the number of degrees to rotate the movie.</font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Quality specifies a quality value. When set to a high-quality setting, the Flash movie plays with anti-aliasing turned on, which slows down performance. A low-quality setting turns off anti-aliasing but speeds up performance. Choose one of these options: </font><p>
+
+<table cellspacing="0" cellpadding="4">
+<tr>
+<td valign="top" width="14"><img src="images/tri.gif" width="14" height="10" vspace="2"></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">High Authorware always plays the movie with anti-aliasing turned on. </font></td>
+</tr>
+
+<tr>
+<td valign="top" width="14"><img src="images/tri.gif" width="14" height="10" vspace="2"></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Low Authorware always plays the movie with anti-aliasing turned off. </font></td>
+</tr>
+
+<tr>
+<td valign="top" width="14"><img src="images/tri.gif" width="14" height="10" vspace="2"></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Auto-High Authorware starts playing the movie with anti-aliasing on but will turn it off if it can't play the movie at the required frame rate. </font></td>
+</tr>
+
+<tr>
+<td valign="top" width="14"><img src="images/tri.gif" width="14" height="10" vspace="2"></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Auto-Low Authorware starts playing the movie with anti-aliasing turned off but will turn on anti-aliasing if it can do so and continue playing the movie at the required frame rate.</font></td>
+</tr>
+
+</table>
+
+<p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Scale Mode controls the way the Flash movie is scaled in the Presentation window. Choose one of these options: </font><p>
+
+<table cellspacing="0" cellpadding="4">
+<tr>
+<td valign="top" width="14"><img src="images/tri.gif" width="14" height="10" vspace="2"></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Show All Authorware maintains the movie's aspect ratio and, if necessary, fills in any gap along the horizontal or vertical dimension using the movie's background color. </font></td>
+</tr>
+
+<tr>
+<td valign="top" width="14"><img src="images/tri.gif" width="14" height="10" vspace="2"></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">No Border Authorware maintains the movie's aspect ratio by cropping the horizontal or vertical dimension as necessary without leaving a border. </font></td>
+</tr>
+
+<tr>
+<td valign="top" width="14"><img src="images/tri.gif" width="14" height="10" vspace="2"></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Exact Fit Authorware stretches the movie to fit the sprite exactly, disregarding aspect ratio.</font></td>
+</tr>
+
+</table>
+
+<p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Tempo controls the rate at which Authorware tries to play the Flash movie. Choose one of these options: </font><p>
+
+<table cellspacing="0" cellpadding="4">
+<tr>
+<td valign="top" width="14"><img src="images/tri.gif" width="14" height="10" vspace="2"></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Normal Authorware tries to play the Flash movie at the required tempo.</font></td>
+</tr>
+
+<tr>
+<td valign="top" width="14"><img src="images/tri.gif" width="14" height="10" vspace="2"></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Lock Step Authorware plays the Flash movie at the rate you set in the </font><code>GlobalTempo</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> system variable. </font></td>
+</tr>
+
+<tr>
+<td valign="top" width="14"><img src="images/tri.gif" width="14" height="10" vspace="2"></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Fixed Rate Authorware plays the movie at a rate you specify in the fps field.</font></td>
+</tr>
+
+</table>
+
+<p>
+
+
+
+<table border="0">
+<tr>
+<td><a href="awflash1.html" onmouseover="swapImage('back','images/contentsover.gif'); window.status='To Table of Contents';return true" onmouseout="swapImage('back','images/contents.gif')"><img src="images/contents.gif" name="back" border="0" vspace=1 alt="To Table of Contents"></a></td>
+
+<td><a href="awflash106.html" onmouseover="swapImage('prev','images/prevover.gif'); window.status='Back to previous document';return true" onmouseout="swapImage('prev','images/prev.gif')"><img src="images/prev.gif" name="prev" border="0" vspace=1 alt="Back to Previous document"></a></td>
+
+<td><a href="awflash108.html" onmouseover="swapImage('next','images/nextover.gif'); window.status='Forward to next document';return true" onmouseout="swapImage('next','images/next.gif')"><img src="images/next.gif" name="next" border="0" vspace=1 alt="Forward to next document"></a></td>
+</tr>
+</table>
+
+<br><p>
+</td>
+</tr>
+
+
+</table>
+
+<br><p>
+
+</body>
+</html>

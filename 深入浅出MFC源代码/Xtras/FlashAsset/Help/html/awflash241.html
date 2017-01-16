@@ -1,0 +1,101 @@
+
+<html>
+<head><title>Macromedia Authorware Attain - Flash Asset Xtra Command Reference: quality</title>
+
+<script language="Javascript">
+
+function swapImage(imgName,newImg){
+  if ((navigator.appName == 'Netscape' && parseFloat(navigator.appVersion) >= 3) || (parseFloat(navigator.appVersion) >= 4)){		
+		eval('document.' + imgName + '.src = "' + newImg + '"');
+	}
+}
+
+</script>
+
+</head>
+
+<body link="#333399" vlink="#660033" alink="#000000" bgcolor="#FFFFFF">
+
+<table border="0" cellspacing="0" cellpadding="0" width="95%">
+<tr>
+<font face="Arial, Helvetica, sans-serif" size="+1"><b>quality</b></font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b></font> </td>
+<td valign="top"><code>SetIconProperty(@"</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">IconTitle</font><code>", #quality, </code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">value</font><code>)</code><p>
+
+<code>SetIconProperty(@"</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">IconTitle</font><code>", #quality, </code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">value</font><code>)</code><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b></font> </td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Icon property, sprite property</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This property controls whether a Flash movie sprite is rendered using anti-aliasing. Anti-aliasing produces high-quality rendering, but the disadvantage is that it can slow down playback of the movie. The </font><code>quality</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property can have these values:</font><p>
+
+<table cellspacing="0" cellpadding="4">
+<tr>
+<td valign="top" width="14"><img src="images/tri.gif" width="14" height="10" vspace="2"></td>
+<td valign="top"><code>#autoHigh</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> Authorware starts rendering the sprite with anti-aliasing. If the actual frame rate falls below the movie's specified frame rate, Authorware turns off anti-aliasing. This setting places a priority on playback speed as opposed to visual quality.</font></td>
+</tr>
+
+<tr>
+<td valign="top" width="14"><img src="images/tri.gif" width="14" height="10" vspace="2"></td>
+<td valign="top"><code>#autoLow</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> Authorware starts rendering the movie without anti-aliasing. If the Flash player determines that the computer processor can handle it, anti-aliasing is turned on. This setting places a priority on visual quality whenever possible.</font></td>
+</tr>
+
+<tr>
+<td valign="top" width="14"><img src="images/tri.gif" width="14" height="10" vspace="2"></td>
+<td valign="top"><code>#high</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> The movie always plays with anti-aliasing.</font></td>
+</tr>
+
+<tr>
+<td valign="top" width="14"><img src="images/tri.gif" width="14" height="10" vspace="2"></td>
+<td valign="top"><code>#low</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> The movie always plays without anti-aliasing.</font></td>
+</tr>
+
+</table>
+
+<p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">You can get and set the value of the </font><code>quality </code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">property. The default setting is </font><code>#high</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">.</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Example</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This routine checks the color depth of the computer on which the movie is playing. If the color depth is set to 8 bits or less (256 colors), the script sets the quality of the sprite to </font><code>#low</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">.</font><p>
+
+<pre>
+If ScreenDepth &lt;= 8 then
+    SetSpriteProperty(@"Flash Icon", #quality, #low)
+end if
+</pre>
+<p>
+
+
+
+<table border="0">
+<tr>
+<td><a href="awflash2.html" onmouseover="swapImage('back','images/contentsover.gif'); window.status='To Table of Contents';return true" onmouseout="swapImage('back','images/contents.gif')"><img src="images/contents.gif" name="back" border="0" vspace=1 alt="To Table of Contents"></a></td>
+
+<td><a href="awflash240.html" onmouseover="swapImage('prev','images/prevover.gif'); window.status='Back to previous document';return true" onmouseout="swapImage('prev','images/prev.gif')"><img src="images/prev.gif" name="prev" border="0" vspace=1 alt="Back to Previous document"></a></td>
+
+<td><a href="awflash242.html" onmouseover="swapImage('next','images/nextover.gif'); window.status='Forward to next document';return true" onmouseout="swapImage('next','images/next.gif')"><img src="images/next.gif" name="next" border="0" vspace=1 alt="Forward to next document"></a></td>
+</tr>
+</table>
+
+<br><p>
+</td>
+</tr>
+
+
+</table>
+
+<br><p>
+
+</body>
+</html>

@@ -1,0 +1,282 @@
+
+<html>
+<head><title>Macromedia Authorware Attain - Using the Macromedia Flash Asset Xtra: Creating Flash movies that send events to Authorware</title>
+
+<script language="Javascript">
+
+function swapImage(imgName,newImg){
+  if ((navigator.appName == 'Netscape' && parseFloat(navigator.appVersion) >= 3) || (parseFloat(navigator.appVersion) >= 4)){		
+		eval('document.' + imgName + '.src = "' + newImg + '"');
+	}
+}
+
+</script>
+
+</head>
+
+<body link="#333399" vlink="#660033" alink="#000000" bgcolor="#FFFFFF">
+
+<table border="0" cellspacing="0" cellpadding="0" width="95%">
+<tr>
+<font face="Arial, Helvetica, sans-serif" size="+1"><b>Creating Flash movies that send events to Authorware</b></font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">A Flash movie can generate events that an event response can capture and respond to while an Authorware piece is running. In Flash, you set up a movie to generate an event by creating either:</font><p>
+
+<table cellspacing="0" cellpadding="4">
+<tr>
+<td valign="top" width="14"><img src="images/tri.gif" width="14" height="10" vspace="2"></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">A button that is assigned a Get URL action</font></td>
+</tr>
+
+<tr>
+<td valign="top" width="14"><img src="images/tri.gif" width="14" height="10" vspace="2"></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">A frame that is assigned a Get URL action</font></td>
+</tr>
+
+</table>
+
+<p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">For example, after creating and selecting a button in Flash, you can assign the button an action by choosing Modify &gt; Element. In the Button Link Properties dialog box, select Get URL from the Action menu.<p>
+
+<img src="images/FlashAction.gif" border="0">
+</font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Don't specify anything for the Target Window option (Authorware ignores that field). What you type in the Network URL field determines how Authorware responds to the button or frame action. There are two ways to fill in the Network URL field:</font><p>
+
+<table cellspacing="0" cellpadding="4">
+<tr>
+<td valign="top" width="14"><img src="images/tri.gif" width="14" height="10" vspace="2"></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Specify any string to pass to Authorware. In Authorware, you set up an event response to capture the event from the Flash movie and read the string as a parameter. Let's say, in Flash, you specify this in the Network URL field:</font></td>
+</tr>
+
+<tr>
+<td></td>
+<td valign="top">
+
+<pre>
+Dali.html
+</pre>
+
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">In Authorware, you set up a Flash Player Movie icon named Surrealists. Following it on the flowline, you set up an event response. In the Event Response Properties dialog box, you choose Icon Surrealists as the sender and getURL as the event name. When a user clicks the button you've assigned </font><code>Dali</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> to, the event that the Flash movie generates looks like this:</font></td>
+</tr>
+</table>
+
+</td>
+</tr>
+</table>
+
+<table border="0" cellspacing="0" cellpadding="0" width="95%">
+<tr>
+<td width="10%" align="right" valign="top"><img src="images/pixel.gif" width="120" height="2" border="0"></td>
+<td width="90%" valign="top">
+
+<table cellspacing="0" cellpadding="4">
+<tr>
+<td><img src="images/pixel.gif" height="1" width="14"></td>
+<td>
+
+<pre>
+#__Sender:8,217,996, #__SenderXtraName:"Xtra Shockwave Flash Movie",
+#__SenderIconId:65,543, #__EventName:#getURL, #__NumArgs:1, 
+#arg0:"Dali.html"
+</pre>
+
+</td>
+</tr>
+</table>
+
+</td>
+</tr>
+</table>
+
+<table border="0" cellspacing="0" cellpadding="0" width="95%">
+<tr>
+<td width="10%" align="right" valign="top"><img src="images/pixel.gif" width="120" height="2" border="0"></td>
+<td width="90%" valign="top">
+
+<table cellspacing="0" cellpadding="4">
+<tr>
+<td></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">To read the string, use a statement like this in the calculation icon attached to the event response:</font></td>
+</tr>
+
+<tr>
+<td></td>
+<td valign="top">
+
+<pre>
+ButtonString := EventLastMatched[#arg0]
+</pre>
+
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">You could then use </font><code>GoToNetPage</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> to go to the HTML page using a statement like this:</font></td>
+</tr>
+
+<tr>
+<td></td>
+<td valign="top">
+
+<pre>
+GoToNetPage(ButtonString)
+</pre>
+
+</td>
+</tr>
+
+<tr>
+<td valign="top" width="14"><img src="images/tri.gif" width="14" height="10" vspace="2"></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Specify the word </font><code>event</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> followed by a colon, the name you want to give the event, and a parameter (if any) you will pass along with the event. Let's say, in Flash, you specify this in the Network URL field:</font></td>
+</tr>
+
+<tr>
+<td></td>
+<td valign="top">
+
+<pre>
+event: FlashMouseUp Dali.html
+</pre>
+
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">In Authorware, you once again set up a Flash Player Movie icon named Surrealists and an event response after it on the flowline. In the Event Response Properties dialog box, you choose Icon Surrealists as the sender and event as the event name. When a user clicks the button you've assigned </font><code>Dali</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> to, the event that the Flash movie generates looks like this:</font></td>
+</tr>
+</table>
+
+</td>
+</tr>
+</table>
+
+<table border="0" cellspacing="0" cellpadding="0" width="95%">
+<tr>
+<td width="10%" align="right" valign="top"><img src="images/pixel.gif" width="120" height="2" border="0"></td>
+<td width="90%" valign="top">
+
+<table cellspacing="0" cellpadding="4">
+<tr>
+<td><img src="images/pixel.gif" height="1" width="14"></td>
+<td>
+
+<pre>
+#__Sender:8,217,996, #__SenderXtraName:"Xtra Shockwave Flash Movie",
+#__SenderIconId:65,543, #__EventName:#event, #__NumArgs:2,
+#arg0:FlashMouseUp, #arg1:"Dali.html"
+</pre>
+
+</td>
+</tr>
+</table>
+
+</td>
+</tr>
+</table>
+
+<table border="0" cellspacing="0" cellpadding="0" width="95%">
+<tr>
+<td width="10%" align="right" valign="top"><img src="images/pixel.gif" width="120" height="2" border="0"></td>
+<td width="90%" valign="top">
+
+<table cellspacing="0" cellpadding="4">
+<tr>
+<td></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">To read the name you've given the event, use a statement like this in the calculation icon attached to the event response:</font></td>
+</tr>
+
+<tr>
+<td></td>
+<td valign="top">
+
+<pre>
+ButtonEventName := EventLastMatched[#arg0]
+</pre>
+
+</td>
+</tr>
+
+<tr>
+<td></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">To read the string, use a statement like this:</font></td>
+</tr>
+
+<tr>
+<td></td>
+<td valign="top">
+
+<pre>
+ButtonString := EventLastMatched[#arg1]
+</pre>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">If a Flash movie generates both </font><code>getURL</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> events and </font><code>event:</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> events, use this statement to determine which type the movie has been generated:</font><p>
+
+<pre>
+ButtonEventType := EventLastMatched[#__EventName]
+</pre>
+<p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">The variable </font><code>ButtonEventType</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> will contain either </font><code>#getURL</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> or </font><code>#event</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">.</font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">In Authorware, you can set up a routine to act upon the different types of events. For example, in a Flash movie, you might assign the following three actions to three buttons.</font><p>
+
+<pre>
+homePage.htm
+event: Eval x&gt;y
+event: EvalAssign x=5
+</pre>
+<p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Then, in Authorware, you could use the following routine to act upon the strings sent from the Flash movie.</font><p>
+
+<pre>
+ButtonEvent := EventLastMatched[#__EventName]
+if ButtonEvent = #getURL then
+	URL := EventLastMatched[#arg0]
+	GoToNetPage(URL)
+else if ButtonEvent = #event then
+	Event = EventLastMatched[#arg0]
+	if Event = "Eval"
+		Eval(EventLastMatched[#arg1])
+	else if Event = "EvalAssign"
+		EvalAssign(EventLastMacthed[#arg1])
+	end if
+end if
+</pre>
+
+<p>
+
+<table border="0">
+<tr>
+<td><a href="awflash1.html" onmouseover="swapImage('back','images/contentsover.gif'); window.status='To Table of Contents';return true" onmouseout="swapImage('back','images/contents.gif')"><img src="images/contents.gif" name="back" border="0" vspace=1 alt="To Table of Contents"></a></td>
+
+<td><a href="awflash108.html" onmouseover="swapImage('prev','images/prevover.gif'); window.status='Back to previous document';return true" onmouseout="swapImage('prev','images/prev.gif')"><img src="images/prev.gif" name="prev" border="0" vspace=1 alt="Back to Previous document"></a></td>
+
+<td><a href="awflash110.html" onmouseover="swapImage('next','images/nextover.gif'); window.status='Forward to next document';return true" onmouseout="swapImage('next','images/next.gif')"><img src="images/next.gif" name="next" border="0" vspace=1 alt="Forward to next document"></a></td>
+</tr>
+</table>
+
+</td>
+</tr>
+</table>
+
+<br><p>
+</td>
+</tr>
+
+
+</table>
+
+<br><p>
+
+</body>
+</html>

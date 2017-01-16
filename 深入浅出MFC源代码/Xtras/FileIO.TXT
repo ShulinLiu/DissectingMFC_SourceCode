@@ -1,0 +1,315 @@
+FileIO Xtra
+Version 1.0.4 - 09dec97 CH
+
+FileIO Xtra for Macromedia Director 6.0
+=======================================
+
+FileIO provides a set of methods allowing users of Macromedia Director 6.0 to
+programmatically access files using the Lingo scripting language. The FileIO
+Xtra is a scripting Xtra.  The scripting Xtra interface is portable across
+all Macromedia products.  Hence the FileIO Xtra may be used with Authorware 4.
+
+Using FileIO
+============
+
+If automatic opening is desired, place a copy of the FileIO Xtra for your platform
+into Application Xtra's folder. If automatic opening is not desired, the Xtra can be 
+placed anywhere and opened using Lingo's 'openXLib' command. This applies to 
+projector's as well, the Xtra must be placed in an Xtra's folder in the same folder 
+as the projector.
+
+Each instance of FileIO can reference a single open file. If multiple files are to
+be opened simultaneously, a new instance of FileIO is required for each opened file.
+A single instance can be used to open multiple files, as long as the file is closed
+before a new file is opened. To create a new instance, use the new() method, defined
+below. To dispose of an instance, set the instance variable to 0. All methods that
+read from or write to the file must be called after the file has been opened using
+the openFile() method. If a new file is to be opened using the same instance, the
+file must be closed using closeFile(). Files can be opened in three different modes:
+Read, Write and Read/Write. When writing to a file, the contents of the file after
+the current position are overwritten.
+
+Example Lingo
+
+ set myFile = new(xtra "fileio")      -- Create an instance of FileIO
+ set fileName = displayOpen(myFile)   -- Display Open Dialog and return the fileName
+ openFile(myFile, fileName, 1)        -- Open the file
+ set theFile = readFile(myFile)       -- Read the file and return a string to Lingo
+ closeFile(myFile)                    -- Close the file
+ set myFile = 0                       -- Dispose of the instance
+
+In this example, we created a new instance and stored it in the variable myFile.
+Next, the displayOpen() method is used to display an open dialog to allow a file to
+be chosen. The file is returned as a fully-qualified path string to Lingo. The file
+is then opened in read only mode, the contents of the file are read, and the file is
+closed. Lastly, the instance is disposed of.
+
+Known Problems
+==============
+
+The createFile() method does not support relative filenames, or the Lingo '@' 
+operator in pathnames. This will be fixed in a later version.
+
+The displaySave() method does not directly inform Lingo whether a user is 
+replacing an existing file. The workaround is to attempt to create the file using
+createFile() and check the error code for a "File Already Exists" error.
+
+History
+=======
+
+09dec97 (v1.0.4)
+
+Fixed a problem leading to garbage characters appearing at the ends of lines, 
+or possibly crash. 
+
+18apr97 (v1.0.2)
+
+Fixed parenting problem with displaySave() and displayOpen() methods.
+Added support for Authorware.
+
+27may96 (v1.0.1)
+
+Added support for double-byte character sets.
+Added version() method to report FileIO Xtra version information. 
+Added getOSDir() to return a full path to the Windows Directory/System Folder.
+
+15mar96 (v1.0.0 Beta)
+
+First public release.
+
+Method Reference
+================
+
+The first line of each definition contains the method name, a list of parameters and
+thier value types. The internal name of the FileIO Xtra is "fileio". This name is
+used whenever referencing the xtra using the form 'xtra "fileio"'.
+
+Note that while Director and projector's can use net-based files by supplying a URL
+for a filename, the FileIO Xtra cannot. It is limited to accessesing files available
+via filesystems mounted on the local system.
+
+New methods will appear at the bottom of this list.
+
+---
+
+mMessageList( xtra reference )
+
+Returns a list of methods and parameters, as well as a brief explanation of each.
+
+---
+
+new( xtra reference )
+
+This is called to create a new instance of FileIO. The Xtra can be referenced by name
+or number. It returns an instance variable used to reference the instance.
+
+---
+
+fileName( instance )
+
+Returns the fileName string of the current open file.  The file must be open use this
+method.
+
+---
+
+status( instance )
+
+Returns the error code returned by the last method called. The value is returned as
+an integer. 
+
+---
+
+error( instance, int error )
+
+Returns a readable error string. A numeric error code is passed in as the
+second argument. The errors returned can be any of the following:
+
+"OK"
+"Memory allocation failure"
+"File directory full"
+"Volume full"
+"Volume not found"
+"I/O Error"
+"Bad file name"
+"File not open"
+"Too many files open"
+"File not found"
+"No such drive"
+"No disk in drive"
+"Directory not found"
+"Instance has an open file"
+"File already exists"
+"File is opened read-only"
+"File is opened write-only"
+"Unknown error"
+
+---
+
+setFilterMask( instance, string mask )
+
+Sets the filter mask used by calls to displayOpen() and displaySave(). The filter
+mask determines what files to show when displaying an Open or Save dialog. The second
+parameter is a string representing the filter mask to set. On Windows, this is a
+comma seperated string of file types and associated extensions (e.g. "All
+Files,*.*,Text Files,*.TXT"), and a string of types on the Macintosh (e.g.
+"TEXTPICT"). On Windows, the filter mask string is limited to 256 characters. On the
+Macintosh, you are limited to four four-character types.  When a new instance of
+FileIO is created, the filter masks defaults to all files. To reset the filter mask to
+display all files after it has been set, just pass in an empty string (e.g.
+setFilterMask(me, "")).
+
+---
+
+openFile( instance, string fileName, int openMode )
+
+Opens the named file. This call must be used before any read/write operations can
+take place. The filename can be either a fully-qualified path and filename, or a
+relative filename. The Lingo '@' pathname operator is supported. The openMode
+parameter specifies whether to open the file in Read, Write or ReadWrite mode. Valid
+Flags are: 0 Read/Write, 1 Read, 2 Write.
+
+---
+
+closeFile( instance )
+
+Closes a file that has been previously opened using the openFile() method.
+
+---
+
+displayOpen( instance )
+
+Displays a platform specific Open dialog allowing a user to specify a file. Returns a
+fully-qualified path and fileName to Lingo. The setFilterMask() method can be used to
+control what file types are displayed in the dialog.
+
+---
+
+displaySave( instance, string title, string defaultFileName )
+
+Displays a platform specific Save dialog allowing a user to specify a file. Returns a
+fully-qualified path and fileName to Lingo. The setFilterMask() method can be used to
+control what file types are displayed in the dialog. The string and defaultFileName 
+parameters allow you to specifiy a default filename to be displayed, as well as title
+text for the save dialog. 
+
+---
+
+createFile( instance, string fileName )
+
+Creates a file. The fileName must be either a fileName to be created in the current
+directory, or a fully-qualified path and fileName. The Lingo '@' pathname operator
+and relative paths are not supported. After creating the new file, the file must be
+opened before it can be written to.
+
+---
+
+setPosition( instance, position )
+
+Sets the file position of the current open file. The file must be open to use this 
+method.
+
+---
+
+getPosition( instance )
+
+Gets the file position of the current open file. Returned as an integer. The file
+must be open to use this method. 
+
+---
+
+getLength( instance )
+
+Gets the length of the currently opened file. Returned as an integer. The file must
+be open use this method. The value returned is the length of the file in bytes. 
+
+---
+
+writeChar( instance, string theChar )
+
+Writes a single character to the file at the current position. The file must be open
+in write or read/write mode to use this method.
+
+---
+
+writeString( instance, string theString )
+
+Writes a string to the file at the current position. The file must be open in write
+or read/write mode to use this method.
+
+---
+
+readChar( instance )
+
+Reads the character (either single or double-byte) at the current position and then 
+increments the position. The character is returned to Lingo as a string. The file must 
+be open in read or read/write mode to use this method. 
+
+---
+
+readLine( instance )
+
+Reads from the current position up to and including the next CR, increments the
+position, and returns the string to Lingo.  The file must be open in read or
+read/write mode to use this method. 
+
+---
+
+readFile( instance )
+
+Reads from the current position to the end of the file and returns the file to Lingo
+as a string.  The file must be open in read or read/write mode to use this method.
+
+---
+
+readWord( instance )
+
+Reads the next word starting at the current position.  The file must be open in read
+or read/write mode to use this method. 
+
+---
+
+readToken( instance, string skipChar, string breakChar )
+
+Reads the next 'token' starting at the current position. Characters matching the
+skipChar parameter are "skipped" and the file is read until breakChar is encountered.
+The file must be open in read or read/write mode to use this method. This method will
+read double-byte tokens as long as the skip and break are single-byte characters. It
+will not detect double-byte skip or break characters.
+
+---
+
+getFinderInfo( instance )
+
+Returns the Type and Creator of the current file as a string. This method does
+nothing when used under Windows.  The file must be open to use this method.
+ 
+---
+ 
+setFinderInfo( instance, string typeAndCreator )
+
+Sets the Type and Creator of the current file. The string takes the form of a space
+seperated set of TYPE and CREATOR codes (e.g. "TEXT TTXT"). This method does nothing
+when used under Windows.  The file must be open to use this method.
+
+---
+
+delete( instance )
+
+Deletes the currently opened file.  The file must be open use this method.
+
+---
+
+version( xtraRef )
+
+Returns FileIO version and build information. Useful when filing 
+bug reports, determining installed version while authoring, etc. No practical use beyond this.
+ 
+---
+
+getOSDir( )
+
+Global method that returns the full path to either the Windows directory, or the System Folder 
+depending on which OS is currently being used. Does not require a child instance or
+Xtra reference to call.
+
+---

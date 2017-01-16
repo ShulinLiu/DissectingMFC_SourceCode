@@ -1,0 +1,80 @@
+
+<html>
+<head><title>Macromedia Authorware Attain - Flash Asset Xtra Command Reference: clearError</title>
+
+<script language="Javascript">
+
+function swapImage(imgName,newImg){
+  if ((navigator.appName == 'Netscape' && parseFloat(navigator.appVersion) >= 3) || (parseFloat(navigator.appVersion) >= 4)){		
+		eval('document.' + imgName + '.src = "' + newImg + '"');
+	}
+}
+
+</script>
+
+</head>
+
+<body link="#333399" vlink="#660033" alink="#000000" bgcolor="#FFFFFF">
+
+<table border="0" cellspacing="0" cellpadding="0" width="95%">
+<tr>
+<font face="Arial, Helvetica, sans-serif" size="+1"><b>clearError</b></font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b></font> </td>
+<td valign="top"><code>CallIcon(@"</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">IconTitle</font><code>", #clearError)</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"></font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b></font> </td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Method</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Use this method to reset the error state of a streaming Flash sprite icon to 0.</font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">If an error occurs while a Flash movie is streaming into memory, Authorware sets the sprite icon's </font><code>state</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property to -1 to indicate that an error occurred. You can use the </font><code>getError</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> method to determine what type of error occurred. You can then use the </font><code>clearError</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> method to reset the sprite icon's error state to 0. Setting a sprite icon's </font><code>pathName</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, </font><code>linked</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, and </font><code>preload</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> properties also automatically clears the error condition.</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Example</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This routine checks to see if an error occurred for a Flash sprite icon named Flash Icon. If there was an error, the routine sets a custom variable with the message and then calls the </font><code>clearError</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> method.</font><p>
+
+<pre>
+If GetIconProperty(@"Flash Icon", #state) then
+    Error:=CallIcon(@"Flash Icon", #getError)
+    CallIcon(@"Flash Icon", #clearError)
+end
+</pre>
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Related&nbsp;Functions</b></font> </td>
+<td valign="top"><code><a href="awflash250.html">state</a> </code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">property, </font><code><a href="awflash220.html">getError</a></code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> method</font><p>
+
+
+
+<table border="0">
+<tr>
+<td><a href="awflash2.html" onmouseover="swapImage('back','images/contentsover.gif'); window.status='To Table of Contents';return true" onmouseout="swapImage('back','images/contents.gif')"><img src="images/contents.gif" name="back" border="0" vspace=1 alt="To Table of Contents"></a></td>
+
+<td><a href="awflash26.html" onmouseover="swapImage('prev','images/prevover.gif'); window.status='Back to previous document';return true" onmouseout="swapImage('prev','images/prev.gif')"><img src="images/prev.gif" name="prev" border="0" vspace=1 alt="Back to Previous document"></a></td>
+
+<td><a href="awflash28.html" onmouseover="swapImage('next','images/nextover.gif'); window.status='Forward to next document';return true" onmouseout="swapImage('next','images/next.gif')"><img src="images/next.gif" name="next" border="0" vspace=1 alt="Forward to next document"></a></td>
+</tr>
+</table>
+
+<br><p>
+</td>
+</tr>
+
+
+</table>
+
+<br><p>
+
+</body>
+</html>

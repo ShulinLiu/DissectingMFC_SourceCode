@@ -1,0 +1,1605 @@
+
+<html>
+<head><title>Macromedia Authorware Attain - Using QuickTime Media: Scripting Reference</title>
+
+<script language="Javascript">
+
+function swapImage(imgName,newImg){
+  if ((navigator.appName == 'Netscape' && parseFloat(navigator.appVersion) >= 3) || (parseFloat(navigator.appVersion) >= 4)){		
+		eval('document.' + imgName + '.src = "' + newImg + '"');
+	}
+}
+
+</script>
+
+</head>
+
+<body link="#333399" vlink="#660033" alink="#000000" bgcolor="#FFFFFF">
+
+
+
+
+<table border="0" cellspacing="0" cellpadding="0" width="95%">
+<tr>
+
+
+<font face="Arial, Helvetica, sans-serif" size="+1"><b>Scripting Reference</b></font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">The QuickTime Xtra provides the following new properties and functions to control QuickTime sprite icons and sprites.</font><p>
+
+<br></tr>
+<tr>
+<td valign="top" align="right">&nbsp;</td><td valign="top"><font face="Arial, Helvetica, sans-serif"><b>center </b></font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b>&nbsp;</font></td>
+<td valign="top"><code>SetIconProperty(IconID@"IconTitle"</code><code>, #</code><code>center,</code><code><font color="#666666">state</font>)</code><p>
+<pre>
+GetIconProperty(IconID@"IconTitle", #center)
+</pre>
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Icon property</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">The </font><code>center</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property has a visible effect only when the </font><code>crop</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property is set to true. The </font><code><font color="#666666">state</font></code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> parameter can have these values:</font><p>
+
+<font face="Arial, Helvetica, sans-serif" size="-1"><b>TRUE</b></font><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> The QuickTime movie is cropped around the center of the movie. </font><p>
+
+<font face="Arial, Helvetica, sans-serif" size="-1"><b>FALSE</b></font><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> The QuickTime movie is cropped from the top left corner of the movie </font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">The </font><code>center</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property can be tested and set.</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Example</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This script sets the setting of the </font><code>center</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property of a QuickTime movie named "QT3" to </font><code>TRUE</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">:</font><p>
+
+<pre>
+SetIconProperty(@"QT3", #crop,TRUE) -- crop must be TRUE
+SetIconProperty(@"QT3", #center,TRUE)
+</pre>
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Related&nbsp;Property</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><a href="#crop">crop</a></font><p>
+
+<br>
+<font face="Arial, Helvetica, sans-serif"><b>controller </b></font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b>&nbsp;</font></td>
+<td valign="top"><code>SetIconProperty(IconID@"IconTitle", #controller, <font color="#666666">state</font>)</code><p>
+
+<pre>
+GetIconProperty(IconID@"IconTitle", #controller)
+</pre>
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Icon property</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This property shows or hides a QuickTime sprite movie's controller. The </font><code><font color="#666666">state</font></code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> parameter can have these values:</font><p>
+
+<font face="Arial, Helvetica, sans-serif" size="-1"><b>TRUE</b></font><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> The QuickTime movie's controller is visible. </font><p>
+
+<font face="Arial, Helvetica, sans-serif" size="-1"><b>FALSE</b></font><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> The QuickTime movie's controller is hidden. </font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">The </font><code>controller</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property can be tested and set. The QuickTime movie must be set to display direct to screen for the controller to be visible.</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Example</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This script reverses the current setting of the </font><code>controller</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property of a QuickTime movie named "Starburst."</font><p>
+
+<pre>
+state := GetIconProperty(IconID@"StarBurst", #<code>controller</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">)
+SetIconProperty(IconID@"StarBurst", #</font><code>controller</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, ~state)
+</font></pre>
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Related&nbsp;Property</b>&nbsp;</font></td>
+<td valign="top"><code><a href="#directToStage">directToStage</a></code><p>
+
+<a name="crop">&nbsp;</a><br>
+<font face="Arial, Helvetica, sans-serif"><b>crop</b></font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b>&nbsp;</font></td>
+<td valign="top"><code>SetIconProperty(IconID@"IconTitle", #crop,<font color="#666666">state</font>)</code><p>
+
+<pre>
+GetIconProperty(IconID@"IconTitle", #<code>crop</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">)
+</font></pre>
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Icon property</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This property affects how a QuickTime movie is displayed in the Presentation window. The </font><code><font color="#666666">state</font></code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> parameter can have these values:</font><p>
+
+<font face="Arial, Helvetica, sans-serif" size="-1"><b>TRUE</b></font><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> The QuickTime movie isn't scaled to fit the sprite. It's cropped to fit inside the sprite rectangle.</font><p>
+
+<font face="Arial, Helvetica, sans-serif" size="-1"><b>FALSE</b></font><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> The QuickTime movie is scaled&#151;either stretched or shrunk&#151;to fit the sprite </font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">The </font><code>crop</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property can be tested and set.</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Example</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This script sets the setting of the </font><code>crop</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property of a QuickTime movie named "QT3" to </font><code>TRUE</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">:</font><p>
+
+<pre>
+SetIconProperty(@"QT3", #crop,TRUE)
+</pre>
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Related&nbsp;Property</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><a href="qt3_aw510.html">center</a>, <a href="qt3_aw510.html">scale</a>, <a href="qt3_aw510.html">translation</a></font><p>
+
+<a name="cuePointNames">&nbsp;</a><br>
+<font face="Arial, Helvetica, sans-serif"><b>cuePointNames </b></font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b>&nbsp;</font></td>
+<td valign="top"><code>GetIconProperty(IconID@"IconTitle", #cuePointNames)</code><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Icon property</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+<td valign="top">
+      <p><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This property 
+        returns a linear list of named cue points set in the QuickTime movie file. 
+        If there are no cue points in the file, the value returned is </font><code>[]</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">. 
+        Use SoundEdit to insert a cue point in a QuickTime file. SoundEdit uses 
+        the term "marker" to refer to the cue points.</font></p>
+      <p><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Newly imported 
+        QuickTime movies have the </font><code>streaming</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> 
+        property set </font><code>TRUE</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> 
+        by default. This means that cue points will be unavailable until the <a href="#streaming"><code>streaming</code></a> 
+        property is set to </font><code>FALSE</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">.</font><br>
+        &nbsp;</p>
+    </td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Related&nbsp;Property</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><a href="#mostRecentCuePoint">mostRecentCuePoint</a></font><p>
+
+<a name="cuePointTimes">&nbsp;</a><br>
+<font face="Arial, Helvetica, sans-serif"><b>cuePointTimes</b></font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b>&nbsp;</font></td>
+<td valign="top"><code>GetIconProperty(IconID@"IconTitle", #cuePointTimes)</code><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Icon property</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+<td valign="top">
+      <p><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This property 
+        returns a linear list of cue point times (in milliseconds) set in the 
+        QuickTime movie file. If there are no cue points in the file, the value 
+        returned is </font><code>[]</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">. 
+        Use SoundEdit to insert a cue point in a QuickTime file. SoundEdit uses 
+        the term "marker" to refer to the cue points.</font></p>
+      <p><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Newly imported 
+        QuickTime movies have the </font><code>streaming</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> 
+        property set </font><code>TRUE</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> 
+        by default. This means that cue points will be unavailable until the <a href="#streaming"><code>streaming</code></a> 
+        property is set to </font><code>FALSE</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">.</font><br>
+        &nbsp;</p>
+    </td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Related&nbsp;Property</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><a href="#mostRecentCuePoint">mostRecentCuePoint</a></font><p>
+
+<br>
+<font face="Arial, Helvetica, sans-serif"><b>currentTime </b></font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b>&nbsp;</font></td>
+<td valign="top"><code>GetSpriteProperty(IconID@"IconTitle", #currentTime)</code><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Sprite property</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This property can be used to determine the time elapsed (in milliseconds) from the start of the specified QuickTime movie. The </font><code>currentTime</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property can be tested but not set.</font><p>
+
+<br>
+<font face="Arial, Helvetica, sans-serif"><b>digitalVideoType</b>&nbsp;</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b>&nbsp;</font></td>
+<td valign="top"><code>GetIconProperty(IconID@"IconTitle", #digitalVideoType)</code><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Icon property</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This property always returns </font><code>#quickTime</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">.</font><p>
+
+<a name="directToStage">&nbsp;</a><br>
+<font face="Arial, Helvetica, sans-serif"><b>directToStage </b></font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b>&nbsp;</font></td>
+<td valign="top"><code>SetIconProperty(IconID@"IconTitle"</code><code><font color="#666666">, #</font></code><code>directToStage,</code><code><font color="#666666">state</font></code><code><font color="#666666">)</font></code><p>
+
+<pre>
+GetIconProperty(IconID@"IconTitle", #<code>directToStage</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">)
+</font></pre>
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Icon property</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This property affects how a QuickTime movie is displayed in the Presentation window. The </font><code><font color="#666666">state</font></code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> parameter can have these values:</font><p>
+
+<font face="Arial, Helvetica, sans-serif" size="-1"><b>TRUE</b></font><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> The QuickTime movie plays in front of all other layers. No objects can appear in front of the movie except as a mask.</font><p>
+
+<font face="Arial, Helvetica, sans-serif" size="-1"><b>FALSE</b></font><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> The QuickTime movie can appear in any layer in the Presentation window. </font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">The </font><code>directToStage</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property can be tested and set.</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Example</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This script sets the setting of the </font><code>directToStage</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property of a QuickTime movie named "QT3" to </font><code>TRUE</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">:</font><p>
+
+<pre>
+SetIconProperty(@"QT3", #directToStage,TRUE)
+</pre>
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Related&nbsp;Property</b>&nbsp;</font></td>
+<td valign="top"><code><a href="qt3_aw510.html">mask</a></code><p>
+
+<br>
+<font face="Arial, Helvetica, sans-serif"><b>duration </b></font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b>&nbsp;</font></td>
+<td valign="top"><code>GetIconProperty(IconID@"IconTitle", #duration)</code><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Icon property</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This property can be used to determine the QuickTime movie's duration in ticks (60ths of a second). The </font><code>duration</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property can be tested but not set.</font><p>
+
+<br>
+<font face="Arial, Helvetica, sans-serif"><b>filename </b></font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b>&nbsp;</font></td>
+<td valign="top"><code>SetIconProperty(IconID@"IconTitle"</code><code><font color="#666666">, #filename</font></code><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">,</font><code><font color="#666666">file</font></code><code><font color="#666666">)</font></code><p>
+
+<pre>
+GetIconProperty(IconID@"IconTitle", #<code>filename</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">)
+</font></pre>
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Icon property</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This property specifies the QuickTime movie file to display at the specified icon title. The </font><code><font color="#666666">file</font></code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> parameter can be an absolute path, a relative path, or a URL.</font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">The </font><code>filename</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property can be tested and set.</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Example</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">The following examples show three ways to specify the </font><code>filename</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property:</font><p>
+
+<pre>
+SetIconProperty(@"QT3", #filename, "sample.mov")
+SetIconProperty(@"QT3", #filename, "C:\qtvr_example.mov")
+SetIconProperty(@"QT3", #filename, &#172;
+"http://www.apple.com/quicktime/samples/qtvrimages/saumur_multirate.mov")
+</pre>
+
+<p>
+
+<br>
+<font face="Arial, Helvetica, sans-serif"><b>frameRate </b></font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><b>Syntax</b>&nbsp;</td>
+<td valign="top"><code>SetIconProperty(IconID@"IconTitle"</code><code><font color="#666666">, #frameRate</font></code><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">,</font><code><font color="#666666">rate</font></code><font color="#666666"><code><font color="#666666">)</font></code><p>
+
+</font><pre><font color="#666666">
+GetIconProperty(IconID@"IconTitle", #</font><code>frameRate</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">)
+</font></pre>
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Icon property</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This property specifies the frame rate at which the QuickTime movie at the specified sprite icon is played. The possible values for the </font><code><font color="#666666">rate</font></code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> parameter correspond to the playback options in the QuickTime Xtra Properties dialog box:</font><p>
+
+<font face="Arial, Helvetica, sans-serif" size="-1"><b>-2 plays every frame as fast as possible </b></font><p>
+
+<font face="Arial, Helvetica, sans-serif" size="-1"><b>-1 plays every frame at the normal rate </b></font><p>
+
+<font face="Arial, Helvetica, sans-serif" size="-1"><b>0 plays the movie in sync with the soundtrack </b></font><p>
+
+<font face="Arial, Helvetica, sans-serif" size="-1"><b>A positive number plays the movie at that frame rate </b></font><p>
+
+<br>
+<font face="Geneva, Arial, Helvetica, sans-serif" size="2">The</font><code>frameRate</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property can be tested and set.</font><br>
+
+<a name="invertMask">&nbsp;</a><br>
+<font face="Arial, Helvetica, sans-serif"><b>invertMask </b></font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b>&nbsp;</font></td>
+<td valign="top"><code>SetIconProperty(IconID@"IconTitle"</code><code><font color="#666666">, #invertMask</font></code><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">,</font><code><font color="#666666">state</font></code><code><font color="#666666">)</font></code><p>
+
+<pre>
+GetIconProperty(IconID@"IconTitle", #invertMask)
+</pre>
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Icon property</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This property controls the way Authorware interprets a QuickTime movie's </font><code>mask</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property. The </font><code>state</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> parameter can have these values:</font><p>
+
+<font face="Arial, Helvetica, sans-serif" size="-1"><b>TRUE</b></font><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> The QuickTime movie is drawn in the white pixels of the movie's mask. </font><p>
+
+<font face="Arial, Helvetica, sans-serif" size="-1"><b>FALSE</b></font><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> The QuickTime movie is drawn in the black pixels of the movie's mask. </font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">The </font><code>invertMask</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property can be tested and set. The default </font><code><font color="#666666">state</font></code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> value is </font><code>FALSE</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">. </font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Specify a mask icon using the </font><code>mask</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> icon property before setting </font><code>invertMask</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">. The QuickTime movie must be set to display direct to screen for </font><code>invertMask</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> to have an effect.</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Example</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This script reverses the current setting of the </font><code>invertMask</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property of a QuickTime movie named "Starburst."</font><p>
+
+<pre>
+state := GetIconProperty(IconID@"StarBurst", #invertMask)
+SetIconProperty(IconID@"StarBurst", #invertMask, ~state)
+</pre>
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Related&nbsp;Property</b>&nbsp;</font></td>
+<td valign="top"><code><a href="#mask">mask</a></code><p>
+
+<br>
+<font face="Arial, Helvetica, sans-serif"><b>isPastCuePoint </b></font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b>&nbsp;</font></td>
+<td valign="top"><code>CallSprite(IconID@"IconTitle", #isPastCuePoint, </code><code><font color="#666666">cuePointID</font></code><code>)</code><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Xtra function</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+    <td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This 
+      function returns the number of times a sprite passes a specified cue point 
+      in its file. The </font><code><font color="#666666">cuePointID</font></code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> 
+      parameter may be an integer or a name. </font> 
+      <p> <font face="Geneva, Arial, Helvetica, sans-serif" size="-1">If </font><code><font color="#666666">cuePointID</font></code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> 
+        is a number, </font><code>isPastCuePoint</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> 
+        returns 1 if the cue point has passed and 0 if it hasn't been passed. 
+        For example, if <code><font color="#666666">cuePointID</font></code> is 
+        2, then <code>isPastCuePoint</code> will return 1 if the second cue point 
+        in the QuickTime movie has passed.</font>
+      <p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">If </font><code><font color="#666666">cuePointID</font></code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> is a name, </font><code>isPastCuePoint</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> returns the number of cue points with that name that have passed.</font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">If the value specified for </font><code><font color="#666666">cuePointID</font></code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> doesn't exist in the QuickTime movie, the function returns 0. </font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">The number returned by </font><code>isPastCuePoint</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> is based on the absolute position of the sprite in the QuickTime movie. For example, if a movie passes cue point Main and then loops and passes Main again, </font><code>isPastCuePoint</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> returns 1 instead of 2. </font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">When the result of </font><code>isPastCuePoint</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> is treated as a Boolean value, the function returns </font><code>TRUE</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> if any cue points identified by </font><code>cuePointID</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> have passed, and </font><code>FALSE</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> if no cue points are passed. </font>
+      <p> <font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Use SoundEdit 
+        to insert a cue point in a QuickTime file. SoundEdit uses the term "marker" 
+        to refer to the cue points.</font>
+      <p><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Newly imported 
+        QuickTime movies have the </font><code>streaming</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> 
+        property set </font><code>TRUE</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> 
+        by default. This means that cue points will be unavailable until the <a href="#streaming"><code>streaming</code></a> 
+        property is set to </font><code>FALSE</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">.</font><br>
+        &nbsp;
+    </td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Related&nbsp;Property</b>&nbsp;</font></td>
+<td valign="top"><code><a href="#cuePointNames">cuePointNames</a></code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, </font><code><a href="#cuePointTimes">cuePointTimes</a></code><p>
+
+<br>
+<font face="Arial, Helvetica, sans-serif"><b>loop</b></font><br>&nbsp;
+
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"></font><code>SetIconProperty(IconID@"IconTitle"</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, #</font><code>loop,</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> state)</font><p>
+
+<pre>
+GetIconProperty(IconID@"IconTitle", #loop)
+</pre>
+<p>
+
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Icon property</font><p>
+
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This property determines whether the specified QuickTime movie is set to loop (</font><code>TRUE</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">) or not (</font><code>FALSE</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">).</font><p>
+
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Example</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This script sets the QuickTime movie named "Starburst" to loop.</font><p>
+
+<pre>
+SetIconProperty(IconID@"StarBurst", #loop, TRUE)
+</pre>
+<p>
+
+<br>
+<font face="Arial, Helvetica, sans-serif"><b>loopBounds</b></font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b>&nbsp;</font></td>
+<td valign="top"><code>SetSpriteProperty(IconID@"IconTitle"</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, #</font><code>loopBounds</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, [</font><code><font color="#666666">startTime, endTime</font></code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">])</font><p>
+
+<pre>
+GetSpriteProperty(IconID@"IconTitle", #loopBounds)
+</pre>
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Sprite property</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This property sets the internal loop points for a QuickTime sprite. The loop points are specified as a list:</font><p>
+
+<pre>
+[startTime, endTime]
+</pre>
+<p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">The </font><code><font color="#666666">startTime</font></code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> and </font><code><font color="#666666">endTime</font></code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> parameters must meet these requirements:</font><p>
+
+<table cellspacing="0" cellpadding="4">
+<tr>
+<td valign="top" width="14"><img src="images/tri.gif" width="14" height="10" vspace="2"></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Both parameters must be integers that specify times in ticks (60ths of a second).</font></td>
+</tr>
+
+<tr>
+<td valign="top" width="14"><img src="images/tri.gif" width="14" height="10" vspace="2"></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">The values must range from 0 to the duration of the QuickTime movie.</font></td>
+</tr>
+
+<tr>
+<td valign="top" width="14"><img src="images/tri.gif" width="14" height="10" vspace="2"></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">The starting time must be less than the ending time.</font></td>
+</tr>
+
+</table>
+
+<p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">If any of these requirements is not met, the QuickTime movie loops through its entire duration.</font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">The </font><code>loopBounds</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property has no effect if the movie's </font><code>loop</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property is set to </font><code>FALSE</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">. Authorware uses these rules to decide how to loop the movie:</font><p>
+
+<table cellspacing="0" cellpadding="4">
+<tr>
+<td valign="top" width="14"><img src="images/tri.gif" width="14" height="10" vspace="2"></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">If the ending time specified by </font><code>loopBounds</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> is reached, the movie loops back to the starting time.</font></td>
+</tr>
+
+<tr>
+<td valign="top" width="14"><img src="images/tri.gif" width="14" height="10" vspace="2"></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">If the end of the movie is reached, the movie loops back to the start of the movie.</font></td>
+</tr>
+
+<tr>
+<td valign="top" width="14"><img src="images/tri.gif" width="14" height="10" vspace="2"></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Authorware stops when it reaches the ending time specified by </font><code>loopBounds</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> or the end of the movie, whichever comes first.</font></td>
+</tr>
+
+</table>
+
+<p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">The </font><code>loopBounds</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property can be tested and set. The default is </font><code>[0,0]</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">.</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Example</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This sprite script sets the starting and ending times for looping within a QuickTime sprite. Notice that the times are set by specifying the number of seconds, which is then converted to ticks by multiplying by 60.</font><p>
+
+<pre>
+SetSpriteProperty(@"QuickTimeIcon", #loopBounds,[(16 * 60),(32 * 60)])
+</pre>
+<p>
+
+<a name="mask">&nbsp;</a><br>
+<font face="Arial, Helvetica, sans-serif"><b>mask</b></font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b>&nbsp;</font></td>
+<td valign="top"><code>SetIconProperty(IconID@"IconTitle"</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, #</font><code>mask</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">,</font><code> IconID@"IconTitle"</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">)</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Icon property</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This property specifies the black and white (1-bit) contents of a display or interaction icon to be used as a mask for QuickTime media rendered direct to screen. The QuickTime media appears in the areas where the mask's pixels are black. The </font><code>mask</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property allows you to take advantage of the performance advantages of a direct to screen digital video while playing a QuickTime movie in a non-rectangular area. The </font><code>mask </code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">property has no effect on non-direct to screen sprite icons.</font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Authorware always aligns the upper-left corner of the contents of the mask icon with the upper-left corner of the QuickTime movie sprite. The mask can't be moved and isn't affected by the </font><code>center</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> or </font><code>crop</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> properties of its associated icon.</font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">For best results, set a QuickTime icon's </font><code>mask</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property before any of its sprites appear in the Presentation window. Setting or changing the </font><code>mask</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property while the sprite appears in the Presentation window can have unpredictable results (for example, the mask might appear as a "freeze frame" of the digital video at the moment the </font><code>mask</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property took effect).</font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Masking is an advanced feature; you may need to do some experimentation to achieve your goal.</font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">The </font><code>mask </code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">property can be tested and set. To remove a mask, set the </font><code>mask </code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">property to </font><code>0</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">.</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Example</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This script sets a mask for the QuickTime sprite icon named "Peeping Tom" before Authorware begins to draw the sprite.</font><p>
+
+<pre>
+SetIconProperty(@"Peeping Tom", #mask, @"Keyhole")
+</pre>
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Related&nbsp;Property</b>&nbsp;</font></td>
+<td valign="top"><code><a href="#directToStage">directToStage</a>, <a href="#invertMask">invertMask</a></code><p>
+
+<br>
+<font face="Arial, Helvetica, sans-serif"><b>mediaBusy </b></font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">GetSpriteProperty(IconID@"IconTitle", #</font><code>mediaBusy</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">)</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Sprite property</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This property returns </font><code>TRUE</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> if the specified QuickTime movie is currently playing. The </font><code>mediaBusy</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property can be tested but not set.</font><p>
+
+<a name="mediaReady">&nbsp;</a><br>
+<font face="Arial, Helvetica, sans-serif"><b>mediaReady </b></font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">GetIconProperty(IconID@"IconTitle", #</font><code>mediaReady</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">)</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Icon property</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This property returns </font><code>TRUE</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> if the specified QuickTime movie is downloaded and ready to play. The </font><code>mediaReady</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property can be tested but not set.</font><p>
+
+<a name="mostRecentCuePoint">&nbsp;</a><br>
+<font face="Arial, Helvetica, sans-serif"><b>mostRecentCuePoint </b></font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b>&nbsp;</font></td>
+<td valign="top"><code>GetSpriteProperty(IconID@"IconTitle", #mostRecentCuePoint)</code><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Sprite property</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This property is the number that identifies the most recent cue point passed in the sprite icon. The value is the ordinal number of the cue point. If no cue points have been passed, the value is 0.</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Related&nbsp;Property</b>&nbsp;</font></td>
+<td valign="top"><code><a href="#cuePointNames">cuePointNames</a></code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, </font><code><a href="#cuePointTimes">cuePointTimes</a></code><p>
+
+<br>
+<font face="Arial, Helvetica, sans-serif"><b>mouseLevel</b></font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b>&nbsp;</font></td>
+<td valign="top"><code>SetSpriteProperty(IconID@"IconTitle"</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, #</font><code>mouseLevel</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, </font><code><font color="#666666">value</font></code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">)</font><p>
+
+<pre>
+GetSpriteProperty(IconID@"IconTitle", #mouseLevel)
+</pre>
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Sprite property</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This property controls how Authorware passes mouse clicks on a QuickTime sprite to QuickTime. Without the QuickTime Xtra, Authorware passes mouse clicks only on the QuickTime controller. The ability to pass mouse clicks within the sprite's bounding rectangle can be useful for interactive media such as QuickTime VR. The </font><code><font color="#666666">value</font></code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> parameter can have these values:</font><p>
+
+<code>#controller</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> passes clicks only on the movie controller. This is the standard behavior without the QuickTime Xtra.</font><p>
+
+<code>#all </code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">passes all mouse clicks within the sprite's bounding rectangle.</font><p>
+
+<code>#none</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> passes no mouse clicks.</font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">The </font><code>mouseLevel</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property can be tested and set. The default value is </font><code>#controller</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">.</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Example</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This script checks to see if the name of the currently executing icon contains the string "QTVR." If it does, it sets the </font><code>mouseLevel</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> to </font><code>#all</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">; otherwise, it sets the </font><code>mouseLevel</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> to </font><code>#none</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">.</font><p>
+
+<pre>
+if Find(" QTVR, IconTitle(ExecutingIconID)) then
+        setSpriteProperty(ExecutingIconID, #mouseLevel, #all)
+    else
+        SetSpriteProperty(ExecutingIconID, #mouseLevel, #none)
+end if
+</pre>
+
+<p>
+
+<br>
+<font face="Arial, Helvetica, sans-serif"><b>mRate</b></font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b>&nbsp;</font></td>
+<td valign="top"><code>SetSpriteProperty(IconID@"IconTitle"</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, #</font><code>mRate</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, </font><code><font color="#666666">value</font></code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">)</font><p>
+
+<pre>
+GetSpriteProperty(IconID@"IconTitle", #<code>mRate</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">)
+</font></pre>
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Sprite property</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This property determines the rate of playback for the QuickTime movie playing in the specified icon. The </font><code><font color="#666666">value</font></code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> parameter can have these values:</font><p>
+
+<font face="Arial, Helvetica, sans-serif" size="-1"><b>1 is normal forward play </b></font><p>
+
+<font face="Arial, Helvetica, sans-serif" size="-1"><b>-1 is reverse </b></font><p>
+
+<font face="Arial, Helvetica, sans-serif" size="-1"><b>0 is stop </b></font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Higher and lower values are possible. For example, a value of 0.5 causes the digital video to play slower than normal. However, frames may be dropped when the value of </font><code>mRate</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> exceeds 1, depending on the performance of the computer the movie is playing on.</font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">The </font><code>mRate</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property can be tested and set.</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Example</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This script toggles forward and reverse playback for the specified QuickTime movie:</font><p>
+
+<pre>
+if (GetSpriteProperty(@"QT3", #mRate)) = 1 then
+        SetSpriteProperty(@"QT3", #mRate,-1)
+    else
+        SetSpriteProperty(@"QT3", #mRate,1)
+end if
+</pre>
+<p>
+
+<br>
+<font face="Arial, Helvetica, sans-serif"><b>mTime</b></font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b>&nbsp;</font></td>
+<td valign="top"><code>SetSpriteProperty(IconID@"IconTitle"</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, #</font><code>mTime</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, </font><code><font color="#666666">value</font></code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">)</font><p>
+
+<pre>
+GetSpriteProperty(IconID@"IconTitle", #<code>mTime</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">)
+</font></pre>
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Sprite property</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This property determines the current time of a QuickTime movie playing in the specified icon. The value of the </font><code>mTime </code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">property is measured in ticks.</font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">The </font><code>mTime</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property can be tested and set.</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Example</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This script restarts the QuickTime movie playing in the "QT3" icon:</font><p>
+
+<pre>
+SetSpriteProperty(@"QT3", #mTime, 0)
+</pre>
+<p>
+
+<br>
+<font face="Arial, Helvetica, sans-serif"><b>pausedAtStart </b></font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b>&nbsp;</font></td>
+<td valign="top"><code>SetIconProperty(IconID@"IconTitle"</code><code><font color="#666666">, #</font></code><code>pausedAtStart,</code><code><font color="#666666">state</font></code><code><font color="#666666">)</font></code><p>
+
+<pre>
+GetIconProperty(IconID@"IconTitle", #<code>pausedAtStart</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">)
+</font></pre>
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Icon property</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This property specifies whether the Paused checkbox in the QuickTime Xtra Properties dialog box is checked or not. The </font><code><font color="#666666">state</font></code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> parameter can have these values:</font><p>
+
+<font face="Arial, Helvetica, sans-serif" size="-1"><b>TRUE</b></font><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> The Paused checkbox is checked. </font><p>
+
+<font face="Arial, Helvetica, sans-serif" size="-1"><b>FALSE</b></font><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> The Paused checkbox is not checked. </font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">The </font><code>pausedAtStart</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property can be tested and set.</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Example</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This script sets the </font><code>pausedAtStart</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property of a QuickTime movie named "QT3" to </font><code>TRUE</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">:</font><p>
+
+<pre>
+SetIconProperty(@"QT3", #<code>pausedAtStart</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">,TRUE)
+</font></pre><font face="Geneva, Arial, Helvetica, sans-serif" size="2">
+<p>
+
+<br>
+<font face="Arial, Helvetica, sans-serif"><b>percentStreamed </b></font><br>&nbsp;</font></td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">GetIconProperty(IconID@"IconTitle", #</font><code>percentStreamed</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">)</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Icon property</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This property returns a value between 1 and 100 to indicate how much of the QuickTime movie has been downloaded. The </font><code>percentStreamed</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property can be tested but not set.</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Related&nbsp;Property</b>&nbsp;</font></td>
+<td valign="top"><code><a href="#mediaReady">mediaReady</a></code><p>
+
+<br>
+<font face="Arial, Helvetica, sans-serif"><b>preload </b></font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b>&nbsp;</font></td>
+<td valign="top"><code>SetIconProperty(IconID@"IconTitle"</code><code><font color="#666666">, #</font></code><code>preload,</code><code><font color="#666666">state</font></code><code><font color="#666666">)</font></code><p>
+
+<pre>
+GetIconProperty(IconID@"IconTitle", #<code>preload</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">)
+</font></pre>
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Icon property</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This property specifies whether the Enable Preload checkbox in the QuickTime Xtra Properties dialog box is checked or not. The </font><code>state</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> parameter can have these values:</font><p>
+
+<font face="Arial, Helvetica, sans-serif" size="-1"><b>TRUE</b></font><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> The Enable Preload checkbox is checked. </font><p>
+
+<font face="Arial, Helvetica, sans-serif" size="-1"><b>FALSE</b></font><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> The Enable Preload checkbox is not checked. </font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">The </font><code>preload</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property can be tested and set.</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Example</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This script sets the </font><code>preload</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property of a QuickTime movie named "QT3" to </font><code>TRUE</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">:</font><p>
+
+<pre>
+SetIconProperty(@"QT3", #<code>preload</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">,TRUE)
+</font></pre><font face="Geneva, Arial, Helvetica, sans-serif" size="2">
+<p>
+
+<br>
+<font face="Arial, Helvetica, sans-serif"><b>QuickTimeVersion</b></font><br>&nbsp;</font></td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">QuickTimeVersion()</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Function</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This function returns a floating-point value that identifies the currently installed version of QuickTime.</font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Windows users: If there are multiple versions of QuickTime 3.0 or later installed, </font><code>QuickTimeVersion</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> returns the latest version. If a version before QuickTime 3.0 is installed, </font><code>QuickTimeVersion</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> returns 2.1.2 regardless of the version installed.</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Example</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This script uses </font><code>QuickTimeVersion</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> to check whether QuickTime is installed. If QuickTime version 3 or later is installed, Authorware jumps to a file containing a QuickTime video. If QuickTime isn't installed, Authorware jumps to a file that employs traditional Authorware animation.</font><p>
+
+<pre>
+if QuickTimeVersion() &gt;= 3 then
+	JumpFile <code>"</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">SplashVideo</font><code>"</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">
+else
+	JumpFile </font><code>"</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">SplashAnimated</font><code>"</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">
+end if
+</font></pre><font face="Geneva, Arial, Helvetica, sans-serif" size="2">
+<p>
+
+<br>
+<font face="Arial, Helvetica, sans-serif"><b>rotation</b></font><br>&nbsp;</font></td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b>&nbsp;</font></td>
+<td valign="top"><code>SetIconProperty(IconID@"IconTitle"</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, #</font><code>rotation</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, </font><code><font color="#666666">degrees</font></code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">)</font><p>
+
+<code>GetIconProperty(IconID@"IconTitle", #rotation)</code><p>
+
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Icon property</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This property controls the rotation of a QuickTime sprite. This property does not rotate the sprite's bounding rectangle or the sprite's controller. Instead, it rotates the image around the image's center point within the sprite's bounding rectangle.</font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">If the sprite's </font><code>crop</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property is set to </font><code>TRUE</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, rotating the sprite frequently moves part of the image out of the viewable area; when the sprite's </font><code>crop</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property is set to </font><code>FALSE</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, the image is scaled to fit within the bounding rectangle (which may cause image distortion).</font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">You specify the rotation in the </font><code><font color="#666666">degrees</font></code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> parameter. The </font><code>rotation</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property can be tested and set. The default value is 0.</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Example</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This script rotates a QuickTime sprite 180 degrees.</font><p>
+
+<pre>
+<code>SpriteRotation := GetIconProperty(IconID@"QuickTime", #rotation)<br>
+SetIconProperty(IconID@"QuickTime", #rotation, SpriteRotation + 180)</code>
+</pre>
+<p>
+
+<br>
+<font face="Arial, Helvetica, sans-serif"><b>scale</b></font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b>&nbsp;</font></td>
+<td valign="top"><code>SetIconProperty(IconID@"IconTitle"</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, #</font><code>scale</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, [</font><code><font color="#666666">xPercent</font></code><code><font color="#666666">, </font></code><code><font color="#666666">yPercent</font></code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">])</font><p>
+
+<code>GetIconProperty(IconID@"IconTitle", #scale)</code><p>
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Icon property</font><p>
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This property controls the scaling of a QuickTime sprite. This property doesn't scale the sprite's bounding rectangle or the sprite's controller. Instead, it scales the image around the image's center point within the bounding rectangle. The scaling is specified as a list containing two percentages:</font><p>
+
+<pre>
+[xPercent, yPercent]
+</pre>
+<p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">The </font><code><font color="#666666">xPercent</font></code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> parameter specifies the amount of horizontal scaling; the </font><code><font color="#666666">yPercent</font></code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> parameter specifies vertical scaling.</font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">When the sprite's </font><code>crop</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property is set to </font><code>TRUE</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, the </font><code>scale</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property can be used to simulate zooming within the sprite's bounding rectangle. When the sprite's </font><code>crop</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property is set to </font><code>FALSE</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, the </font><code>scale</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property is ignored.</font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">The </font><code>scale</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property can be tested and set. The default value is [100,100].</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Example</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This script zooms in on a QuickTime sprite.</font><p>
+
+<pre>
+SetIconProperty(IconID@"QT3", #scale,[150,150])
+</pre>
+<p>
+
+<a name="setTrackEnabled">&nbsp;</a><br>
+<font face="Arial, Helvetica, sans-serif"><b>setTrackEnabled </b></font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b>&nbsp;</font></td>
+<td valign="top"><code>CallSprite(</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">IconID@"IconTitle"</font><code>, #setTrackEnabled, </code><code><font color="#666666">trackNum, state</font></code><code>)</code><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Xtra function</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This function determines whether a QuickTime sprite's track is enabled to play. QuickTime version 3 or later supports multiple tracks for video, sound, text, and other media. </font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Example</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This script toggles the first track in the sprite icon named "QT3."</font><p>
+
+<pre>
+if (CallSprite(@"QT3", #trackEnabled,1) ) = 0 then
+        CallSprite(@"QT3", #setTrackEnabled,1,TRUE)
+    else
+        CallSprite(@"QT3", #setTrackEnabled,1,FALSE)
+end if
+</pre>
+<p>
+
+<br>
+<font face="Arial, Helvetica, sans-serif"><b>sound </b></font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b>&nbsp;</font></td>
+<td valign="top"><code>SetIconProperty(IconID@"IconTitle"</code><code><font color="#666666">, #</font></code><code>sound,</code><code><font color="#666666">state</font></code><code><font color="#666666">)</font></code><p>
+
+<pre>
+GetIconProperty(IconID@"IconTitle", #<code>sound</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">)
+</font></pre>
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Icon property</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This property controls the audio output of the specified QuickTime sprite icon. The </font><code>state</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> parameter can have these values:</font><p>
+
+<font face="Arial, Helvetica, sans-serif" size="-1"><b>TRUE</b></font><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> The QuickTime movie's sound is turned on. </font><p>
+
+<font face="Arial, Helvetica, sans-serif" size="-1"><b>FALSE</b></font><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> The QuickTime movie's sound is turned off. </font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">The </font><code>sound</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property can be tested and set.</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Example</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This script reverses the current setting of the </font><code>sound</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property of a QuickTime movie named "Starburst."</font><p>
+
+<pre>
+state := GetIconProperty(IconID@"StarBurst", #<code>sound</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">)
+SetIconProperty(IconID@"StarBurst", #</font><code>sound</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, ~state)
+</font></pre>
+      <font face="Geneva, Arial, Helvetica, sans-serif" size="2"> 
+      <p> <a name="streaming"></a><br>
+        <font face="Arial, Helvetica, sans-serif"><b>streaming</b></font><br>
+        &nbsp; 
+      </font></td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"></font><code>SetIconProperty(IconID@"IconTitle"</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, #</font><code>streaming,</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> state)</font><p>
+
+<pre>
+GetIconProperty(IconID@"IconTitle", #<code>streaming</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">)
+</font></pre><font face="Geneva, Arial, Helvetica, sans-serif" size="2">
+<p>
+
+</font></td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">QuickTime movies may now be streamed into Authorware. Set </font><code>streaming</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> to </font><code>TRUE</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> to enable this feature. This setting is </font><code>TRUE</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> by default in Authorware 5.1, but </font><code>FALSE</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> by default for any existing ( Authorware 5.0 and earlier ) QuickTime icons. Note: QuickTime 4 must be installed to enable </font><code>streaming</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">.</font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">If a streaming QuickTime file contains cuepoints, then you must set the text track to be preloaded (use a QuickTime editor such as MoviePlayerPro to do this). If you do not preload the text track, Authorware will disable the cuepoints in the QuickTime file so it can stream without downloading the entire file. You will need to reload the file after editing the QuickTime movie to preload the cuepoint track.</font>
+      <p> <font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Newly imported 
+        QuickTime movies have the </font><code>streaming</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> 
+        property set </font><code>TRUE</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> 
+        by default. This means that cue points will be unavailable until the <a href="#streaming"><code>streaming</code></a> 
+        property is set to </font><code>FALSE</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">.</font>
+      <p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">The </font><code>streaming</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property can be tested and set.</font><p>
+
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Example</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This script sets the QuickTime movie named "Starburst" to download completely before playing by setting the </font><code>streaming</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property to </font><code>FALSE</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">.</font><p>
+
+<pre>
+SetIconProperty(IconID@"StarBurst", #streaming, FALSE)
+</pre>
+<p>
+
+<br>
+<font face="Arial, Helvetica, sans-serif"><b>timeScale </b></font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">GetIconProperty(IconID@"IconTitle", #</font><code>timeScale</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">)</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Icon property</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This property gives the time unit per second that the QuickTime movie's frames are based on. For example, QuickTime video is measured in 1/600s of a second so the </font><code>timeScale</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> value is 600. The </font><code>timeScale</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property can be tested but not set.</font><p>
+
+<br>
+<font face="Arial, Helvetica, sans-serif"><b>trackCount </b></font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b>&nbsp;</font></td>
+<td valign="top"><code>CallSprite(</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">IconID@"IconTitle"</font><code>, #trackCount)</code><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Xtra function</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This function returns the number of tracks in the movie at the specified icon. QuickTime version 3 or later supports multiple tracks for video, sound, text, and other media.</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Example</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This script sets the value of the </font><code>NumTracks</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> variable to the number of tracks in the sprite icon named "QT3."</font><p>
+
+<pre>
+<code>NumTracks</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> := CallSprite(@"QT3", #trackCount)
+</font></pre><font face="Geneva, Arial, Helvetica, sans-serif" size="2">
+<p>
+
+<br>
+<font face="Arial, Helvetica, sans-serif"><b>trackEnabled </b></font><br>&nbsp;</font></td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b>&nbsp;</font></td>
+<td valign="top"><code>CallSprite(</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">IconID@"IconTitle"</font><code>, #trackEnabled, </code><code><font color="#666666">trackNum</font></code><code>)</code><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Xtra function</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This function indicates whether the specified track of a digital video is enabled to play. Use the </font><code><a href="#setTrackEnabled">setTrackEnabled</a></code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> function to enable or disable a track.</font><p>
+
+<table cellspacing="0" cellpadding="4">
+<tr>
+<td valign="top" width="14"><img src="images/tri.gif" width="14" height="10" vspace="2"></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">When </font><code>trackEnabled</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> is </font><code>TRUE</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, the specified track is enabled. </font></td>
+</tr>
+
+<tr>
+<td valign="top" width="14"><img src="images/tri.gif" width="14" height="10" vspace="2"></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">When </font><code>trackEnabled</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> is </font><code>FALSE</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, the specified track is disabled. </font></td>
+</tr>
+
+</table>
+
+<br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Example</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This script toggles the first track in the sprite icon named "QT3."</font><p>
+
+<pre>
+if (CallSprite(@"QT3", #trackEnabled,1) ) = 0 then
+        CallSprite(@"QT3", #setTrackEnabled,1,TRUE)
+    else
+        CallSprite(@"QT3", #setTrackEnabled,1,FALSE)
+end if
+</pre>
+<p>
+
+<br>
+<font face="Arial, Helvetica, sans-serif"><b>trackNextKeyTime</b></font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b>&nbsp;</font></td>
+<td valign="top"><code>CallSprite(IconID@"IconTitle"</code><code><font color="#666666">, #</font></code><code>trackNextKeyTime, </code><code><font color="#666666">trackNum</font></code><code><font color="#666666">)</font></code><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Xtra function</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This function returns the time in ticks (60ths of a second) of the keyframe that follows the current time in the QuickTime movie. The movie's track is specified by </font><code><font color="#666666">trackNum</font></code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">. The returned value can be tested but not set.</font><p>
+
+<br>
+<font face="Arial, Helvetica, sans-serif"><b>trackNextSampleTime</b></font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b>&nbsp;</font></td>
+<td valign="top"><code>CallSprite(IconID@"IconTitle"</code><code><font color="#666666">, #</font></code><code>trackNextSampleTime, </code><code><font color="#666666">trackNum</font></code><code><font color="#666666">)</font></code><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Xtra function</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This function returns the time in ticks (60ths of a second) of the next sample that follows the QuickTime movie's current time. It's useful for locating text tracks in a QuickTime movie. The returned value can be tested but not set.</font><p>
+
+<br>
+<font face="Arial, Helvetica, sans-serif"><b>trackPreviousKeyTime</b></font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b>&nbsp;</font></td>
+<td valign="top"><code>CallSprite(IconID@"IconTitle"</code><code><font color="#666666">, #</font></code><code>trackPreviousKeyTime, </code><code><font color="#666666">trackNum</font></code><code><font color="#666666">)</font></code><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Xtra function</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This function returns the time in ticks (60ths of a second) of the prior keyframe that precedes the current time in the QuickTime movie. The movie's track is specified by </font><code><font color="#666666">trackNum</font></code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">. The returned value can be tested but not set.</font><p>
+
+<br>
+<font face="Arial, Helvetica, sans-serif"><b>trackPreviousSampleTime</b></font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b>&nbsp;</font></td>
+<td valign="top"><code>CallSprite(IconID@"IconTitle"</code><code><font color="#666666">, #</font></code><code>trackPreviousSampleTime, </code><code><font color="#666666">trackNum</font></code><code><font color="#666666">)</font></code><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Xtra function</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This function returns the time in ticks (60ths of a second) of the sample that precedes the QuickTime movie's current time. It is useful for locating text tracks in a QuickTime movie. The returned value can be tested but not set.</font><p>
+
+<br>
+<font face="Arial, Helvetica, sans-serif"><b>trackStartTime</b></font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b>&nbsp;</font></td>
+<td valign="top"><code>CallSprite(</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">IconID@"IconTitle"</font><code>, #trackStartTime,</code><code><font color="#666666"> </font></code><code><font color="#666666">trackNum</font></code><code>)</code><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Xtra function</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This function returns the start time of the specified track of the specified QuickTime movie in ticks (60ths of a second).</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Example</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This script sets the value of the </font><code>StartTime</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> variable to the default starting time of the second track in the sprite icon named "QT3."</font><p>
+
+<pre>
+<code>StartTime</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> := CallSprite(@"QT3", #</font><code>trackStartTime</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, 2)
+</font></pre><font face="Geneva, Arial, Helvetica, sans-serif" size="2">
+<p>
+
+<br>
+<font face="Arial, Helvetica, sans-serif"><b>trackStopTime</b></font><br>&nbsp;</font></td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b>&nbsp;</font></td>
+<td valign="top"><code>CallSprite(</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">IconID@"IconTitle"</font><code>, #trackStopTime,</code><code><font color="#666666"> </font></code><code><font color="#666666">trackNum</font></code><code>)</code><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Xtra function</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This function returns the stop time of the specified track of the specified QuickTime movie in ticks (60ths of a second).</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Example</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This script sets the value of the </font><code>EndTime</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> variable to the default ending time of the second track in the sprite icon named "QT3."</font><p>
+
+<pre>
+<code>EndTime</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> := CallSprite(@"QT3", #</font><code>trackStopTime</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, 2)
+</font></pre><font face="Geneva, Arial, Helvetica, sans-serif" size="2">
+<p>
+
+<br>
+<font face="Arial, Helvetica, sans-serif"><b>trackType </b></font><br>&nbsp;</font></td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b>&nbsp;</font></td>
+<td valign="top"><code>CallSprite(</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">IconID@"IconTitle"</font><code>, #trackType,</code><code><font color="#666666"> </font></code><code><font color="#666666">trackNum</font></code><code>)</code><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Xtra function</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This function returns a symbol to identify the type of the specified track in the movie at the specified icon. QuickTime version 3 or later supports multiple tracks for video, sound, text, and other media. Possible return values include</font><code> #video</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, </font><code>#sound</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, and </font><code>#text</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">.</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Example</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This script sets the value of the </font><code>SoundTrack</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> variable depending on the presence of sound in the second track of the sprite icon named "QT3."</font><p>
+
+<pre>
+If CallSprite(@"QT3", #trackType, 2) = #sound then
+        SoundTrack := "sound available"
+    else
+        SoundTrack := "no sound available"
+end if
+</pre>
+<p>
+
+<br>
+<font face="Arial, Helvetica, sans-serif"><b>trackText</b></font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b>&nbsp;</font></td>
+<td valign="top"><code>CallSprite</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">(IconID@"IconTitle", #</font><code>trackText</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, </font><code><font color="#666666">trackNum</font></code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">)</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Xtra function</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This function returns the text that is at the current time in the specified track of the QuickTime movie. The result is a string value, which can be up to 32K characters long. This function applies to text tracks only.</font><p>
+
+<br>
+<font face="Arial, Helvetica, sans-serif"><b>translation</b></font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b>&nbsp;</font></td>
+<td valign="top"><code>SetIconProperty(IconID@"IconTitle"</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, #</font><code>translation</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, [</font><code><font color="#666666">xOffset</font></code><code><font color="#666666">, </font></code><code><font color="#666666">yOffset</font></code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">])</font><p>
+
+<code>GetIconProperty(IconID@"IconTitle", #translation)</code><p>
+
+<code>SetSpriteProperty(IconID@"IconTitle", #translation, [</code><code><font color="#666666">xOffset</font></code><code><font color="#666666">, </font></code><code><font color="#666666">yOffset</font></code><code>])</code><p>
+
+<code>GetSpriteProperty(IconID@"IconTitle", #translation)</code><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Icon property</font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Sprite property</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This property controls the offset of a QuickTime sprite's image within the sprite's bounding box. This offset is expressed in relation to the sprite's default location, as set by its </font><code>center</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property. When </font><code>center</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> is set to </font><code>TRUE</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, the sprite is offset relative to the center of the bounding rectangle; when </font><code>center</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> is set to </font><code>FALSE</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, the sprite is offset relative to the upper-left corner of the bounding rectangle. The offset is set as a list:</font><p>
+
+<pre>
+[xOffset, yOffset]
+</pre>
+<p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">The </font><code><font color="#666666">xOffset</font></code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> parameter specifies the horizontal offset, in pixels, from the sprite's default location; the </font><code><font color="#666666">yOffset</font></code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> parameter specifies the vertical offset. You can specify offsets as positive or negative integers.</font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">When the sprite's </font><code>crop</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property is set to </font><code>TRUE</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, the </font><code>translation</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property can be used to mask portions of the QuickTime movie by moving them outside the bounding rectangle. When the </font><code>crop</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property is set to </font><code>FALSE</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, the </font><code>translation</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property is ignored and the sprite is always positioned at the upper-left corner of the sprite's rectangle.</font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">The </font><code>translation</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property can be tested and set. The default is [0,0].</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Example</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This script assumes that the </font><code>center</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property of a 320-pixel-wide QuickTime sprite is set to </font><code>FALSE</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">. It moves the movie's horizontal translation point to the right edge of the sprite by 10 pixels. This has a "wipe right" effect, moving the sprite out of view to the right each time the script executes. </font><p>
+
+<pre>
+horizontalPosition := GetSpriteProperty(IconID@"QuickTime", #translation)
+if horizontalPosition &lt; 320 then
+	SetSpriteProperty(IconID@"QuickTime", #translation, horizontalPosition + [10,0])
+end if
+</pre>
+<p>
+
+<br>
+<font face="Arial, Helvetica, sans-serif"><b>video </b></font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b>&nbsp;</font></td>
+<td valign="top"><code>SetIconProperty(IconID@"IconTitle"</code><code><font color="#666666">, #</font></code><code>video,</code><code><font color="#666666">state</font></code><code><font color="#666666">)</font></code><p>
+
+<pre>
+GetIconProperty(IconID@"IconTitle", #<code>video</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">)
+</font></pre>
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Icon property</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This property enables or disables the video output of the specified QuickTime sprite icon. The </font><code><font color="#666666">state</font></code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> parameter can have these values:</font><p>
+
+<font face="Arial, Helvetica, sans-serif" size="-1"><b>TRUE</b></font><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> The QuickTime movie's video is visible. </font><p>
+
+<font face="Arial, Helvetica, sans-serif" size="-1"><b>FALSE</b></font><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> The QuickTime movie's video is hidden. </font><p>
+
+<font face="Geneva, Arial, Helvetica, sans-serif" size="-1">The </font><code>video</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property can be tested and set.</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Example</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This script reverses the current setting of the </font><code>video</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property of a QuickTime movie named "Starburst."</font><p>
+
+<pre>
+state := GetIconProperty(IconID@"StarBurst", #<code>video</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">)
+SetIconProperty(IconID@"StarBurst", #</font><code>video</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, ~state)
+</font></pre><font face="Geneva, Arial, Helvetica, sans-serif" size="2">
+<p>
+
+<br>
+<font face="Arial, Helvetica, sans-serif"><b>volumeLevel</b></font><br>&nbsp;</font></td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Syntax</b>&nbsp;</font></td>
+<td valign="top"><code>SetSpriteProperty(IconID@"IconTitle"</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">, #</font><code>volumeLevel,</code><code><font color="#666666">level</font></code><font face="Geneva, Arial, Helvetica, sans-serif" size="2">)</font><p>
+
+<pre>
+GetSpriteProperty(IconID@"IconTitle", #volumeLevel)
+</pre>
+</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Type</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">Sprite property</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Description</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This property controls the sound volume of a QuickTime sprite. You can set the sound level from 0 (mute) to 256 (full volume). The </font><code>volumeLevel</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> property can be tested and set.</font><br>&nbsp;</td>
+</tr>
+
+<tr>
+<td valign="top" align="right"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1"><b>Example</b>&nbsp;</font></td>
+<td valign="top"><font face="Geneva, Arial, Helvetica, sans-serif" size="-1">This script checks if the </font><code>volumeLevel</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> of the QuickTime sprite is greater than 200. If it is, the script sets the </font><code>volumeLevel</code><font face="Geneva, Arial, Helvetica, sans-serif" size="2"> to 150.</font><p>
+
+<pre>
+if GetSpriteProperty(IconID@"QuickTime", #volumeLevel) &gt; 200 then
+	SetSpriteProperty(IconID@"QuickTime", #volumeLevel,150)
+end if
+</pre>
+<p>
+
+
+
+<table border="0">
+<tr>
+<td><a href="qt3_aw5.html" onmouseover="swapImage('back','images/contentsover.gif'); window.status='To Table of Contents';return true" onmouseout="swapImage('back','images/contents.gif')"><img src="images/contents.gif" name="back" border="0" vspace=1 alt="To Table of Contents"></a></td>
+
+<td><a href="qt3_aw509.html" onmouseover="swapImage('prev','images/prevover.gif'); window.status='Back to previous document';return true" onmouseout="swapImage('prev','images/prev.gif')"><img src="images/prev.gif" name="prev" border="0" vspace=1 alt="Back to Previous document"></a></td>
+<td><a href="qtvr02.html" onmouseover="swapImage('next','images/nextover.gif'); window.status='Forward to next document';return true" onmouseout="swapImage('next','images/next.gif')"><img src="images/next.gif" name="next" border="0" vspace=1 alt="Forward to next document"></a></td></tr>
+</table>
+
+<br><p>
+</td>
+</tr>
+
+
+</table>
+
+<br><p>
+
+</body>
+</html>
