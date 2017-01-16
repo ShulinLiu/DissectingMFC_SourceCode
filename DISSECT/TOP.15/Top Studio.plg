@@ -1,0 +1,50 @@
+--------------------Configuration: Top Studio - Win32 Pseudo-Debug--------------------
+Begining build with project "H:\u004\prog\Top.16\Top Studio.dsp", at root.
+Active configuration is Win32 (x86) Dynamic-Link Library (based on Win32 (x86) Dynamic-Link Library)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /MD /W3 /Gm /GX /Zi /Od /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_PSEUDO_DEBUG" /D "_WINDLL" /D "_AFXDLL" /D "_AFXEXT" /Fp"Debug/Top Studio.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /c "
+			"OLE Type Library Maker" with flags "/nologo /D "NDEBUG" /mktyplib203 /o NUL /win32 "
+			"Win32 Resource Compiler" with flags "/l 0x404 /fo"Debug/Top Studio.res" /d "NDEBUG" /d "_PSEUDO_DEBUG" /d "_AFXDLL" "
+			"Browser Database Maker" with flags "/nologo /o"Debug/Top Studio.bsc" "
+			"COFF Linker for 80x86" with flags "/nologo /subsystem:windows /dll /incremental:yes /pdb:"Debug/Top Studio.pdb" /debug /machine:I386 /out:"Debug/Top Studio.awx" /implib:"Debug/Top Studio.lib" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "D:\WIN95\TEMP\RSP23B5.BAT" with contents <@echo off
+call ".\makehelp.bat"
+copy ".\Debug\Top Studio.hlp" "E:\DEVSTUDIO\SHAREDIDE\Template"
+>
+Creating command line "D:\WIN95\TEMP\RSP23B5.BAT" 
+Creating command line "rc.exe /l 0x404 /fo"Debug/Top Studio.res" /d "NDEBUG" /d "_PSEUDO_DEBUG" /d "_AFXDLL" "H:\u004\prog\Top.16\Top Studio.rc"" 
+Making help file...
+Syntax error
+File not found - Top Studio.hlp                  
+        0 file(s) copied
+
+File not found - .\Debug\Top Studio.hlp          
+        0 file(s) copied
+Creating temp file "D:\WIN95\TEMP\RSP30B0.TMP" with contents </nologo /subsystem:windows /dll /incremental:yes /pdb:"Debug/Top Studio.pdb" /debug /machine:I386 /out:"Debug/Top Studio.awx" /implib:"Debug/Top Studio.lib" 
+.\Debug\Chooser.obj
+.\Debug\Cstm1Dlg.obj
+.\Debug\Debug.obj
+.\Debug\StdAfx.obj
+".\Debug\Top Studio.obj"
+".\Debug\Top StudioAw.obj"
+".\Debug\Top Studio.res">
+Creating command line "link.exe @D:\WIN95\TEMP\RSP30B0.TMP" 
+Creating temp file "D:\WIN95\TEMP\RSP30B1.BAT" with contents <@echo off
+if not exist "E:\DEVSTUDIO\SHAREDIDE\Template\nul" md "E:\DEVSTUDIO\SHAREDIDE\Template"
+copy ".\Debug\Top Studio.awx" "E:\DEVSTUDIO\SHAREDIDE\Template"
+if exist ".\Debug\Top Studio.pdb" copy ".\Debug\Top Studio.pdb"  "E:\DEVSTUDIO\SHAREDIDE\Template"
+>
+Creating command line "D:\WIN95\TEMP\RSP30B1.BAT" 
+Compiling resources...
+Linking...
+Copying custom AppWizard to Template directory...
+        1 file(s) copied
+        1 file(s) copied
+
+
+
+Top Studio.awx - 0 error(s), 0 warning(s)

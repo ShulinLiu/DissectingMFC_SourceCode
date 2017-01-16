@@ -1,0 +1,57 @@
+--------------------Configuration: Graph - Win32 Release--------------------
+Begining build with project "H:\u004\prog\graph2.13\Graph.dsp", at root.
+Active configuration is Win32 (x86) Application (based on Win32 (x86) Application)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp".\Release/Graph.pch" /Yu"stdafx.h" /Fo".\Release/" /Fd".\Release/" /FD /c "
+			"OLE Type Library Maker" with flags "/nologo /D "NDEBUG" /mktyplib203 /win32 "
+			"Win32 Resource Compiler" with flags "/l 0x404 /fo".\Release/Graph.res" /d "NDEBUG" /d "_AFXDLL" "
+			"Browser Database Maker" with flags "/nologo /o".\Release/Graph.bsc" "
+			"COFF Linker for 80x86" with flags "/nologo /subsystem:windows /incremental:no /pdb:".\Release/Graph.pdb" /machine:I386 /out:".\Release/Graph.exe" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "D:\WIN95\TEMP\RSP3064.TMP" with contents </nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp".\Release/Graph.pch" /Yu"stdafx.h" /Fo".\Release/" /Fd".\Release/" /FD /c 
+"H:\u004\prog\graph2.13\BarView.cpp"
+"H:\u004\prog\graph2.13\ChildFrm.cpp"
+"H:\u004\prog\graph2.13\Graph.cpp"
+"H:\u004\prog\graph2.13\GraphDoc.cpp"
+"H:\u004\prog\graph2.13\GraphView.cpp"
+"H:\u004\prog\graph2.13\MainFrm.cpp"
+"H:\u004\prog\graph2.13\NewDoc.cpp"
+"H:\u004\prog\graph2.13\TextView.cpp"
+>
+Creating command line "cl.exe @D:\WIN95\TEMP\RSP3064.TMP" 
+Creating temp file "D:\WIN95\TEMP\RSP3065.TMP" with contents </nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp".\Release/Graph.pch" /Yc"stdafx.h" /Fo".\Release/" /Fd".\Release/" /FD /c 
+"H:\u004\prog\graph2.13\StdAfx.cpp"
+>
+Creating command line "cl.exe @D:\WIN95\TEMP\RSP3065.TMP" 
+Creating temp file "D:\WIN95\TEMP\RSP3066.TMP" with contents </nologo /subsystem:windows /incremental:no /pdb:".\Release/Graph.pdb" /machine:I386 /out:".\Release/Graph.exe" 
+.\Release\BarView.obj
+.\Release\ChildFrm.obj
+.\Release\Graph.obj
+.\Release\GraphDoc.obj
+.\Release\GraphView.obj
+.\Release\MainFrm.obj
+.\Release\NewDoc.obj
+.\Release\StdAfx.obj
+.\Release\TextView.obj
+.\Release\Graph.res>
+Creating command line "link.exe @D:\WIN95\TEMP\RSP3066.TMP" 
+Compiling...
+StdAfx.cpp
+Compiling...
+BarView.cpp
+ChildFrm.cpp
+Graph.cpp
+GraphDoc.cpp
+GraphView.cpp
+MainFrm.cpp
+NewDoc.cpp
+TextView.cpp
+Generating Code...
+Linking...
+
+
+
+Graph.exe - 0 error(s), 0 warning(s)

@@ -1,0 +1,48 @@
+--------------------Configuration: Scribble - Win32 Release--------------------
+Begining build with project "H:\u004\prog\scribble\Step2\Scribble.dsp", at root.
+Active configuration is Win32 (x86) Application (based on Win32 (x86) Application)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp".\Release/Scribble.pch" /Yu"stdafx.h" /Fo".\Release/" /Fd".\Release/" /FD /c "
+			"OLE Type Library Maker" with flags "/nologo /D "NDEBUG" /mktyplib203 /win32 "
+			"Win32 Resource Compiler" with flags "/l 0x409 /fo".\Release/Scribble.res" /d "NDEBUG" /d "_AFXDLL" "
+			"Browser Database Maker" with flags "/nologo /o".\Release/Scribble.bsc" "
+			"COFF Linker for 80x86" with flags "/nologo /subsystem:windows /incremental:no /pdb:".\Release/Scribble.pdb" /machine:I386 /out:".\Release/Scribble.exe" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "D:\WIN95\TEMP\RSPC385.TMP" with contents </nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp".\Release/Scribble.pch" /Yu"stdafx.h" /Fo".\Release/" /Fd".\Release/" /FD /c 
+"H:\u004\prog\scribble\Step2\ChildFrm.cpp"
+"H:\u004\prog\scribble\Step2\MainFrm.cpp"
+"H:\u004\prog\scribble\Step2\Scribble.cpp"
+"H:\u004\prog\scribble\Step2\ScribDoc.cpp"
+"H:\u004\prog\scribble\Step2\ScribVw.cpp"
+>
+Creating command line "cl.exe @D:\WIN95\TEMP\RSPC385.TMP" 
+Creating temp file "D:\WIN95\TEMP\RSPC386.TMP" with contents </nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp".\Release/Scribble.pch" /Yc"stdafx.h" /Fo".\Release/" /Fd".\Release/" /FD /c 
+"H:\u004\prog\scribble\Step2\StdAfx.cpp"
+>
+Creating command line "cl.exe @D:\WIN95\TEMP\RSPC386.TMP" 
+Creating temp file "D:\WIN95\TEMP\RSPC387.TMP" with contents </nologo /subsystem:windows /incremental:no /pdb:".\Release/Scribble.pdb" /machine:I386 /out:".\Release/Scribble.exe" 
+.\Release\ChildFrm.obj
+.\Release\MainFrm.obj
+.\Release\Scribble.obj
+.\Release\ScribDoc.obj
+.\Release\ScribVw.obj
+.\Release\StdAfx.obj
+.\Release\Scribble.res>
+Creating command line "link.exe @D:\WIN95\TEMP\RSPC387.TMP" 
+Compiling...
+StdAfx.cpp
+Compiling...
+ChildFrm.cpp
+MainFrm.cpp
+Scribble.cpp
+ScribDoc.cpp
+ScribVw.cpp
+Generating Code...
+Linking...
+
+
+
+Scribble.exe - 0 error(s), 0 warning(s)

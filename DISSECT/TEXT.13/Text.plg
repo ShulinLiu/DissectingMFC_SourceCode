@@ -1,0 +1,53 @@
+--------------------Configuration: Text - Win32 Release--------------------
+Begining build with project "H:\u004\prog\text.13\Text.dsp", at root.
+Active configuration is Win32 (x86) Application (based on Win32 (x86) Application)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp".\Release/Text.pch" /Yu"stdafx.h" /Fo".\Release/" /Fd".\Release/" /FD /c "
+			"OLE Type Library Maker" with flags "/nologo /D "NDEBUG" /mktyplib203 /win32 "
+			"Win32 Resource Compiler" with flags "/l 0x404 /fo".\Release/Text.res" /d "NDEBUG" /d "_AFXDLL" "
+			"Browser Database Maker" with flags "/nologo /o".\Release/Text.bsc" "
+			"COFF Linker for 80x86" with flags "/nologo /subsystem:windows /incremental:no /pdb:".\Release/Text.pdb" /machine:I386 /out:".\Release/Text.exe" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating command line "rc.exe /l 0x404 /fo".\Release/Text.res" /d "NDEBUG" /d "_AFXDLL" "H:\u004\prog\text.13\Text.rc"" 
+Creating temp file "D:\WIN95\TEMP\RSP50.TMP" with contents </nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp".\Release/Text.pch" /Yu"stdafx.h" /Fo".\Release/" /Fd".\Release/" /FD /c 
+"H:\u004\prog\text.13\ChildFrm.cpp"
+"H:\u004\prog\text.13\HexView.cpp"
+"H:\u004\prog\text.13\MainFrm.cpp"
+"H:\u004\prog\text.13\Text.cpp"
+"H:\u004\prog\text.13\TextDoc.cpp"
+"H:\u004\prog\text.13\TextView.cpp"
+>
+Creating command line "cl.exe @D:\WIN95\TEMP\RSP50.TMP" 
+Creating temp file "D:\WIN95\TEMP\RSP0051.TMP" with contents </nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp".\Release/Text.pch" /Yc"stdafx.h" /Fo".\Release/" /Fd".\Release/" /FD /c 
+"H:\u004\prog\text.13\StdAfx.cpp"
+>
+Creating command line "cl.exe @D:\WIN95\TEMP\RSP0051.TMP" 
+Creating temp file "D:\WIN95\TEMP\RSP0052.TMP" with contents </nologo /subsystem:windows /incremental:no /pdb:".\Release/Text.pdb" /machine:I386 /out:".\Release/Text.exe" 
+.\Release\ChildFrm.obj
+.\Release\HexView.obj
+.\Release\MainFrm.obj
+.\Release\StdAfx.obj
+.\Release\Text.obj
+.\Release\TextDoc.obj
+.\Release\TextView.obj
+.\Release\Text.res>
+Creating command line "link.exe @D:\WIN95\TEMP\RSP0052.TMP" 
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+ChildFrm.cpp
+HexView.cpp
+MainFrm.cpp
+Text.cpp
+TextDoc.cpp
+TextView.cpp
+Generating Code...
+Linking...
+
+
+
+Text.exe - 0 error(s), 0 warning(s)

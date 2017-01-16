@@ -1,0 +1,33 @@
+--------------------Configuration: mltithrd - Win32 Debug--------------------
+Begining build with project "h:\u004\prog\mltithrd.14\mltithrd.dsp", at root.
+Active configuration is Win32 (x86) Application (based on Win32 (x86) Application)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /MDd /W3 /Gm /GX /Zi /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /Fp"Debug/mltithrd.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /c "
+			"OLE Type Library Maker" with flags "/nologo /D "_DEBUG" /mktyplib203 /o NUL /win32 "
+			"Win32 Resource Compiler" with flags "/l 0x404 /fo"Debug/mltithrd.res" /d "_DEBUG" /d "_AFXDLL" "
+			"Browser Database Maker" with flags "/nologo /o"Debug/mltithrd.bsc" "
+			"COFF Linker for 80x86" with flags "/nologo /subsystem:windows /incremental:yes /pdb:"Debug/mltithrd.pdb" /debug /machine:I386 /out:"Debug/mltithrd.exe" /pdbtype:sept "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "D:\WIN95\TEMP\RSP7283.TMP" with contents </nologo /MDd /W3 /Gm /GX /Zi /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /Fp"Debug/mltithrd.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /c 
+"H:\u004\prog\mltithrd.14\mltithrdView.cpp"
+>
+Creating command line "cl.exe @D:\WIN95\TEMP\RSP7283.TMP" 
+Creating temp file "D:\WIN95\TEMP\RSP7284.TMP" with contents </nologo /subsystem:windows /incremental:yes /pdb:"Debug/mltithrd.pdb" /debug /machine:I386 /out:"Debug/mltithrd.exe" /pdbtype:sept 
+.\Debug\mltithrd.obj
+.\Debug\StdAfx.obj
+.\Debug\MainFrm.obj
+.\Debug\ChildFrm.obj
+.\Debug\mltithrdDoc.obj
+.\Debug\mltithrdView.obj
+.\Debug\mltithrd.res>
+Creating command line "link.exe @D:\WIN95\TEMP\RSP7284.TMP" 
+Compiling...
+mltithrdView.cpp
+Linking...
+
+
+
+mltithrd.exe - 0 error(s), 0 warning(s)
