@@ -1,0 +1,50 @@
+--------------------Configuration: Scribble - Win32 Release--------------------
+Begining build with project "H:\u004\prog\scribble\step0\Scribble.dsp", at root.
+Active configuration is Win32 (x86) Application (based on Win32 (x86) Application)
+
+Project's tools are:
+			"32-bit C/C++ Compiler for 80x86" with flags "/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR".\Release/" /Fp".\Release/Scribble.pch" /Yu"stdafx.h" /Fo".\Release/" /Fd".\Release/" /FD /c "
+			"OLE Type Library Maker" with flags "/nologo /D "NDEBUG" /mktyplib203 /win32 "
+			"Win32 Resource Compiler" with flags "/l 0x404 /fo".\Release/Scribble.res" /d "NDEBUG" /d "_AFXDLL" "
+			"Browser Database Maker" with flags "/nologo /o".\Release/Scribble.bsc" "
+			"COFF Linker for 80x86" with flags "/nologo /subsystem:windows /incremental:no /pdb:".\Release/Scribble.pdb" /machine:I386 /out:".\Release/Scribble.exe" "
+			"Custom Build" with flags ""
+			"<Component 0xa>" with flags ""
+
+Creating temp file "D:\WIN95\TEMP\RSPA0A3.TMP" with contents </nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR".\Release/" /Fp".\Release/Scribble.pch" /Yu"stdafx.h" /Fo".\Release/" /Fd".\Release/" /FD /c 
+"H:\u004\prog\scribble\step0\ChildFrm.cpp"
+"H:\u004\prog\scribble\step0\MainFrm.cpp"
+"H:\u004\prog\scribble\step0\Scribble.cpp"
+"H:\u004\prog\scribble\step0\ScribbleDoc.cpp"
+"H:\u004\prog\scribble\step0\ScribbleView.cpp"
+>
+Creating command line "cl.exe @D:\WIN95\TEMP\RSPA0A3.TMP" 
+Creating temp file "D:\WIN95\TEMP\RSPA0A4.TMP" with contents </nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR".\Release/" /Fp".\Release/Scribble.pch" /Yc"stdafx.h" /Fo".\Release/" /Fd".\Release/" /FD /c 
+"H:\u004\prog\scribble\step0\StdAfx.cpp"
+>
+Creating command line "cl.exe @D:\WIN95\TEMP\RSPA0A4.TMP" 
+Creating temp file "D:\WIN95\TEMP\RSPA0A5.TMP" with contents </nologo /subsystem:windows /incremental:no /pdb:".\Release/Scribble.pdb" /machine:I386 /out:".\Release/Scribble.exe" 
+.\Release\ChildFrm.obj
+.\Release\MainFrm.obj
+.\Release\Scribble.obj
+.\Release\ScribbleDoc.obj
+.\Release\ScribbleView.obj
+.\Release\StdAfx.obj
+.\Release\Scribble.res>
+Creating command line "link.exe @D:\WIN95\TEMP\RSPA0A5.TMP" 
+Compiling...
+StdAfx.cpp
+Compiling...
+ChildFrm.cpp
+MainFrm.cpp
+Scribble.cpp
+ScribbleDoc.cpp
+ScribbleView.cpp
+Generating Code...
+Linking...
+Creating command line "bscmake.exe /nologo /o".\Release/Scribble.bsc"  .\Release\StdAfx.sbr .\Release\ChildFrm.sbr .\Release\MainFrm.sbr .\Release\Scribble.sbr .\Release\ScribbleDoc.sbr .\Release\ScribbleView.sbr" 
+Creating browse info file...
+
+
+
+Scribble.exe - 0 error(s), 0 warning(s)
