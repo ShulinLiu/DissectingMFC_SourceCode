@@ -1,5 +1,7 @@
-#include <iostream.h>
+#include <iostream>
 #include <stdio.h>
+
+using namespace std;
 
 class ClassA
 {
@@ -29,7 +31,7 @@ void func2() {  }
 virtual void vfunc1() {    }
 };
 
-void main()
+int main()
 {
   cout << sizeof(ClassA) << endl;
   cout << sizeof(ClassB) << endl;
@@ -77,5 +79,3 @@ void main()
   cout << (int)*((char*)pb+4) << endl;
   cout << (int)*((char*)pc+12) << endl;
 }
-
-

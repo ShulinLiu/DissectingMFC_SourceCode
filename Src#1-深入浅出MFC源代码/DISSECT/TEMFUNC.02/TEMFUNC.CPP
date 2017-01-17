@@ -1,4 +1,5 @@
-#include <iostream.h>
+#include <iostream>
+using namespace std;
 
 template <class T>
 T power(T base, int exponent)
@@ -10,7 +11,7 @@ T power(T base, int exponent)
     return result;
 }
 
-void main()
+int main()
 {
     int i = power(5, 4);
     long l = power(1000L, 3);
@@ -20,4 +21,3 @@ void main()
     cout << "l= " << l << endl;
     cout << "d= " << d << endl;
 }
-

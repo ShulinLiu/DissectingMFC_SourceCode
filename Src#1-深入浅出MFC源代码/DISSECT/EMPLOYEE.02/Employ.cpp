@@ -1,5 +1,10 @@
 #include <iostream>
-#include <string.h>
+// Traditional C way:
+//#include <string.h>
+
+// C++ way
+using namespace std;
+#include <cstring>
 
 //---------------------------------------
 class CEmployee

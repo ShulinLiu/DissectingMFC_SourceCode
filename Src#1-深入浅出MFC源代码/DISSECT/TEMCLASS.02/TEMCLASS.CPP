@@ -1,4 +1,5 @@
-#include <iostream.h>
+#include <iostream>
+using namespace std;
 
 template <class T>
 class CThree
@@ -33,7 +34,7 @@ CThree<T>::CThree(T t1, T t2, T t3) :
     return;
 }
 //---------------------------------------
-void main()
+int main()
 {
     CThree<int> obj1(2, 5, 4);
     cout << obj1.Min() << endl;
@@ -47,4 +48,3 @@ void main()
     cout << obj3.Min() << endl;
     cout << obj3.Max() << endl;
 }
-

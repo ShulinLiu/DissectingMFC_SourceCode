@@ -1,4 +1,5 @@
-#include <iostream.h>
+#include <iostream>
+using namespace std;
 
 class CObject
 {
@@ -24,7 +25,7 @@ public:
   virtual void Serialize() { cout << "CMyDoc::Serialize() \n\n"; }
 };
 //------------------------------------------------------------------
-void main()
+int main()
 {
 CMyDoc  mydoc;
 CMyDoc* pmydoc = new CMyDoc;
@@ -42,4 +43,3 @@ CMyDoc* pmydoc = new CMyDoc;
   ((CDocument)mydoc).func();
 }
 
-

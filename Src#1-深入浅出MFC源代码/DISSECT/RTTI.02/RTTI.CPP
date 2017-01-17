@@ -1,7 +1,10 @@
 // RTTI.cpp - a demonstration of RTTI in C++
-#include <typeinfo.h>
-#include <iostream.h>
-#include <string.h>
+#include <typeinfo>
+#include <iostream>
+//#include <string.h>
+
+using namespace std;
+#include <cstring>
 
 class graphicImage
 {
@@ -67,7 +70,7 @@ void processFile(graphicImage *type)
         cout << "Unknown type! " << (typeid(*type)).name() << endl;
 }
 
-void main()
+int main()
 {
     graphicImage *gImage = new GIFimage();
     graphicImage *pImage = new PICTimage();
@@ -75,4 +78,3 @@ void main()
     processFile(gImage);
     processFile(pImage);
 }
-

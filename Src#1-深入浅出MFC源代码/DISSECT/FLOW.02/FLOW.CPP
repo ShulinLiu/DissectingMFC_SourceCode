@@ -1,5 +1,8 @@
-#include <iostream.h>
-#include <string.h>
+#include <iostream>
+//#include <string.h>
+
+using namespace std;
+#include <cstring>
 
 class CDemo
 {
@@ -33,7 +36,7 @@ void func()
 
 CDemo GlobalObject("GlobalObject");  // global static
 
-void main()
+int main()
 {
   CDemo LocalObjectInMain("LocalObjectInMain"); // in stack
   CDemo* pHeapObjectInMain = new CDemo("HeapObjectInMain"); // in heap
@@ -43,4 +46,4 @@ void main()
   cout << "In main, after calling func\n";
 
 }
-
+
