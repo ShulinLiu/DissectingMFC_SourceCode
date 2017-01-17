@@ -6,5 +6,3 @@ CWinApp* AfxGetApp()
 {
   return theApp.m_pCurrentWinApp;
 }
-
-

@@ -1,4 +1,5 @@
-#include <iostream.h>
+#include <iostream>
+using namespace std;
 
 class CObject
 {
@@ -100,5 +101,3 @@ public:
 // global function
 
 CWinApp* AfxGetApp();
-
-
