@@ -1,5 +1,5 @@
 # DissectingMFC_SourceCode
-深入浅出MFC源代码，
+深入浅出MFC(Edition 2nd)，MFC learning and practices in Visual C++ 6.0
 
 
 【本书程序范例】
