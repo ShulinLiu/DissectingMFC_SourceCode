@@ -55,14 +55,17 @@ public:
   CObject::~CObject() {
                       }
 
+  //The header of the linked list
   virtual CRuntimeClass* GetRuntimeClass() const;
 
 public:
+	//declare the static  member
   static CRuntimeClass classCObject;
 };
 
 class CCmdTarget : public CObject
 {
+	    //declare using Macro
         DECLARE_DYNAMIC(CCmdTarget)
 public:
   CCmdTarget::CCmdTarget()  {
@@ -73,6 +76,7 @@ public:
 
 class CWinThread : public CCmdTarget
 {
+		//declare using Macro
         DECLARE_DYNAMIC(CWinThread)
 public:
   CWinThread::CWinThread()  {
@@ -92,6 +96,7 @@ class CWnd;
 
 class CWinApp : public CWinThread
 {
+		//declare using Macro
         DECLARE_DYNAMIC(CWinApp)
 public:
   CWinApp* m_pCurrentWinApp;
@@ -117,6 +122,7 @@ public:
 
 class CDocument : public CCmdTarget
 {
+		//declare using Macro
         DECLARE_DYNAMIC(CDocument)
 public:
   CDocument::CDocument()   {
@@ -127,6 +133,7 @@ public:
 
 class CWnd : public CCmdTarget
 {
+		//declare using Macro
         DECLARE_DYNAMIC(CWnd)
 public:
   CWnd::CWnd()   {
@@ -141,6 +148,7 @@ public:
 
 class CFrameWnd : public CWnd
 {
+		//declare using Macro
         DECLARE_DYNAMIC(CFrameWnd)
 public:
   CFrameWnd::CFrameWnd()   {
@@ -153,6 +161,7 @@ public:
 
 class CView : public CWnd
 {
+		//declare using Macro
         DECLARE_DYNAMIC(CView)
 public:
   CView::CView()   {

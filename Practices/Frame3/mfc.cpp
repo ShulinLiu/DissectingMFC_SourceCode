@@ -2,6 +2,7 @@
 
 extern CMyWinApp theApp;
 
+//initial the static member
 static char szCObject[] = "CObject";
 struct CRuntimeClass CObject::classCObject =
         { szCObject, sizeof(CObject), 0xffff, NULL, NULL };
@@ -47,6 +48,7 @@ BOOL CFrameWnd::PreCreateWindow()
   return TRUE;
 }
 
+//implement using macro
 IMPLEMENT_DYNAMIC(CCmdTarget, CObject)
 IMPLEMENT_DYNAMIC(CWinThread, CCmdTarget)
 IMPLEMENT_DYNAMIC(CWinApp, CWinThread)
