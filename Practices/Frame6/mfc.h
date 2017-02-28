@@ -42,6 +42,7 @@ public: \
         static CRuntimeClass class##class_name; \
         virtual CRuntimeClass* GetRuntimeClass() const;
 
+//Macro _DYNCREATE include _DYNAMIC
 #define DECLARE_DYNCREATE(class_name) \
         DECLARE_DYNAMIC(class_name) \
         static CObject* PASCAL CreateObject();
@@ -77,6 +78,7 @@ public:
 
 public:
   static CRuntimeClass classCObject;
+  //virtual function to sayHello
   virtual void SayHello() { cout << "Hello CObject \n"; }
 };
 
