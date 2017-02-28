@@ -56,6 +56,7 @@ public:
                       }
 
   virtual CRuntimeClass* GetRuntimeClass() const;
+  //IsKindOf
   BOOL IsKindOf(const CRuntimeClass* pClass) const;
 
 public:

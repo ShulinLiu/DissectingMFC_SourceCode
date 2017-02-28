@@ -20,6 +20,7 @@ CRuntimeClass* CObject::GetRuntimeClass() const
         return &CObject::classCObject;
 }
 
+//using IsKindOf to identify type
 BOOL CObject::IsKindOf(const CRuntimeClass* pClass) const
 {
         CRuntimeClass* pClassThis = GetRuntimeClass();
