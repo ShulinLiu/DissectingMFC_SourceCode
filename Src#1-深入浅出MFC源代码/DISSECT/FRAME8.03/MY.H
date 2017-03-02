@@ -40,4 +40,3 @@ public:
                        }
   DECLARE_MESSAGE_MAP()
 };
-

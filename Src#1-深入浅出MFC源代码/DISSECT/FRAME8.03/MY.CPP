@@ -94,4 +94,3 @@ void main()
     cout << "routing path and call stack:" << endl;
     AfxWndProc(0, WM_COMMAND, 0, 0, pMyFrame);
 }
-

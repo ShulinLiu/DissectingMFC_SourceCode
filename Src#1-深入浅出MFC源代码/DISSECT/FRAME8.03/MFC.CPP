@@ -200,4 +200,3 @@ LRESULT AfxCallWndProc(CWnd* pWnd, HWND hWnd, UINT nMsg,
   LRESULT lResult = pWnd->WindowProc(nMsg, wParam, lParam);
   return lResult;
 }
-

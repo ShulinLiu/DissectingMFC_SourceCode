@@ -67,7 +67,7 @@ struct AFX_MSGMAP
         };
 
 // Message map signature values and macros in separate header
-#include <afxmsg_.h>
+#include "afxmsg_.h"
 
 class CObject
 {
@@ -234,4 +234,3 @@ LRESULT AfxWndProc(HWND hWnd, UINT nMsg, WPARAM wParam, LPARAM lParam,
                    CWnd* pWnd); // last param. pWnd is added by JJHOU.
 LRESULT AfxCallWndProc(CWnd* pWnd, HWND hWnd, UINT nMsg, WPARAM wParam,
                        LPARAM lParam);
-
