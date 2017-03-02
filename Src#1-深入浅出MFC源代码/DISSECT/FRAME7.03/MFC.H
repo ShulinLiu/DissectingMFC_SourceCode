@@ -193,4 +193,3 @@ public:
 
 // global function
 CWinApp* AfxGetApp();
-

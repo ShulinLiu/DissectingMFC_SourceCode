@@ -102,4 +102,3 @@ void main()
     cout << endl << "CMyWinApp Message Map : " << endl;
     MsgMapPrinting(pMessageMap);
 }
-
