@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1488520207 source:e:\codes\virfunc\virfunc\main.cpp
+	<iostream>
+	"FUNCPTR.H"
+
+1488520536 e:\codes\virfunc\virfunc\funcptr.h
+	"stdio.h"
+
