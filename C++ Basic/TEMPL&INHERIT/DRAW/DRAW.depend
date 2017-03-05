@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1488693505 source:e:\codes\draw\main.cpp
+	"stdio.h"
+	"string.h"
+	"Painter.h"
+
+1488693574 e:\codes\draw\painter.h
+
