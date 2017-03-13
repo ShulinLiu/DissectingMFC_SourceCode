@@ -11,6 +11,7 @@ public:
                            }
 
   virtual BOOL InitInstance();
+
 };
 
 class CMyFrameWnd : public CFrameWnd

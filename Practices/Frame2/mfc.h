@@ -55,11 +55,14 @@ public:
                       }
   CWinApp::~CWinApp() {
                       }
-
+//InitApplication as a virtual function
+  //used for registerClass
   virtual BOOL InitApplication() {
                                    cout << "CWinApp::InitApplication \n";
                                    return TRUE;
                                  }
+//InitInstance as a virtual function
+//need to override when inherit by user
   virtual BOOL InitInstance()    {
                                    cout << "CWinApp::InitInstance \n";
                                    return TRUE;

@@ -1,3 +1,4 @@
+//MFC Framework simulation: the construction of the class
 #include <iostream>
 using namespace std;
 

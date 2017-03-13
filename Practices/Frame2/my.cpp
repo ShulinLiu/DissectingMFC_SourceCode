@@ -5,6 +5,7 @@ CMyWinApp theApp;
 BOOL CMyWinApp::InitInstance()
 {
     cout << "CMyWinApp::InitInstance \n";
+	cout << "override InitInstance in CMyWinApp \n";
     m_pMainWnd = new CMyFrameWnd;
     return TRUE;
 }
@@ -18,6 +19,8 @@ CMyFrameWnd::CMyFrameWnd()
 //------------------------------------------------------------------
 // main
 //------------------------------------------------------------------
+
+// simulation for execute process
 void main()
 {
 
