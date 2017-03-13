@@ -24,6 +24,13 @@ void PrintAllClasses()
 		std::cout << pClass->m_lpszClassName << "\n";
         std::cout << pClass->m_nObjectSize << "\n";
         std::cout << pClass->m_wSchema << "\n";
+
+		//print the BaseClass's name
+		if(pClass->m_pBaseClass != NULL)
+		{
+			std::cout << "Base Class: ";
+			std::cout << pClass->m_pBaseClass->m_lpszClassName<<"\n";
+		}
     }
 }
 //------------------------------------------------------------------

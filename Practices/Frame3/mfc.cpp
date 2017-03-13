@@ -2,12 +2,12 @@
 
 extern CMyWinApp theApp;
 
-//initial the static member
 static char szCObject[] = "CObject";
 struct CRuntimeClass CObject::classCObject =
         { szCObject, sizeof(CObject), 0xffff, NULL, NULL };
 static AFX_CLASSINIT _init_CObject(&CObject::classCObject);
 
+//initial the static member
 CRuntimeClass* CRuntimeClass::pFirstClass = NULL;
 
 AFX_CLASSINIT::AFX_CLASSINIT(CRuntimeClass* pNewClass)
