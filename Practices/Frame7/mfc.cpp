@@ -39,6 +39,8 @@ CWinApp* AfxGetApp()
   return theApp.m_pCurrentWinApp;
 }
 
+////////////////////////////////////////////////////////////////////////////////////
+//implement for CCmdTarget
 AFX_MSGMAP* CCmdTarget::GetMessageMap() const  // JJHOU: in MFC 40 cmdtarg.cpp
 {
         return &CCmdTarget::messageMap;
@@ -56,6 +58,7 @@ AFX_MSGMAP_ENTRY CCmdTarget::_messageEntries[] = // JJHOU: in in MFC 40 cmdtarg.
         { 0, 0, CCmdTargetid, 0, AfxSig_end, 0 }
 
 };
+////////////////////////////////////////////////////////////////////////////////////
 
 BEGIN_MESSAGE_MAP(CWnd, CCmdTarget)
 ON_COMMAND(CWndid, 0)

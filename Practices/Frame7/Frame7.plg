@@ -6,19 +6,19 @@
 --------------------Configuration: Frame7 - Win32 Debug--------------------
 </h3>
 <h3>Command Lines</h3>
-Creating temporary file "C:\Users\Paopao\AppData\Local\Temp\RSP65DE.tmp" with contents
+Creating temporary file "C:\Users\Paopao\AppData\Local\Temp\RSP70CE.tmp" with contents
 [
-/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/Frame7.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ  /c 
-"C:\Users\Paopao\Desktop\Frame7\mfc.cpp"
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/Frame7.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\Codes\Frame7\mfc.cpp"
 ]
-Creating command line "cl.exe @C:\Users\Paopao\AppData\Local\Temp\RSP65DE.tmp" 
-Creating temporary file "C:\Users\Paopao\AppData\Local\Temp\RSP65DF.tmp" with contents
+Creating command line "cl.exe @C:\Users\Paopao\AppData\Local\Temp\RSP70CE.tmp" 
+Creating temporary file "C:\Users\Paopao\AppData\Local\Temp\RSP70D9.tmp" with contents
 [
-kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib  kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/Frame7.pdb" /debug /machine:I386 /out:"Debug/Frame7.exe" /pdbtype:sept 
-.\Debug\my.obj
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/Frame7.pdb" /debug /machine:I386 /out:"Debug/Frame7.exe" /pdbtype:sept 
 .\Debug\mfc.obj
+.\Debug\my.obj
 ]
-Creating command line "link.exe @C:\Users\Paopao\AppData\Local\Temp\RSP65DF.tmp"
+Creating command line "link.exe @C:\Users\Paopao\AppData\Local\Temp\RSP70D9.tmp"
 <h3>Output Window</h3>
 Compiling...
 mfc.cpp
