@@ -6,7 +6,7 @@
 --------------------Configuration: MyFir - Win32 Debug--------------------
 </h3>
 <h3>Command Lines</h3>
-Creating temporary file "C:\Users\Paopao\AppData\Local\Temp\RSP2939.tmp" with contents
+Creating temporary file "C:\Users\Paopao\AppData\Local\Temp\RSPFDC0.tmp" with contents
 [
 /nologo /subsystem:windows /incremental:yes /pdb:"Debug/MyFir.pdb" /debug /machine:I386 /out:"Debug/MyFir.exe" /pdbtype:sept 
 .\Debug\ChildFrm.obj
@@ -17,7 +17,7 @@ Creating temporary file "C:\Users\Paopao\AppData\Local\Temp\RSP2939.tmp" with co
 .\Debug\StdAfx.obj
 .\Debug\MyFir.res
 ]
-Creating command line "link.exe @C:\Users\Paopao\AppData\Local\Temp\RSP2939.tmp"
+Creating command line "link.exe @C:\Users\Paopao\AppData\Local\Temp\RSPFDC0.tmp"
 <h3>Output Window</h3>
 Linking...
 
