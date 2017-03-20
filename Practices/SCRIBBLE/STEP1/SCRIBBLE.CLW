@@ -18,11 +18,11 @@ ResourceCount=10
 Resource1=IDD_ABOUTBOX
 Resource2=IDR_MAINFRAME
 Resource3=IDR_SCRIBBTYPE
-Resource8=IDD_ABOUTBOX (English (U.S.))
+Resource8=IDR_MAINFRAME (English (U.S.))
 Resource9=IDR_SCRIBBTYPE (English (U.S.))
 Class5=CAboutDlg
 Class6=CChildFrame
-Resource10=IDR_MAINFRAME (English (U.S.))
+Resource10=IDD_ABOUTBOX (English (U.S.))
 
 [CLS:CScribbleApp]
 Type=0
