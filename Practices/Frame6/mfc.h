@@ -179,12 +179,15 @@ public:
 
 class CView : public CWnd
 {
-        DECLARE_DYNAMIC(CView)
+        //DECLARE_DYNAMIC(CView)
+		DECLARE_DYNCREATE(CView)
 public:
   CView::CView()   {
+                    cout << "CView Constructor \n";
                    }
   CView::~CView()  {
                    }
+  void SayHello() { cout << "Hello CView \n"; }
 };
 
 // global function
