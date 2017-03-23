@@ -14,7 +14,6 @@ typedef long           LONG;
 
 #define WM_COMMAND             0x0111
 #define CObjectid              0xffff
-//classid: present level of the class
 #define   CCmdTargetid         1
 #define     CWinThreadid       11
 #define       CWinAppid        111
@@ -108,6 +107,7 @@ public:
                       cout << "CWinThread::Run \n";
                       return 1;
                     }
+  //not declare the DECLARE_MESSAGE_MAP
 };
 
 class CWnd;
