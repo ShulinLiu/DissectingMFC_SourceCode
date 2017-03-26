@@ -134,7 +134,7 @@ WPARAM wParam, LPARAM lParam)
 void OnLButtonDown(HWND hWnd, UINT message, 
 				WPARAM wParam, LPARAM lParam)
 {
-	ShowText="Hello!";
+	ShowText="Hello,Shirley!";
 	InvalidateRect(hWnd,NULL,1);
 }
 void OnPaint(HWND hWnd, UINT message, 
@@ -143,7 +143,7 @@ void OnPaint(HWND hWnd, UINT message,
 	PAINTSTRUCT ps;
 	HDC hdc;
 	hdc = BeginPaint(hWnd, &ps);
-	TextOut(hdc,50,50,ShowText,6);
+	TextOut(hdc,50,50,ShowText,14);
 	EndPaint(hWnd, &ps);
 }
 void OnDestroy(HWND hWnd, UINT message, 
