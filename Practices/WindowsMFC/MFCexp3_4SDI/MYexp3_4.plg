@@ -1,0 +1,54 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: MYexp3_4 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Debug/MYexp3_4.res" /d "_DEBUG" /d "_AFXDLL" "E:\Codes\MYexp3_4\MYexp3_4.rc"" 
+Creating temporary file "C:\Users\Paopao\AppData\Local\Temp\RSP1CFB.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/MYexp3_4.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ   /c 
+"E:\Codes\MYexp3_4\MYexp3_4.cpp"
+"E:\Codes\MYexp3_4\MainFrm.cpp"
+"E:\Codes\MYexp3_4\MYexp3_4Doc.cpp"
+"E:\Codes\MYexp3_4\MYexp3_4View.cpp"
+]
+Creating command line "cl.exe @C:\Users\Paopao\AppData\Local\Temp\RSP1CFB.tmp" 
+Creating temporary file "C:\Users\Paopao\AppData\Local\Temp\RSP1CFC.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/MYexp3_4.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ   /c 
+"E:\Codes\MYexp3_4\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\Users\Paopao\AppData\Local\Temp\RSP1CFC.tmp" 
+Creating temporary file "C:\Users\Paopao\AppData\Local\Temp\RSP1CFD.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/MYexp3_4.pdb" /debug /machine:I386 /out:"Debug/MYexp3_4.exe" /pdbtype:sept 
+.\Debug\MYexp3_4.obj
+.\Debug\StdAfx.obj
+.\Debug\MainFrm.obj
+.\Debug\MYexp3_4Doc.obj
+.\Debug\MYexp3_4View.obj
+.\Debug\MYexp3_4.res
+]
+Creating command line "link.exe @C:\Users\Paopao\AppData\Local\Temp\RSP1CFD.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+MYexp3_4.cpp
+MainFrm.cpp
+MYexp3_4Doc.cpp
+MYexp3_4View.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+MYexp3_4.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
