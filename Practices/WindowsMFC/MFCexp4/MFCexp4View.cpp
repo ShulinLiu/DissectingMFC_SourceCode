@@ -62,22 +62,37 @@ void CMFCexp4View::OnDraw(CDC* pDC)
 	//Step1: to print out char*
 	//pDC->TextOut(50,50,"输出字符串");
 
+
 	//Step2: use CPen, paint different strokes
-	int red=0,green=0,blue=0;
-	int width=2;
+//	int red=0,green=0,blue=0;
+//	int width=2;
+//	int row=20;
+//	for(int s=0;s<8;s++)
+//	{
+//		int color=RGB(red,green,blue);
+//		CPen newPen(PS_SOLID,width,color);
+//		CPen*oldPen=pDC->SelectObject(&newPen);
+//		pDC->MoveTo(20,row);
+//		pDC->LineTo(300,row);
+//		pDC->SelectObject(oldPen);
+//		red+=32;
+//		green+=16;
+//		blue+=8;
+//		width+=2;
+//		row+=30;
+//	}
+
+	//Step3: use CPen, paint different pen styles
+	pDC->TextOut(200,200,"改变画笔风格");
+	int style[]={PS_SOLID,PS_DASH,PS_DOT,PS_DASHDOT,PS_DASHDOTDOT};
 	int row=20;
-	for(int s=0;s<8;s++)
+	for(int s=0;s<5;s++)
 	{
-		int color=RGB(red,green,blue);
-		CPen newPen(PS_SOLID,width,color);
+		CPen newPen(style[s],1,RGB(0,0,0));
 		CPen*oldPen=pDC->SelectObject(&newPen);
 		pDC->MoveTo(20,row);
 		pDC->LineTo(300,row);
 		pDC->SelectObject(oldPen);
-		red+=32;
-		green+=16;
-		blue+=8;
-		width+=2;
 		row+=30;
 	}
 }
