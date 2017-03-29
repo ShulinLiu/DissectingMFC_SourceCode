@@ -1,0 +1,30 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: MFCexp5_1_2 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\Paopao\AppData\Local\Temp\RSPA45C.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/MFCexp5_1_2.pdb" /debug /machine:I386 /out:"Debug/MFCexp5_1_2.exe" /pdbtype:sept 
+.\Debug\MFCexp5_1_2.obj
+.\Debug\StdAfx.obj
+.\Debug\MainFrm.obj
+.\Debug\MFCexp5_1_2Doc.obj
+.\Debug\MFCexp5_1_2View.obj
+.\Debug\MFCexp5_1_2.res
+.\Debug\DrawRect.obj
+]
+Creating command line "link.exe @C:\Users\Paopao\AppData\Local\Temp\RSPA45C.tmp"
+<h3>Output Window</h3>
+Linking...
+
+
+
+<h3>Results</h3>
+MFCexp5_1_2.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
