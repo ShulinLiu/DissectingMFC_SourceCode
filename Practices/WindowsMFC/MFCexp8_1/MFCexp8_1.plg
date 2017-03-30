@@ -1,0 +1,42 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: MFCexp8_1 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Debug/MFCexp8_1.res" /d "_DEBUG" /d "_AFXDLL" "E:\Codes\MFCexp8_1\MFCexp8_1.rc"" 
+Creating temporary file "C:\Users\Paopao\AppData\Local\Temp\RSP9F1C.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/MFCexp8_1.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\Codes\MFCexp8_1\MFCexp8_1.cpp"
+"E:\Codes\MFCexp8_1\MFCexp8_1Doc.cpp"
+]
+Creating command line "cl.exe @C:\Users\Paopao\AppData\Local\Temp\RSP9F1C.tmp" 
+Creating temporary file "C:\Users\Paopao\AppData\Local\Temp\RSP9F1D.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/MFCexp8_1.pdb" /debug /machine:I386 /out:"Debug/MFCexp8_1.exe" /pdbtype:sept 
+.\Debug\MainFrm.obj
+.\Debug\MFCexp8_1.obj
+.\Debug\MFCexp8_1Doc.obj
+.\Debug\MFCexp8_1View.obj
+.\Debug\StdAfx.obj
+.\Debug\MFCexp8_1.res
+]
+Creating command line "link.exe @C:\Users\Paopao\AppData\Local\Temp\RSP9F1D.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+MFCexp8_1.cpp
+MFCexp8_1Doc.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+MFCexp8_1.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
