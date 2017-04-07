@@ -1,0 +1,54 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: CArchive - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Debug/CArchive.res" /d "_DEBUG" /d "_AFXDLL" "E:\Codes\CArchive\CArchive.rc"" 
+Creating temporary file "C:\Users\Paopao\AppData\Local\Temp\RSPD9AD.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/CArchive.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ   /c 
+"E:\Codes\CArchive\CArchive.cpp"
+"E:\Codes\CArchive\MainFrm.cpp"
+"E:\Codes\CArchive\CArchiveDoc.cpp"
+"E:\Codes\CArchive\CArchiveView.cpp"
+]
+Creating command line "cl.exe @C:\Users\Paopao\AppData\Local\Temp\RSPD9AD.tmp" 
+Creating temporary file "C:\Users\Paopao\AppData\Local\Temp\RSPD9B9.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/CArchive.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ   /c 
+"E:\Codes\CArchive\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\Users\Paopao\AppData\Local\Temp\RSPD9B9.tmp" 
+Creating temporary file "C:\Users\Paopao\AppData\Local\Temp\RSPD9BA.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/CArchive.pdb" /debug /machine:I386 /out:"Debug/CArchive.exe" /pdbtype:sept 
+.\Debug\CArchive.obj
+.\Debug\StdAfx.obj
+.\Debug\MainFrm.obj
+.\Debug\CArchiveDoc.obj
+.\Debug\CArchiveView.obj
+.\Debug\CArchive.res
+]
+Creating command line "link.exe @C:\Users\Paopao\AppData\Local\Temp\RSPD9BA.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+CArchive.cpp
+MainFrm.cpp
+CArchiveDoc.cpp
+CArchiveView.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+CArchive.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
