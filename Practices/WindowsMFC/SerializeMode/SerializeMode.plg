@@ -1,0 +1,31 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: SerializeMode - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\Paopao\AppData\Local\Temp\RSPFE1C.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/SerializeMode.pdb" /debug /machine:I386 /out:"Debug/SerializeMode.exe" /pdbtype:sept 
+.\Debug\ChildFrm.obj
+.\Debug\MainFrm.obj
+.\Debug\SerializeMode.obj
+.\Debug\SerializeModeDoc.obj
+.\Debug\SerializeModeView.obj
+.\Debug\StdAfx.obj
+.\Debug\SerializeMode.res
+.\Debug\Letter.obj
+]
+Creating command line "link.exe @C:\Users\Paopao\AppData\Local\Temp\RSPFE1C.tmp"
+<h3>Output Window</h3>
+Linking...
+
+
+
+<h3>Results</h3>
+SerializeMode.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
