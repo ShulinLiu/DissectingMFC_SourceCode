@@ -1,0 +1,54 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: CFile2 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Debug/CFile2.res" /d "_DEBUG" /d "_AFXDLL" "E:\Codes\CFile2\CFile2.rc"" 
+Creating temporary file "C:\Users\Paopao\AppData\Local\Temp\RSPC5B2.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/CFile2.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ   /c 
+"E:\Codes\CFile2\CFile2.cpp"
+"E:\Codes\CFile2\MainFrm.cpp"
+"E:\Codes\CFile2\CFile2Doc.cpp"
+"E:\Codes\CFile2\CFile2View.cpp"
+]
+Creating command line "cl.exe @C:\Users\Paopao\AppData\Local\Temp\RSPC5B2.tmp" 
+Creating temporary file "C:\Users\Paopao\AppData\Local\Temp\RSPC5B3.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/CFile2.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ   /c 
+"E:\Codes\CFile2\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\Users\Paopao\AppData\Local\Temp\RSPC5B3.tmp" 
+Creating temporary file "C:\Users\Paopao\AppData\Local\Temp\RSPC5B4.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/CFile2.pdb" /debug /machine:I386 /out:"Debug/CFile2.exe" /pdbtype:sept 
+.\Debug\CFile2.obj
+.\Debug\StdAfx.obj
+.\Debug\MainFrm.obj
+.\Debug\CFile2Doc.obj
+.\Debug\CFile2View.obj
+.\Debug\CFile2.res
+]
+Creating command line "link.exe @C:\Users\Paopao\AppData\Local\Temp\RSPC5B4.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+CFile2.cpp
+MainFrm.cpp
+CFile2Doc.cpp
+CFile2View.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+CFile2.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
