@@ -111,7 +111,7 @@ void CSerializeModeView::OnLButtonDown(UINT nFlags, CPoint point)
 	// TODO: Add your message handler code here and/or call default
 	
 	CSerializeModeDoc *pDoc=GetDocument( );
-	pDoc->m_lLetter='M'; 
+	pDoc->m_lLetter='L'; //注意这是字符变量m_lLetter
 	Invalidate( );
 	CView::OnLButtonDown(nFlags, point);
 }
@@ -120,7 +120,7 @@ void CSerializeModeView::OnRButtonDown(UINT nFlags, CPoint point)
 {
 	// TODO: Add your message handler code here and/or call default
 	CSerializeModeDoc *pDoc=GetDocument( );
-	pDoc->m_Letters.SetLetter('m'); 
+	pDoc->m_Letters.SetLetter('R'); //注意这是内嵌CLetter对象m_Letter
 	Invalidate( );	
 	CView::OnRButtonDown(nFlags, point);
 }

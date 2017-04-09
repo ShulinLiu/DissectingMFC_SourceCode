@@ -1,0 +1,39 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: SerializeMode2 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\Paopao\AppData\Local\Temp\RSPA1A5.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/SerializeMode2.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ   /c 
+"E:\Codes\SerializeMode2\SerializeMode2View.cpp"
+]
+Creating command line "cl.exe @C:\Users\Paopao\AppData\Local\Temp\RSPA1A5.tmp" 
+Creating temporary file "C:\Users\Paopao\AppData\Local\Temp\RSPA1A6.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/SerializeMode2.pdb" /debug /machine:I386 /out:"Debug/SerializeMode2.exe" /pdbtype:sept 
+.\Debug\SerializeMode2.obj
+.\Debug\StdAfx.obj
+.\Debug\MainFrm.obj
+.\Debug\ChildFrm.obj
+.\Debug\SerializeMode2Doc.obj
+.\Debug\SerializeMode2View.obj
+.\Debug\SerializeMode2.res
+.\Debug\CLetter.obj
+]
+Creating command line "link.exe @C:\Users\Paopao\AppData\Local\Temp\RSPA1A6.tmp"
+<h3>Output Window</h3>
+Compiling...
+SerializeMode2View.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+SerializeMode2.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
