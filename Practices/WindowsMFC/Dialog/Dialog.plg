@@ -1,0 +1,31 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Dialog - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\Paopao\AppData\Local\Temp\RSPD750.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/Dialog.pdb" /debug /machine:I386 /out:"Debug/Dialog.exe" /pdbtype:sept 
+.\Debug\Dialog.obj
+.\Debug\StdAfx.obj
+.\Debug\MainFrm.obj
+.\Debug\ChildFrm.obj
+.\Debug\DialogDoc.obj
+.\Debug\DialogView.obj
+.\Debug\Dialog.res
+.\Debug\MyDialog.obj
+]
+Creating command line "link.exe @C:\Users\Paopao\AppData\Local\Temp\RSPD750.tmp"
+<h3>Output Window</h3>
+Linking...
+
+
+
+<h3>Results</h3>
+Dialog.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
