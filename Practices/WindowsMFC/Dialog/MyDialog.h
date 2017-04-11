@@ -19,7 +19,8 @@ public:
 // Dialog Data
 	//{{AFX_DATA(CMyDialog)
 	enum { IDD = IDD_DIALOG1 };
-		// NOTE: the ClassWizard will add data members here
+	CString	m_Edit1;
+	CString	m_Edit2;
 	//}}AFX_DATA
 
 
@@ -37,7 +38,8 @@ protected:
 
 	// Generated message map functions
 	//{{AFX_MSG(CMyDialog)
-		// NOTE: the ClassWizard will add member functions here
+	afx_msg void OnButton1();
+	afx_msg void OnButton2();
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
 };

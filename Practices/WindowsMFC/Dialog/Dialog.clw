@@ -148,13 +148,15 @@ CommandCount=14
 [DLG:IDD_DIALOG1]
 Type=1
 Class=CMyDialog
-ControlCount=6
+ControlCount=8
 Control1=IDOK,button,1342242817
 Control2=IDCANCEL,button,1342242816
 Control3=IDC_STATIC,static,1342308352
 Control4=IDC_EDIT1,edit,1350631552
 Control5=IDC_EDIT2,edit,1350631552
 Control6=IDC_STATIC,static,1342308352
+Control7=IDC_BUTTON1,button,1342242816
+Control8=IDC_BUTTON2,button,1342242816
 
 [CLS:CMyDialog]
 Type=0
@@ -162,5 +164,6 @@ HeaderFile=MyDialog.h
 ImplementationFile=MyDialog.cpp
 BaseClass=CDialog
 Filter=D
-LastObject=CMyDialog
+LastObject=IDC_BUTTON2
+VirtualFilter=dWC
 

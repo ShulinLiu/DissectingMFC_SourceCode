@@ -37,6 +37,8 @@ public:
 
 // Implementation
 public:
+	CString m_outEdit2;
+	CString m_outEdit1;
 	virtual ~CDialogView();
 #ifdef _DEBUG
 	virtual void AssertValid() const;

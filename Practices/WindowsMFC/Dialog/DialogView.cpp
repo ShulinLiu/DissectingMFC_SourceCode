@@ -58,6 +58,8 @@ void CDialogView::OnDraw(CDC* pDC)
 	CDialogDoc* pDoc = GetDocument();
 	ASSERT_VALID(pDoc);
 	// TODO: add draw code for native data here
+	pDC->TextOut(10,10,m_outEdit1);
+	pDC->TextOut(100,10,m_outEdit2);
 }
 
 /////////////////////////////////////////////////////////////////////////////
@@ -105,9 +107,17 @@ CDialogDoc* CDialogView::GetDocument() // non-debug version is inline
 
 void CDialogView::OnLButtonDown(UINT nFlags, CPoint point) 
 {
-	CString m_info;
+//	CString m_info;
 	CMyDialog dlg;				//定义对话框对象
-	dlg.DoModal( );				//显示并运行模态对话框
+//	dlg.DoModal( );				//显示并运行模态对话框
+
+			int result=dlg.DoModal();
+		if(result==IDOK)
+		{
+			m_outEdit1=dlg.m_Edit1;
+			m_outEdit2=dlg.m_Edit2;
+			Invalidate();
+		}
 	
 	CView::OnLButtonDown(nFlags, point);
 }
