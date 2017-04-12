@@ -2,26 +2,28 @@
 
 [General Info]
 Version=1
-LastClass=CMyDialog
+LastClass=RCDlg
 LastTemplate=CDialog
 NewFileInclude1=#include "stdafx.h"
 NewFileInclude2=#include "Dialog.h"
 LastPage=0
 
-ClassCount=7
+ClassCount=8
 Class1=CDialogApp
 Class2=CDialogDoc
 Class3=CDialogView
 Class4=CMainFrame
 
-ResourceCount=4
-Resource1=IDD_ABOUTBOX
-Resource2=IDR_MAINFRAME
+ResourceCount=5
+Resource1=IDR_MAINFRAME
+Resource2=IDD_ABOUTBOX
 Resource3=IDR_DIALOGTYPE
 Class5=CChildFrame
 Class6=CAboutDlg
 Class7=CMyDialog
 Resource4=IDD_DIALOG1
+Class8=RCDlg
+Resource5=IDD_DIALOG2
 
 [CLS:CDialogApp]
 Type=0
@@ -164,6 +166,24 @@ HeaderFile=MyDialog.h
 ImplementationFile=MyDialog.cpp
 BaseClass=CDialog
 Filter=D
-LastObject=IDC_BUTTON2
+LastObject=CMyDialog
 VirtualFilter=dWC
+
+[DLG:IDD_DIALOG2]
+Type=1
+Class=RCDlg
+ControlCount=4
+Control1=IDC_EDIT1,edit,1350631552
+Control2=IDC_EDIT2,edit,1350631552
+Control3=IDC_BUTTON1,button,1342242816
+Control4=IDC_BUTTON2,button,1342242816
+
+[CLS:RCDlg]
+Type=0
+HeaderFile=RCDlg.h
+ImplementationFile=RCDlg.cpp
+BaseClass=CDialog
+Filter=D
+VirtualFilter=dWC
+LastObject=IDC_BUTTON2
 

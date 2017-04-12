@@ -14,6 +14,7 @@ static char THIS_FILE[] = __FILE__;
 #endif
 
 #include "MyDialog.h"
+#include "RCDlg.h"
 /////////////////////////////////////////////////////////////////////////////
 // CDialogView
 
@@ -22,6 +23,7 @@ IMPLEMENT_DYNCREATE(CDialogView, CView)
 BEGIN_MESSAGE_MAP(CDialogView, CView)
 	//{{AFX_MSG_MAP(CDialogView)
 	ON_WM_LBUTTONDOWN()
+	ON_WM_RBUTTONDOWN()
 	//}}AFX_MSG_MAP
 	// Standard printing commands
 	ON_COMMAND(ID_FILE_PRINT, CView::OnFilePrint)
@@ -120,4 +122,11 @@ void CDialogView::OnLButtonDown(UINT nFlags, CPoint point)
 		}
 	
 	CView::OnLButtonDown(nFlags, point);
+}
+
+void CDialogView::OnRButtonDown(UINT nFlags, CPoint point) 
+{
+		RCDlg dlg;				//定义对话框对象
+    	dlg.DoModal( );	
+	CView::OnRButtonDown(nFlags, point);
 }

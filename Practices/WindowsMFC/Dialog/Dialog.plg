@@ -6,34 +6,21 @@
 --------------------Configuration: Dialog - Win32 Debug--------------------
 </h3>
 <h3>Command Lines</h3>
-Creating command line "rc.exe /l 0x804 /fo"Debug/Dialog.res" /d "_DEBUG" /d "_AFXDLL" "E:\Codes\Dialog\Dialog.rc"" 
-Creating temporary file "C:\Users\Paopao\AppData\Local\Temp\RSP395F.tmp" with contents
-[
-/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/Dialog.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ   /c 
-"E:\Codes\Dialog\Dialog.cpp"
-"E:\Codes\Dialog\MyDialog.cpp"
-]
-Creating command line "cl.exe @C:\Users\Paopao\AppData\Local\Temp\RSP395F.tmp" 
-Creating temporary file "C:\Users\Paopao\AppData\Local\Temp\RSP3960.tmp" with contents
+Creating temporary file "C:\Users\Paopao\AppData\Local\Temp\RSP2140.tmp" with contents
 [
 /nologo /subsystem:windows /incremental:yes /pdb:"Debug/Dialog.pdb" /debug /machine:I386 /out:"Debug/Dialog.exe" /pdbtype:sept 
-.\Debug\Dialog.obj
-.\Debug\StdAfx.obj
-.\Debug\MainFrm.obj
 .\Debug\ChildFrm.obj
+.\Debug\Dialog.obj
 .\Debug\DialogDoc.obj
 .\Debug\DialogView.obj
-.\Debug\Dialog.res
+.\Debug\MainFrm.obj
 .\Debug\MyDialog.obj
+.\Debug\StdAfx.obj
+.\Debug\Dialog.res
+.\Debug\RCDlg.obj
 ]
-Creating command line "link.exe @C:\Users\Paopao\AppData\Local\Temp\RSP3960.tmp"
+Creating command line "link.exe @C:\Users\Paopao\AppData\Local\Temp\RSP2140.tmp"
 <h3>Output Window</h3>
-Compiling resources...
-Compiling...
-MyDialog.cpp
-Generating Code...
-Skipping... (no relevant changes detected)
-Dialog.cpp
 Linking...
 
 
