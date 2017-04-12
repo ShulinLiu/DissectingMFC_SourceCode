@@ -17,6 +17,10 @@ protected: // create from serialization only
 	CAFXDlgView();
 	DECLARE_DYNCREATE(CAFXDlgView)
 
+	LOGFONT m_logFont;		//定义一个LOGFONT类型的数据成员
+	CFont* m_pFont;			//定义一个字体对象指针
+	COLORREF m_fontColor;	//定义存放字体颜色的成员变量
+
 // Attributes
 public:
 	CAFXDlgDoc* GetDocument();

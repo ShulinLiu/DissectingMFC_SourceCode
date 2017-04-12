@@ -6,23 +6,13 @@
 --------------------Configuration: AFXDlg - Win32 Debug--------------------
 </h3>
 <h3>Command Lines</h3>
-Creating command line "rc.exe /l 0x804 /fo"Debug/AFXDlg.res" /d "_DEBUG" /d "_AFXDLL" "E:\Codes\AFXDlg\AFXDlg.rc"" 
-Creating temporary file "C:\Users\Paopao\AppData\Local\Temp\RSPB44F.tmp" with contents
+Creating temporary file "C:\Users\Paopao\AppData\Local\Temp\RSP19F8.tmp" with contents
 [
 /nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/AFXDlg.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ   /c 
 "E:\Codes\AFXDlg\AFXDlg.cpp"
-"E:\Codes\AFXDlg\MainFrm.cpp"
-"E:\Codes\AFXDlg\AFXDlgDoc.cpp"
-"E:\Codes\AFXDlg\AFXDlgView.cpp"
 ]
-Creating command line "cl.exe @C:\Users\Paopao\AppData\Local\Temp\RSPB44F.tmp" 
-Creating temporary file "C:\Users\Paopao\AppData\Local\Temp\RSPB450.tmp" with contents
-[
-/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/AFXDlg.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ   /c 
-"E:\Codes\AFXDlg\StdAfx.cpp"
-]
-Creating command line "cl.exe @C:\Users\Paopao\AppData\Local\Temp\RSPB450.tmp" 
-Creating temporary file "C:\Users\Paopao\AppData\Local\Temp\RSPB451.tmp" with contents
+Creating command line "cl.exe @C:\Users\Paopao\AppData\Local\Temp\RSP19F8.tmp" 
+Creating temporary file "C:\Users\Paopao\AppData\Local\Temp\RSP19F9.tmp" with contents
 [
 /nologo /subsystem:windows /incremental:yes /pdb:"Debug/AFXDlg.pdb" /debug /machine:I386 /out:"Debug/AFXDlg.exe" /pdbtype:sept 
 .\Debug\AFXDlg.obj
@@ -32,17 +22,11 @@ Creating temporary file "C:\Users\Paopao\AppData\Local\Temp\RSPB451.tmp" with co
 .\Debug\AFXDlgView.obj
 .\Debug\AFXDlg.res
 ]
-Creating command line "link.exe @C:\Users\Paopao\AppData\Local\Temp\RSPB451.tmp"
+Creating command line "link.exe @C:\Users\Paopao\AppData\Local\Temp\RSP19F9.tmp"
 <h3>Output Window</h3>
-Compiling resources...
 Compiling...
-StdAfx.cpp
-Compiling...
+Skipping... (no relevant changes detected)
 AFXDlg.cpp
-MainFrm.cpp
-AFXDlgDoc.cpp
-AFXDlgView.cpp
-Generating Code...
 Linking...
 
 
