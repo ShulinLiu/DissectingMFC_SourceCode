@@ -1,0 +1,44 @@
+// AutoServer.odl : type library source for AutoServer.exe
+
+// This file will be processed by the MIDL compiler to produce the
+// type library (AutoServer.tlb).
+
+[ uuid(ACEA6042-8EAB-43D4-9764-108B4C49B3BD), version(1.0) ]
+library AutoServer
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+
+	//  Primary dispatch interface for CAutoServerDoc
+	
+	[ uuid(8CE8E65F-B8D7-4383-AB63-6C2744300535) ]
+	dispinterface IAutoServer
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CAutoServerDoc)
+			[id(1)] short Diameter;
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CAutoServerDoc)
+			[id(2)] void DispSvWindow();
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CAutoServerDoc
+	
+	[ uuid(685E7E73-BD9A-4C12-AD56-142A3FFBD0D6) ]
+	coclass Document
+	{
+		[default] dispinterface IAutoServer;
+	};
+
+	//{{AFX_APPEND_ODL}}
+	//}}AFX_APPEND_ODL}}
+};

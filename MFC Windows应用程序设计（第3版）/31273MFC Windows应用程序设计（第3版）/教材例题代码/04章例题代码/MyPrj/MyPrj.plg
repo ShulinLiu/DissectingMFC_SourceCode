@@ -1,0 +1,44 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: MyPrj - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\WINDOWS\TEMP\RSP1241.TMP" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fp"Debug/MyPrj.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ   /c 
+"I:\修改后的mfc教材\教材例题代码\第四章例题代码\MyPrj\MyPrj.cpp"
+"I:\修改后的mfc教材\教材例题代码\第四章例题代码\MyPrj\MyPrjView.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSP1241.TMP" 
+Creating temporary file "C:\WINDOWS\TEMP\RSP1242.TMP" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/MyPrj.pdb" /debug /machine:I386 /out:"Debug/MyPrj.exe" /pdbtype:sept 
+".\Debug\MyPrj.obj"
+".\Debug\StdAfx.obj"
+".\Debug\MainFrm.obj"
+".\Debug\MyPrjDoc.obj"
+".\Debug\MyPrjView.obj"
+".\Debug\MyPrj.res"
+]
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSP1242.TMP"
+<h3>Output Window</h3>
+Compiling...
+MyPrjView.cpp
+Generating Code...
+Skipping... (no relevant changes detected)
+MyPrj.cpp
+Linking...
+Creating command line "bscmake.exe /nologo /o"Debug/MyPrj.bsc"  ".\Debug\StdAfx.sbr" ".\Debug\MyPrj.sbr" ".\Debug\MainFrm.sbr" ".\Debug\MyPrjDoc.sbr" ".\Debug\MyPrjView.sbr""
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+MyPrj.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

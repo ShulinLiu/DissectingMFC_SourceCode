@@ -1,0 +1,54 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: MFCexp9_4 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Debug/MFCexp9_4.res" /d "_DEBUG" /d "_AFXDLL" "E:\MFC第二版\教材例题代码\09章例题代码\MFCexp9_4\MFCexp9_4.rc"" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP41.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/MFCexp9_4.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ   /c 
+"E:\MFC第二版\教材例题代码\09章例题代码\MFCexp9_4\MFCexp9_4.cpp"
+"E:\MFC第二版\教材例题代码\09章例题代码\MFCexp9_4\MainFrm.cpp"
+"E:\MFC第二版\教材例题代码\09章例题代码\MFCexp9_4\MFCexp9_4Doc.cpp"
+"E:\MFC第二版\教材例题代码\09章例题代码\MFCexp9_4\MFCexp9_4View.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP41.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP42.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/MFCexp9_4.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ   /c 
+"E:\MFC第二版\教材例题代码\09章例题代码\MFCexp9_4\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP42.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP43.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/MFCexp9_4.pdb" /debug /machine:I386 /out:"Debug/MFCexp9_4.exe" /pdbtype:sept 
+".\Debug\MFCexp9_4.obj"
+".\Debug\StdAfx.obj"
+".\Debug\MainFrm.obj"
+".\Debug\MFCexp9_4Doc.obj"
+".\Debug\MFCexp9_4View.obj"
+".\Debug\MFCexp9_4.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP43.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+MFCexp9_4.cpp
+MainFrm.cpp
+MFCexp9_4Doc.cpp
+MFCexp9_4View.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+MFCexp9_4.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

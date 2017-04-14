@@ -1,0 +1,41 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: MFCexp6_3 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ren1\LOCALS~1\Temp\RSP11A.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/MFCexp6_3.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ   /c 
+"F:\MFC代码\第六章例题代码\MFCexp6_3\MFCexp6_3.cpp"
+"F:\MFC代码\第六章例题代码\MFCexp6_3\MFCexp6_3View.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ren1\LOCALS~1\Temp\RSP11A.tmp" 
+Creating temporary file "C:\DOCUME~1\ren1\LOCALS~1\Temp\RSP11B.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/MFCexp6_3.pdb" /debug /machine:I386 /out:"Debug/MFCexp6_3.exe" /pdbtype:sept 
+".\Debug\MFCexp6_3.obj"
+".\Debug\StdAfx.obj"
+".\Debug\MainFrm.obj"
+".\Debug\MFCexp6_3Doc.obj"
+".\Debug\MFCexp6_3View.obj"
+".\Debug\MFCexp6_3.res"
+".\Debug\DrawRect.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\ren1\LOCALS~1\Temp\RSP11B.tmp"
+<h3>Output Window</h3>
+Compiling...
+MFCexp6_3.cpp
+MFCexp6_3View.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+MFCexp6_3.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,7 @@
+; MFCexp13_4dll.def : Declares the module parameters for the DLL.
+
+LIBRARY      "MFCexp13_4dll"
+DESCRIPTION  'MFCexp13_4dll Windows Dynamic Link Library'
+
+EXPORTS
+    ; Explicit exports can go here

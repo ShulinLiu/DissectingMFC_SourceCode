@@ -1,0 +1,63 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: MFCexp12_2 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Debug/MFCexp12_2.res" /d "_DEBUG" /d "_AFXDLL" "I:\MFC教材n\电子教案\教材例题代码\第12章例题代码\MFCexp12_2\MFCexp12_2.rc"" 
+Creating temporary file "C:\WINDOWS\TEMP\RSP2085.TMP" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fp"Debug/MFCexp12_2.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"I:\MFC教材n\电子教案\教材例题代码\第12章例题代码\MFCexp12_2\MainFrm.cpp"
+"I:\MFC教材n\电子教案\教材例题代码\第12章例题代码\MFCexp12_2\MFCexp12_2.cpp"
+"I:\MFC教材n\电子教案\教材例题代码\第12章例题代码\MFCexp12_2\MFCexp12_2Doc.cpp"
+"I:\MFC教材n\电子教案\教材例题代码\第12章例题代码\MFCexp12_2\MFCexp12_2View.cpp"
+"I:\MFC教材n\电子教案\教材例题代码\第12章例题代码\MFCexp12_2\MyThread.cpp"
+"I:\MFC教材n\电子教案\教材例题代码\第12章例题代码\MFCexp12_2\MyWnd.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSP2085.TMP" 
+Creating temporary file "C:\WINDOWS\TEMP\RSP2086.TMP" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fp"Debug/MFCexp12_2.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"I:\MFC教材n\电子教案\教材例题代码\第12章例题代码\MFCexp12_2\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSP2086.TMP" 
+Creating temporary file "C:\WINDOWS\TEMP\RSP2087.TMP" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/MFCexp12_2.pdb" /debug /machine:I386 /out:"Debug/MFCexp12_2.exe" /pdbtype:sept 
+".\Debug\MainFrm.obj"
+".\Debug\MFCexp12_2.obj"
+".\Debug\MFCexp12_2Doc.obj"
+".\Debug\MFCexp12_2View.obj"
+".\Debug\MyThread.obj"
+".\Debug\MyWnd.obj"
+".\Debug\StdAfx.obj"
+".\Debug\MFCexp12_2.res"
+]
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSP2087.TMP"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+MainFrm.cpp
+MFCexp12_2.cpp
+MFCexp12_2Doc.cpp
+MFCexp12_2View.cpp
+MyThread.cpp
+MyWnd.cpp
+Generating Code...
+Linking...
+Creating command line "bscmake.exe /nologo /o"Debug/MFCexp12_2.bsc"  ".\Debug\StdAfx.sbr" ".\Debug\MainFrm.sbr" ".\Debug\MFCexp12_2.sbr" ".\Debug\MFCexp12_2Doc.sbr" ".\Debug\MFCexp12_2View.sbr" ".\Debug\MyThread.sbr" ".\Debug\MyWnd.sbr""
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+MFCexp12_2.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

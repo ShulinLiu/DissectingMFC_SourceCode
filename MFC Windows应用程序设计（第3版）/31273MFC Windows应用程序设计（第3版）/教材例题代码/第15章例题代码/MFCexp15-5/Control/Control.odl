@@ -1,0 +1,70 @@
+// Control.odl : type library source for ActiveX Control project.
+
+// This file will be processed by the Make Type Library (mktyplib) tool to
+// produce the type library (Control.tlb) that will become a resource in
+// Control.ocx.
+
+#include <olectl.h>
+#include <idispids.h>
+
+[ uuid(81EC1B7D-F1B8-4562-8A71-7F707A055C4A), version(1.0),
+  helpfile("Control.hlp"),
+  helpstring("Control ActiveX Control module"),
+  control ]
+library CONTROLLib
+{
+	importlib(STDOLE_TLB);
+	importlib(STDTYPE_TLB);
+
+	//  Primary dispatch interface for CControlCtrl
+
+	[ uuid(37FF5418-7565-46AE-A24C-5C51346CB014),
+	  helpstring("Dispatch interface for Control Control"), hidden ]
+	dispinterface _DControl
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CControlCtrl)
+			[id(1)] BSTR InputString;
+			//}}AFX_ODL_PROP
+
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CControlCtrl)
+			//}}AFX_ODL_METHOD
+
+			[id(DISPID_ABOUTBOX)] void AboutBox();
+	};
+
+	//  Event dispatch interface for CControlCtrl
+
+	[ uuid(5AFBC2CA-B05A-4478-AD1C-127C38CD08E4),
+	  helpstring("Event interface for Control Control") ]
+	dispinterface _DControlEvents
+	{
+		properties:
+			//  Event interface has no properties
+
+		methods:
+			// NOTE - ClassWizard will maintain event information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_EVENT(CControlCtrl)
+			//}}AFX_ODL_EVENT
+	};
+
+	//  Class information for CControlCtrl
+
+	[ uuid(DD03940C-D761-4FF5-81A5-D0BD64CDEF20),
+	  helpstring("Control Control"), control ]
+	coclass Control
+	{
+		[default] dispinterface _DControl;
+		[default, source] dispinterface _DControlEvents;
+	};
+
+
+	//{{AFX_APPEND_ODL}}
+	//}}AFX_APPEND_ODL}}
+};

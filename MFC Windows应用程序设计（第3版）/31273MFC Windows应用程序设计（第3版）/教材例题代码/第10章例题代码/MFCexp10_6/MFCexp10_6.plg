@@ -1,0 +1,37 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: MFCexp10_6 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\WINDOWS\TEMP\RSP1024.TMP" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/MFCexp10_6.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"G:\MFC教材n\教材例题代码\第10章例题代码\MFCexp10_6\MFCexp10_6View.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSP1024.TMP" 
+Creating temporary file "C:\WINDOWS\TEMP\RSP1025.TMP" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/MFCexp10_6.pdb" /debug /machine:I386 /out:"Debug/MFCexp10_6.exe" /pdbtype:sept 
+".\Debug\MainFrm.obj"
+".\Debug\MFCexp10_6.obj"
+".\Debug\MFCexp10_6Doc.obj"
+".\Debug\MFCexp10_6View.obj"
+".\Debug\StdAfx.obj"
+".\Debug\MFCexp10_6.res"
+]
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSP1025.TMP"
+<h3>Output Window</h3>
+Compiling...
+MFCexp10_6View.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+MFCexp10_6.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

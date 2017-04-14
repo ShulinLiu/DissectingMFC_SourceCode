@@ -1,0 +1,8 @@
+; MFCexp13_3dll.def : Declares the module parameters for the DLL.
+
+LIBRARY      "MFCexp13_3dll"
+DESCRIPTION  'MFCexp13_3dll Windows Dynamic Link Library'
+
+EXPORTS
+    ; Explicit exports can go here
+	ShowMsg

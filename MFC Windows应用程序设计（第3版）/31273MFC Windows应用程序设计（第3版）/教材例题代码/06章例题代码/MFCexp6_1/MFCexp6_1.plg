@@ -1,0 +1,54 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: MFCexp6_1 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Debug/MFCexp6_1.res" /d "_DEBUG" /d "_AFXDLL" "F:\MFC代码\第六章例题代码\MFCexp6_1\MFCexp6_1.rc"" 
+Creating temporary file "C:\DOCUME~1\ren1\LOCALS~1\Temp\RSPC2.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/MFCexp6_1.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ   /c 
+"F:\MFC代码\第六章例题代码\MFCexp6_1\MFCexp6_1.cpp"
+"F:\MFC代码\第六章例题代码\MFCexp6_1\MainFrm.cpp"
+"F:\MFC代码\第六章例题代码\MFCexp6_1\MFCexp6_1Doc.cpp"
+"F:\MFC代码\第六章例题代码\MFCexp6_1\MFCexp6_1View.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ren1\LOCALS~1\Temp\RSPC2.tmp" 
+Creating temporary file "C:\DOCUME~1\ren1\LOCALS~1\Temp\RSPC3.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/MFCexp6_1.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ   /c 
+"F:\MFC代码\第六章例题代码\MFCexp6_1\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ren1\LOCALS~1\Temp\RSPC3.tmp" 
+Creating temporary file "C:\DOCUME~1\ren1\LOCALS~1\Temp\RSPC4.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/MFCexp6_1.pdb" /debug /machine:I386 /out:"Debug/MFCexp6_1.exe" /pdbtype:sept 
+".\Debug\MFCexp6_1.obj"
+".\Debug\StdAfx.obj"
+".\Debug\MainFrm.obj"
+".\Debug\MFCexp6_1Doc.obj"
+".\Debug\MFCexp6_1View.obj"
+".\Debug\MFCexp6_1.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\ren1\LOCALS~1\Temp\RSPC4.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+MFCexp6_1.cpp
+MainFrm.cpp
+MFCexp6_1Doc.cpp
+MFCexp6_1View.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+MFCexp6_1.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

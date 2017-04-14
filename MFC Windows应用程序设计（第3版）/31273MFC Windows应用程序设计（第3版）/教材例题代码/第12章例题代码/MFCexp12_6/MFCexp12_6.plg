@@ -1,0 +1,54 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: MFCexp12_6 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Debug/MFCexp12_6.res" /d "_DEBUG" /d "_AFXDLL" "I:\修改后的mfc教材\Mfc代码\第十二章例题代码\MFCexp12_6\MFCexp12_6.rc"" 
+Creating temporary file "C:\WINDOWS\TEMP\RSP22F5.TMP" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/MFCexp12_6.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ   /c 
+"I:\修改后的mfc教材\Mfc代码\第十二章例题代码\MFCexp12_6\MFCexp12_6.cpp"
+"I:\修改后的mfc教材\Mfc代码\第十二章例题代码\MFCexp12_6\MainFrm.cpp"
+"I:\修改后的mfc教材\Mfc代码\第十二章例题代码\MFCexp12_6\MFCexp12_6Doc.cpp"
+"I:\修改后的mfc教材\Mfc代码\第十二章例题代码\MFCexp12_6\MFCexp12_6View.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSP22F5.TMP" 
+Creating temporary file "C:\WINDOWS\TEMP\RSP22F6.TMP" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/MFCexp12_6.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ   /c 
+"I:\修改后的mfc教材\Mfc代码\第十二章例题代码\MFCexp12_6\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSP22F6.TMP" 
+Creating temporary file "C:\WINDOWS\TEMP\RSP22F7.TMP" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/MFCexp12_6.pdb" /debug /machine:I386 /out:"Debug/MFCexp12_6.exe" /pdbtype:sept 
+".\Debug\MFCexp12_6.obj"
+".\Debug\StdAfx.obj"
+".\Debug\MainFrm.obj"
+".\Debug\MFCexp12_6Doc.obj"
+".\Debug\MFCexp12_6View.obj"
+".\Debug\MFCexp12_6.res"
+]
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSP22F7.TMP"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+MFCexp12_6.cpp
+MainFrm.cpp
+MFCexp12_6Doc.cpp
+MFCexp12_6View.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+MFCexp12_6.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

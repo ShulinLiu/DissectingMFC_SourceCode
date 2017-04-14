@@ -1,0 +1,63 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: MFCexp9_6 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Debug/MFCexp9_6.res" /d "_DEBUG" /d "_AFXDLL" "E:\MFC第二版\教材例题代码\09章例题代码\MFCexp9_6\MFCexp9_6.rc"" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP5C.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fp"Debug/MFCexp9_6.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\MFC第二版\教材例题代码\09章例题代码\MFCexp9_6\ChildFrm.cpp"
+"E:\MFC第二版\教材例题代码\09章例题代码\MFCexp9_6\Letter.cpp"
+"E:\MFC第二版\教材例题代码\09章例题代码\MFCexp9_6\MainFrm.cpp"
+"E:\MFC第二版\教材例题代码\09章例题代码\MFCexp9_6\MFCexp9_6.cpp"
+"E:\MFC第二版\教材例题代码\09章例题代码\MFCexp9_6\MFCexp9_6Doc.cpp"
+"E:\MFC第二版\教材例题代码\09章例题代码\MFCexp9_6\MFCexp9_6View.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP5C.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP5D.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fp"Debug/MFCexp9_6.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\MFC第二版\教材例题代码\09章例题代码\MFCexp9_6\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP5D.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP5E.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/MFCexp9_6.pdb" /debug /machine:I386 /out:"Debug/MFCexp9_6.exe" /pdbtype:sept 
+".\Debug\ChildFrm.obj"
+".\Debug\Letter.obj"
+".\Debug\MainFrm.obj"
+".\Debug\MFCexp9_6.obj"
+".\Debug\MFCexp9_6Doc.obj"
+".\Debug\MFCexp9_6View.obj"
+".\Debug\StdAfx.obj"
+".\Debug\MFCexp9_6.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP5E.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+ChildFrm.cpp
+Letter.cpp
+MainFrm.cpp
+MFCexp9_6.cpp
+MFCexp9_6Doc.cpp
+MFCexp9_6View.cpp
+Generating Code...
+Linking...
+Creating command line "bscmake.exe /nologo /o"Debug/MFCexp9_6.bsc"  ".\Debug\StdAfx.sbr" ".\Debug\ChildFrm.sbr" ".\Debug\Letter.sbr" ".\Debug\MainFrm.sbr" ".\Debug\MFCexp9_6.sbr" ".\Debug\MFCexp9_6Doc.sbr" ".\Debug\MFCexp9_6View.sbr""
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+MFCexp9_6.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

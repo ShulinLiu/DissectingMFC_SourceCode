@@ -1,0 +1,40 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: MFCexp11_3 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Debug/MFCexp11_3.res" /d "_DEBUG" /d "_AFXDLL" "G:\MFCexp11_3\MFCexp11_3.rc"" 
+Creating temporary file "C:\WINDOWS\TEMP\RSPF260.TMP" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/MFCexp11_3.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ   /c 
+"G:\MFCexp11_3\MFCexp11_3.cpp"
+"G:\MFCexp11_3\MFCexp11_3Dlg.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPF260.TMP" 
+Creating temporary file "C:\WINDOWS\TEMP\RSPF261.TMP" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/MFCexp11_3.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ   /c 
+"G:\MFCexp11_3\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPF261.TMP" 
+Creating command line "link.exe /nologo /subsystem:windows /incremental:yes /pdb:"Debug/MFCexp11_3.pdb" /debug /machine:I386 /out:"Debug/MFCexp11_3.exe" /pdbtype:sept  .\Debug\MFCexp11_3.obj .\Debug\MFCexp11_3Dlg.obj .\Debug\StdAfx.obj .\Debug\MFCexp11_3.res "
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+MFCexp11_3.cpp
+MFCexp11_3Dlg.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+MFCexp11_3.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

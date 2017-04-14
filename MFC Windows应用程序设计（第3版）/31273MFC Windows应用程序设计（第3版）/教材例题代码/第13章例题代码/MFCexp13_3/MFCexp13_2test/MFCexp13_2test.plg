@@ -1,0 +1,27 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: MFCexp13_2test - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ren1\LOCALS~1\Temp\RSP77.tmp" with contents
+[
+MFCexp13_2dll.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/MFCexp13_2test.pdb" /debug /machine:I386 /out:"Debug/MFCexp13_2test.exe" /pdbtype:sept 
+".\Debug\MFCexp13_2test.obj"
+".\Debug\MFCexp13_2testDlg.obj"
+".\Debug\StdAfx.obj"
+".\Debug\MFCexp13_2test.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\ren1\LOCALS~1\Temp\RSP77.tmp"
+<h3>Output Window</h3>
+Linking...
+
+
+
+<h3>Results</h3>
+MFCexp13_2test.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

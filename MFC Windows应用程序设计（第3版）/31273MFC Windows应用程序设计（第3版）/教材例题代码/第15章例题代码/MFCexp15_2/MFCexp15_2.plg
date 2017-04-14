@@ -1,0 +1,60 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: MFCexp15_2 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Debug/MFCexp15_2.res" /d "_DEBUG" /d "_AFXDLL" "G:\MFCexp15_2\MFCexp15_2.rc"" 
+Creating temporary file "C:\WINDOWS\TEMP\RSPB0F3.TMP" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/MFCexp15_2.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ   /c 
+"G:\MFCexp15_2\MFCexp15_2.cpp"
+"G:\MFCexp15_2\MainFrm.cpp"
+"G:\MFCexp15_2\MFCexp15_2Doc.cpp"
+"G:\MFCexp15_2\MFCexp15_2View.cpp"
+"G:\MFCexp15_2\SrvrItem.cpp"
+"G:\MFCexp15_2\IpFrame.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPB0F3.TMP" 
+Creating temporary file "C:\WINDOWS\TEMP\RSPB0F4.TMP" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/MFCexp15_2.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ   /c 
+"G:\MFCexp15_2\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPB0F4.TMP" 
+Creating temporary file "C:\WINDOWS\TEMP\RSPB0F5.TMP" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/MFCexp15_2.pdb" /debug /machine:I386 /out:"Debug/MFCexp15_2.exe" /pdbtype:sept 
+.\Debug\MFCexp15_2.obj
+.\Debug\StdAfx.obj
+.\Debug\MainFrm.obj
+.\Debug\MFCexp15_2Doc.obj
+.\Debug\MFCexp15_2View.obj
+.\Debug\SrvrItem.obj
+.\Debug\IpFrame.obj
+.\Debug\MFCexp15_2.res
+]
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSPB0F5.TMP"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+MFCexp15_2.cpp
+MainFrm.cpp
+MFCexp15_2Doc.cpp
+MFCexp15_2View.cpp
+SrvrItem.cpp
+IpFrame.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+MFCexp15_2.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

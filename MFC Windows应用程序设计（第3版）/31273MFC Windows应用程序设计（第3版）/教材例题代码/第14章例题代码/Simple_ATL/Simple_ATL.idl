@@ -1,0 +1,39 @@
+// Simple_ATL.idl : IDL source for Simple_ATL.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (Simple_ATL.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+	[
+		object,
+		uuid(09DE34FD-0136-45EA-B0FD-7B3D22EC4463),
+		dual,
+		helpstring("IFirst Interface"),
+		pointer_default(unique)
+	]
+	interface IFirst : IDispatch
+	{
+		[id(1), helpstring("method AddNumbers")] HRESULT AddNumbers([in] long Num1, [in] long Num2, [out] long *ReturnVal);
+	};
+
+[
+	uuid(A9B07443-6CCC-4E48-BF8C-7F4D5DF622F9),
+	version(1.0),
+	helpstring("Simple_ATL 1.0 Type Library")
+]
+library SIMPLE_ATLLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(2A379C68-E4DB-4FF5-BD05-9BE284B5D674),
+		helpstring("First Class")
+	]
+	coclass First
+	{
+		[default] interface IFirst;
+	};
+};

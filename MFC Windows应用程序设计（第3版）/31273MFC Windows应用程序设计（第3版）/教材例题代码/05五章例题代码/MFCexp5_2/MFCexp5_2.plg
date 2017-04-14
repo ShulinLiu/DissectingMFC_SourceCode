@@ -1,0 +1,52 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: MFCexp5_2 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ren1\LOCALS~1\Temp\RSP9D.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/MFCexp5_2.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"F:\MFC代码\第五章例题代码\MFCexp5_2\MainFrm.cpp"
+"F:\MFC代码\第五章例题代码\MFCexp5_2\MFCexp5_2.cpp"
+"F:\MFC代码\第五章例题代码\MFCexp5_2\MFCexp5_2Doc.cpp"
+"F:\MFC代码\第五章例题代码\MFCexp5_2\MFCexp5_2View.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ren1\LOCALS~1\Temp\RSP9D.tmp" 
+Creating temporary file "C:\DOCUME~1\ren1\LOCALS~1\Temp\RSP9E.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/MFCexp5_2.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"F:\MFC代码\第五章例题代码\MFCexp5_2\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ren1\LOCALS~1\Temp\RSP9E.tmp" 
+Creating temporary file "C:\DOCUME~1\ren1\LOCALS~1\Temp\RSP9F.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/MFCexp5_2.pdb" /debug /machine:I386 /out:"Debug/MFCexp5_2.exe" /pdbtype:sept 
+".\Debug\MainFrm.obj"
+".\Debug\MFCexp5_2.obj"
+".\Debug\MFCexp5_2Doc.obj"
+".\Debug\MFCexp5_2View.obj"
+".\Debug\StdAfx.obj"
+".\Debug\MFCexp5_2.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\ren1\LOCALS~1\Temp\RSP9F.tmp"
+<h3>Output Window</h3>
+Compiling...
+StdAfx.cpp
+Compiling...
+MainFrm.cpp
+MFCexp5_2.cpp
+MFCexp5_2Doc.cpp
+MFCexp5_2View.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+MFCexp5_2.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

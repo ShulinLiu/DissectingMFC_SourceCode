@@ -1,0 +1,40 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: MFCexp6_2 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ren1\LOCALS~1\Temp\RSPFE.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fp"Debug/MFCexp6_2.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"F:\MFC代码\第六章例题代码\MFCexp6_2\MFCexp6_2View.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ren1\LOCALS~1\Temp\RSPFE.tmp" 
+Creating temporary file "C:\DOCUME~1\ren1\LOCALS~1\Temp\RSPFF.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/MFCexp6_2.pdb" /debug /machine:I386 /out:"Debug/MFCexp6_2.exe" /pdbtype:sept 
+".\Debug\MainFrm.obj"
+".\Debug\MFCexp6_2.obj"
+".\Debug\MFCexp6_2Doc.obj"
+".\Debug\MFCexp6_2View.obj"
+".\Debug\StdAfx.obj"
+".\Debug\MFCexp6_2.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\ren1\LOCALS~1\Temp\RSPFF.tmp"
+<h3>Output Window</h3>
+Compiling...
+MFCexp6_2View.cpp
+Linking...
+Creating command line "bscmake.exe /nologo /o"Debug/MFCexp6_2.bsc"  ".\Debug\StdAfx.sbr" ".\Debug\MainFrm.sbr" ".\Debug\MFCexp6_2.sbr" ".\Debug\MFCexp6_2Doc.sbr" ".\Debug\MFCexp6_2View.sbr""
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+MFCexp6_2.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

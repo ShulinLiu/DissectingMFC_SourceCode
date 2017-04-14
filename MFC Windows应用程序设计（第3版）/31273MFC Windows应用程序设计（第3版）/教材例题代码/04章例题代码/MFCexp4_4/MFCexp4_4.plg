@@ -1,0 +1,41 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: MFCexp4_4 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP2B.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fp"Debug/MFCexp4_4.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\MFC第二版\教材例题代码\04章例题代码\MFCexp4_4\MFCexp4_4.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP2B.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP2C.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/MFCexp4_4.pdb" /debug /machine:I386 /out:"Debug/MFCexp4_4.exe" /pdbtype:sept 
+".\Debug\MainFrm.obj"
+".\Debug\MFCexp4_4.obj"
+".\Debug\MFCexp4_4Doc.obj"
+".\Debug\MFCexp4_4View.obj"
+".\Debug\StdAfx.obj"
+".\Debug\MFCexp4_4.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP2C.tmp"
+<h3>Output Window</h3>
+Compiling...
+MFCexp4_4.cpp
+E:\MFC第二版\教材例题代码\04章例题代码\MFCexp4_4\MFCexp4_4.cpp(86) : error C2065: 'cmdInfo' : undeclared identifier
+Error executing cl.exe.
+Creating command line "bscmake.exe /nologo /o"Debug/MFCexp4_4.bsc"  ".\Debug\StdAfx.sbr" ".\Debug\MainFrm.sbr" ".\Debug\MFCexp4_4.sbr" ".\Debug\MFCexp4_4Doc.sbr" ".\Debug\MFCexp4_4View.sbr""
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+MFCexp4_4.exe - 1 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,5 @@
+;DLL的名称
+LIBRARY MFCexp13_1dll
+; 声明ShowHello为导出函数
+EXPORTS ShowHello
+;def文件结束

@@ -1,0 +1,54 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: MFCexp13_5 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Debug/MFCexp13_5.res" /d "_DEBUG" /d "_AFXDLL" "E:\MFC第二版\教材例题代码\第13章例题代码\MFCexp13_5\MFCexp13_5.rc"" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP34.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/MFCexp13_5.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\MFC第二版\教材例题代码\第13章例题代码\MFCexp13_5\MainFrm.cpp"
+"E:\MFC第二版\教材例题代码\第13章例题代码\MFCexp13_5\MFCexp13_5.cpp"
+"E:\MFC第二版\教材例题代码\第13章例题代码\MFCexp13_5\MFCexp13_5Doc.cpp"
+"E:\MFC第二版\教材例题代码\第13章例题代码\MFCexp13_5\MFCexp13_5View.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP34.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP35.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/MFCexp13_5.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\MFC第二版\教材例题代码\第13章例题代码\MFCexp13_5\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP35.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP36.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/MFCexp13_5.pdb" /debug /machine:I386 /out:"Debug/MFCexp13_5.exe" /pdbtype:sept 
+".\Debug\MainFrm.obj"
+".\Debug\MFCexp13_5.obj"
+".\Debug\MFCexp13_5Doc.obj"
+".\Debug\MFCexp13_5View.obj"
+".\Debug\StdAfx.obj"
+".\Debug\MFCexp13_5.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP36.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+MainFrm.cpp
+MFCexp13_5.cpp
+MFCexp13_5Doc.cpp
+MFCexp13_5View.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+MFCexp13_5.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

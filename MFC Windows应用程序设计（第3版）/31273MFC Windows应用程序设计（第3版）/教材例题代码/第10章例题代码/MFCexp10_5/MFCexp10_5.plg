@@ -1,0 +1,31 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: MFCexp10_5 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Debug/MFCexp10_5.res" /d "_DEBUG" /d "_AFXDLL" "I:\修改后的MFC教材\MFC代码\第十章例题代码\MFCexp10_5\MFCexp10_5.rc"" 
+Creating temporary file "C:\WINDOWS\TEMP\RSP9241.TMP" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/MFCexp10_5.pdb" /debug /machine:I386 /out:"Debug/MFCexp10_5.exe" /pdbtype:sept 
+".\Debug\MainFrm.obj"
+".\Debug\MFCexp10_5.obj"
+".\Debug\MFCexp10_5Doc.obj"
+".\Debug\MFCexp10_5View.obj"
+".\Debug\StdAfx.obj"
+".\Debug\MFCexp10_5.res"
+]
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSP9241.TMP"
+<h3>Output Window</h3>
+Compiling resources...
+Linking...
+
+
+
+<h3>Results</h3>
+MFCexp10_5.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

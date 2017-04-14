@@ -1,0 +1,57 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: ContainerApp - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Release/ContainerApp.res" /d "NDEBUG" "C:\WinPrgS\Chap19\ContainerApp\ContainerApp.rc"" 
+Creating temporary file "C:\WINDOWS\TEMP\RSPA041.TMP" with contents
+[
+/nologo /MT /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/ContainerApp.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\WinPrgS\Chap19\ContainerApp\CntrItem.cpp"
+"C:\WinPrgS\Chap19\ContainerApp\ContainerApp.cpp"
+"C:\WinPrgS\Chap19\ContainerApp\ContainerAppDoc.cpp"
+"C:\WinPrgS\Chap19\ContainerApp\ContainerAppView.cpp"
+"C:\WinPrgS\Chap19\ContainerApp\MainFrm.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPA041.TMP" 
+Creating temporary file "C:\WINDOWS\TEMP\RSPA042.TMP" with contents
+[
+/nologo /MT /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /Fp"Release/ContainerApp.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\WinPrgS\Chap19\ContainerApp\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPA042.TMP" 
+Creating temporary file "C:\WINDOWS\TEMP\RSPA043.TMP" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:"Release/ContainerApp.pdb" /machine:I386 /out:"Release/ContainerApp.exe" 
+.\Release\CntrItem.obj
+.\Release\ContainerApp.obj
+.\Release\ContainerAppDoc.obj
+.\Release\ContainerAppView.obj
+.\Release\MainFrm.obj
+.\Release\StdAfx.obj
+.\Release\ContainerApp.res
+]
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSPA043.TMP"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+CntrItem.cpp
+ContainerApp.cpp
+ContainerAppDoc.cpp
+ContainerAppView.cpp
+MainFrm.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+ContainerApp.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

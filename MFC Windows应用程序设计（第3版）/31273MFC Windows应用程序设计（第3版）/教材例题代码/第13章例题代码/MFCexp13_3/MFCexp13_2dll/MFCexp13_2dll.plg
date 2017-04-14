@@ -1,0 +1,33 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: MFCexp13_2dll - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ren1\LOCALS~1\Temp\RSP5B.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "MFCEXP13_2DLL_EXPORTS" /Fp"Debug/MFCexp13_2dll.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ  /c 
+"F:\修改后的MFC教材\MFC代码\第十三章例题代码\MFCexp13_2dll\MFCexp13_2dll.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ren1\LOCALS~1\Temp\RSP5B.tmp" 
+Creating temporary file "C:\DOCUME~1\ren1\LOCALS~1\Temp\RSP5C.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /dll /incremental:yes /pdb:"Debug/MFCexp13_2dll.pdb" /debug /machine:I386 /out:"Debug/MFCexp13_2dll.dll" /implib:"Debug/MFCexp13_2dll.lib" /pdbtype:sept 
+".\Debug\MFCexp13_2dll.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\ren1\LOCALS~1\Temp\RSP5C.tmp"
+<h3>Output Window</h3>
+Compiling...
+MFCexp13_2dll.cpp
+Linking...
+   Creating library Debug/MFCexp13_2dll.lib and object Debug/MFCexp13_2dll.exp
+
+
+
+<h3>Results</h3>
+MFCexp13_2dll.dll - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
