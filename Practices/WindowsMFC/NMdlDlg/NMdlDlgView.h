@@ -9,6 +9,7 @@
 #pragma once
 #endif // _MSC_VER > 1000
 #include"NonMdlDlg.h"
+#include "Property.h"
 
 class CNMdlDlgView : public CView
 {
@@ -55,6 +56,7 @@ protected:
 	//{{AFX_MSG(CNMdlDlgView)
 	afx_msg void OnLButtonDown(UINT nFlags, CPoint point);
 	afx_msg void OnRButtonDown(UINT nFlags, CPoint point);
+	afx_msg void OnLButtonDblClk(UINT nFlags, CPoint point);
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
 };

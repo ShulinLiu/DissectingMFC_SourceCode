@@ -2,24 +2,30 @@
 
 [General Info]
 Version=1
-LastClass=CNonMdlDlg
+LastClass=CProperty
 LastTemplate=CDialog
 NewFileInclude1=#include "stdafx.h"
 NewFileInclude2=#include "NMdlDlg.h"
 LastPage=0
 
-ClassCount=6
+ClassCount=9
 Class1=CNMdlDlgApp
 Class2=CNMdlDlgDoc
 Class3=CNMdlDlgView
 Class4=CMainFrame
 
-ResourceCount=3
-Resource1=IDD_ABOUTBOX
-Resource2=IDR_MAINFRAME
+ResourceCount=6
+Resource1=IDD_DIALOG3
+Resource2=IDD_DIALOG1
 Class5=CAboutDlg
 Class6=CNonMdlDlg
-Resource3=IDD_DIALOG1
+Resource3=IDD_DIALOG2
+Class7=CTextOptions
+Resource4=IDD_ABOUTBOX
+Class8=CBitmapOptions
+Resource5=IDR_MAINFRAME
+Class9=CProperty
+Resource6=IDD_DIALOG4
 
 [CLS:CNMdlDlgApp]
 Type=0
@@ -135,4 +141,50 @@ BaseClass=CDialog
 Filter=D
 LastObject=CNonMdlDlg
 VirtualFilter=dWC
+
+[DLG:IDD_DIALOG2]
+Type=1
+Class=CTextOptions
+ControlCount=4
+Control1=IDC_STATIC,button,1342177287
+Control2=IDC_RADIO1,button,1342177289
+Control3=IDC_RADIO2,button,1342177289
+Control4=IDC_RADIO3,button,1342177289
+
+[CLS:CTextOptions]
+Type=0
+HeaderFile=TextOptions.h
+ImplementationFile=TextOptions.cpp
+BaseClass=CPropertyPage
+Filter=D
+LastObject=CTextOptions
+
+[DLG:IDD_DIALOG3]
+Type=1
+Class=CBitmapOptions
+ControlCount=0
+
+[CLS:CBitmapOptions]
+Type=0
+HeaderFile=BitmapOptions.h
+ImplementationFile=BitmapOptions.cpp
+BaseClass=CPropertyPage
+Filter=D
+LastObject=CBitmapOptions
+
+[DLG:IDD_DIALOG4]
+Type=1
+Class=CProperty
+ControlCount=3
+Control1=IDOK,button,1342242817
+Control2=IDCANCEL,button,1342242816
+Control3=IDC_BUTTON1,button,1342242816
+
+[CLS:CProperty]
+Type=0
+HeaderFile=Property.h
+ImplementationFile=Property.cpp
+BaseClass=CDialog
+Filter=D
+LastObject=CProperty
 

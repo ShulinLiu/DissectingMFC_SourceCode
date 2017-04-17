@@ -6,19 +6,39 @@
 --------------------Configuration: NMdlDlg - Win32 Debug--------------------
 </h3>
 <h3>Command Lines</h3>
-Creating temporary file "C:\Users\Paopao\AppData\Local\Temp\RSPF583.tmp" with contents
+Creating command line "rc.exe /l 0x804 /fo"Debug/NMdlDlg.res" /d "_DEBUG" /d "_AFXDLL" "E:\Codes\NMdlDlg\NMdlDlg.rc"" 
+Creating temporary file "C:\Users\Paopao\AppData\Local\Temp\RSPD9C4.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/NMdlDlg.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\Codes\NMdlDlg\NMdlDlg.cpp"
+"E:\Codes\NMdlDlg\TextOptions.cpp"
+"E:\Codes\NMdlDlg\BitmapOptions.cpp"
+"E:\Codes\NMdlDlg\Property.cpp"
+]
+Creating command line "cl.exe @C:\Users\Paopao\AppData\Local\Temp\RSPD9C4.tmp" 
+Creating temporary file "C:\Users\Paopao\AppData\Local\Temp\RSPD9C5.tmp" with contents
 [
 /nologo /subsystem:windows /incremental:yes /pdb:"Debug/NMdlDlg.pdb" /debug /machine:I386 /out:"Debug/NMdlDlg.exe" /pdbtype:sept 
-.\Debug\NMdlDlg.obj
-.\Debug\StdAfx.obj
 .\Debug\MainFrm.obj
+.\Debug\NMdlDlg.obj
 .\Debug\NMdlDlgDoc.obj
 .\Debug\NMdlDlgView.obj
-.\Debug\NMdlDlg.res
 .\Debug\NonMdlDlg.obj
+.\Debug\StdAfx.obj
+.\Debug\NMdlDlg.res
+.\Debug\TextOptions.obj
+.\Debug\BitmapOptions.obj
+.\Debug\Property.obj
 ]
-Creating command line "link.exe @C:\Users\Paopao\AppData\Local\Temp\RSPF583.tmp"
+Creating command line "link.exe @C:\Users\Paopao\AppData\Local\Temp\RSPD9C5.tmp"
 <h3>Output Window</h3>
+Compiling resources...
+Compiling...
+NMdlDlg.cpp
+TextOptions.cpp
+BitmapOptions.cpp
+Property.cpp
+Generating Code...
 Linking...
 
 

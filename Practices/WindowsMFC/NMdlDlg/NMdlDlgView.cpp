@@ -22,6 +22,7 @@ BEGIN_MESSAGE_MAP(CNMdlDlgView, CView)
 	//{{AFX_MSG_MAP(CNMdlDlgView)
 	ON_WM_LBUTTONDOWN()
 	ON_WM_RBUTTONDOWN()
+	ON_WM_LBUTTONDBLCLK()
 	//}}AFX_MSG_MAP
 	// Standard printing commands
 	ON_COMMAND(ID_FILE_PRINT, CView::OnFilePrint)
@@ -127,4 +128,12 @@ void CNMdlDlgView::OnRButtonDown(UINT nFlags, CPoint point)
 		m_pNameDlg->Create( );			//创建对话框
 	
 	CView::OnRButtonDown(nFlags, point);
+}
+
+void CNMdlDlgView::OnLButtonDblClk(UINT nFlags, CPoint point) 
+{
+	// TODO: Add your message handler code here and/or call default
+	CProperty pPrt("My Property Sheet");
+	int result=pPrt.DoModal();
+	CView::OnLButtonDblClk(nFlags, point);
 }

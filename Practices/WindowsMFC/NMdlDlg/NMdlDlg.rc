@@ -189,6 +189,37 @@ BEGIN
     PUSHBUTTON      "Cancel",IDC_BUTTON1,141,38,30,16
 END
 
+IDD_DIALOG2 DIALOG DISCARDABLE  0, 0, 187, 99
+STYLE WS_CHILD | WS_CAPTION
+CAPTION "Text Options"
+FONT 10, "System"
+BEGIN
+    GROUPBOX        "Options",IDC_STATIC,24,18,122,59
+    CONTROL         "Radio1",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON,43,30,39,
+                    10
+    CONTROL         "Radio2",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,43,45,39,
+                    10
+    CONTROL         "Radio3",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,43,61,39,
+                    10
+END
+
+IDD_DIALOG3 DIALOG DISCARDABLE  0, 0, 187, 97
+STYLE WS_CHILD | WS_CAPTION
+CAPTION "Bitmap Options"
+FONT 10, "System"
+BEGIN
+END
+
+IDD_DIALOG4 DIALOG DISCARDABLE  0, 0, 187, 118
+STYLE WS_CHILD | WS_CAPTION
+CAPTION "My Property Sheet"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,26,97,50,14
+    PUSHBUTTON      "取消",IDCANCEL,77,97,50,14
+    PUSHBUTTON      "应用",IDC_BUTTON1,130,97,50,14
+END
+
 
 #ifndef _MAC
 /////////////////////////////////////////////////////////////////////////////
@@ -255,6 +286,30 @@ BEGIN
         RIGHTMARGIN, 180
         TOPMARGIN, 7
         BOTTOMMARGIN, 88
+    END
+
+    IDD_DIALOG2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 92
+    END
+
+    IDD_DIALOG3, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 90
+    END
+
+    IDD_DIALOG4, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 111
     END
 END
 #endif    // APSTUDIO_INVOKED
