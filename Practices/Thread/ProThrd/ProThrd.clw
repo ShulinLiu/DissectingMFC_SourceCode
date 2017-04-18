@@ -127,6 +127,7 @@ ImplementationFile=MyWnd.cpp
 BaseClass=CFrameWnd
 Filter=T
 LastObject=CMyWnd
+VirtualFilter=fWC
 
 [CLS:CMyThread]
 Type=0

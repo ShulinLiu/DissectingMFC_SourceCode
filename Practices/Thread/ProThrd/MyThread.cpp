@@ -26,11 +26,11 @@ CMyThread::~CMyThread()
 }
 
 BOOL CMyThread::InitInstance()
-{
-	CMyWnd*pFrameWnd=new CMyWnd();
-	pFrameWnd->Create(NULL,"Client Thread Window");
+{	CMyWnd*pFrameWnd=new CMyWnd();
+	pFrameWnd->Create(NULL,"Thread Window");
 	pFrameWnd->ShowWindow(SW_SHOW);
 	pFrameWnd->UpdateWindow();
+	
 	return TRUE;
 
 }

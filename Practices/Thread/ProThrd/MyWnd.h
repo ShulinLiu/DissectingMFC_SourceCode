@@ -34,7 +34,7 @@ protected:
 
 	// Generated message map functions
 	//{{AFX_MSG(CMyWnd)
-		// NOTE - the ClassWizard will add and remove member functions here.
+	afx_msg void OnLButtonDown(UINT nFlags, CPoint point);
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
 };
