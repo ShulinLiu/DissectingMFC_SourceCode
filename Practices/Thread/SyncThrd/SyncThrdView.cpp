@@ -23,6 +23,8 @@ CCriticalSection criticalSection;//定义临界段对象
 
 CMutex mutexObj(FALSE, "mutex1");//定义互斥体对象
 
+CSemaphore semaphorObj(2,3);//信号量
+
 /////////////////////////////////////////////////////////////////////////////
 // CSyncThrdView
 
@@ -93,42 +95,51 @@ CSyncThrdDoc* CSyncThrdView::GetDocument() // non-debug version is inline
 // 线程函数，全局或者静态函数
 UINT MessageThread1(LPVOID pParam)
 {
-	criticalSection.Lock( );
+	semaphorObj.Lock();
     char* pMessage ="Thread1 is started";
     CWnd* pMainWnd = AfxGetMainWnd( );
     ::MessageBox(pMainWnd->m_hWnd,
         pMessage, "Thread message", MB_OK);
-	criticalSection.Unlock( );
+	semaphorObj.Unlock( );
     return 0;
 }
 UINT MessageThread2(LPVOID pParam)
 {
-	criticalSection.Lock( );
+	semaphorObj.Lock( );
     char* pMessage ="Thread2 is started";
     CWnd* pMainWnd = AfxGetMainWnd( );
     ::MessageBox(pMainWnd->m_hWnd,
         pMessage, "Thread message", MB_OK);
-	criticalSection.Unlock( );
+	semaphorObj.Unlock( );
     return 0;
 }
-
 UINT MessageThread3(LPVOID pParam)
 {
-	mutexObj.Lock( );
+	semaphorObj.Lock( );
     char* pMessage ="Thread3 is started";
     CWnd* pMainWnd = AfxGetMainWnd( );
     ::MessageBox(pMainWnd->m_hWnd,
         pMessage, "Thread message", MB_OK);
-	mutexObj.Unlock( );
+	semaphorObj.Unlock( );
+    return 0;
+}
+UINT MessageThread4(LPVOID pParam)
+{
+	semaphorObj.Lock( );
+    char* pMessage ="Thread4 is started";
+    CWnd* pMainWnd = AfxGetMainWnd( );
+    ::MessageBox(pMainWnd->m_hWnd,
+        pMessage, "Thread message", MB_OK);
+	semaphorObj.Unlock( );
     return 0;
 }
 
 void CSyncThrdView::OnLButtonDown(UINT nFlags, CPoint point) 
 {
-	AfxBeginThread (MessageThread1,
-		"Thread is started");//启动线程1
-	AfxBeginThread (MessageThread2,
-		"Thread is started");//启动线程2
+	AfxBeginThread (MessageThread1,"Thread is started");
+	AfxBeginThread (MessageThread2,"Thread is started");
+	AfxBeginThread (MessageThread3,"Thread is started");
+	AfxBeginThread (MessageThread4,"Thread is started");
 	
 	CView::OnLButtonDown(nFlags, point);
 }
@@ -136,6 +147,6 @@ void CSyncThrdView::OnLButtonDown(UINT nFlags, CPoint point)
 void CSyncThrdView::OnRButtonDown(UINT nFlags, CPoint point) 
 {
 
-	AfxBeginThread (MessageThread3,"Thread is started");	
+	
 	CView::OnRButtonDown(nFlags, point);
 }
