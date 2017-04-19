@@ -17,7 +17,11 @@ static char THIS_FILE[] = __FILE__;
 //CEvent eventObj;
 
 //手工发信对象
-CEvent eventObj(FALSE,TRUE);
+//CEvent eventObj(FALSE,TRUE);
+
+CCriticalSection criticalSection;//定义临界段对象
+
+CMutex mutexObj(FALSE, "mutex1");//定义互斥体对象
 
 /////////////////////////////////////////////////////////////////////////////
 // CSyncThrdView
@@ -89,37 +93,34 @@ CSyncThrdDoc* CSyncThrdView::GetDocument() // non-debug version is inline
 // 线程函数，全局或者静态函数
 UINT MessageThread1(LPVOID pParam)
 {
+	criticalSection.Lock( );
     char* pMessage ="Thread1 is started";
     CWnd* pMainWnd = AfxGetMainWnd( );
     ::MessageBox(pMainWnd->m_hWnd,
-        pMessage, "Thread message", MB_OK);//显示一个信息框
-	eventObj.Lock( );                      //使线程1处于等待状态
-	pMessage="Thread1 is unblocked";
-    ::MessageBox(pMainWnd->m_hWnd,
-        pMessage, "Thread1 message", MB_OK);//显示线程1解锁后的信息框
-	eventObj.Lock( );						//使线程1再次处于等待状态
-	pMessage="Thread1 is unblocked again";
-    ::MessageBox(pMainWnd->m_hWnd,
-        pMessage, "Thread1 message", MB_OK); //显示线程1解锁后的信息框
+        pMessage, "Thread message", MB_OK);
+	criticalSection.Unlock( );
     return 0;
 }
 UINT MessageThread2(LPVOID pParam)
 {
+	criticalSection.Lock( );
     char* pMessage ="Thread2 is started";
     CWnd* pMainWnd = AfxGetMainWnd( );
     ::MessageBox(pMainWnd->m_hWnd,
-        pMessage, "Thread message", MB_OK); //显示一个信息框
-	eventObj.Lock( );						//使线程2处于等待状态
-	pMessage="Thread2 is unblocked";
-    ::MessageBox(pMainWnd->m_hWnd,
-        pMessage, "Thread2 message", MB_OK); //显示线程2解锁后的信息框
+        pMessage, "Thread message", MB_OK);
+	criticalSection.Unlock( );
     return 0;
 }
 
 UINT MessageThread3(LPVOID pParam)
 {
-	eventObj.SetEvent( );					//把事件对象置为发信状态
-	return 0;
+	mutexObj.Lock( );
+    char* pMessage ="Thread3 is started";
+    CWnd* pMainWnd = AfxGetMainWnd( );
+    ::MessageBox(pMainWnd->m_hWnd,
+        pMessage, "Thread message", MB_OK);
+	mutexObj.Unlock( );
+    return 0;
 }
 
 void CSyncThrdView::OnLButtonDown(UINT nFlags, CPoint point) 
@@ -127,15 +128,14 @@ void CSyncThrdView::OnLButtonDown(UINT nFlags, CPoint point)
 	AfxBeginThread (MessageThread1,
 		"Thread is started");//启动线程1
 	AfxBeginThread (MessageThread2,
-						"Thread is started");//启动线程2
+		"Thread is started");//启动线程2
 	
 	CView::OnLButtonDown(nFlags, point);
 }
 
 void CSyncThrdView::OnRButtonDown(UINT nFlags, CPoint point) 
 {
-	AfxBeginThread (MessageThread3,
-						"Thread is unblocked");//启动线程3
-	
+
+	AfxBeginThread (MessageThread3,"Thread is started");	
 	CView::OnRButtonDown(nFlags, point);
 }

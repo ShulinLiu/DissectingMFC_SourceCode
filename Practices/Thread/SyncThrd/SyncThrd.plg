@@ -6,17 +6,17 @@
 --------------------Configuration: SyncThrd - Win32 Debug--------------------
 </h3>
 <h3>Command Lines</h3>
-Creating temporary file "C:\Users\Paopao\AppData\Local\Temp\RSP90E7.tmp" with contents
+Creating temporary file "C:\Users\Paopao\AppData\Local\Temp\RSP78EF.tmp" with contents
 [
 /nologo /subsystem:windows /incremental:yes /pdb:"Debug/SyncThrd.pdb" /debug /machine:I386 /out:"Debug/SyncThrd.exe" /pdbtype:sept 
-.\Debug\SyncThrd.obj
-.\Debug\StdAfx.obj
 .\Debug\MainFrm.obj
+.\Debug\StdAfx.obj
+.\Debug\SyncThrd.obj
 .\Debug\SyncThrdDoc.obj
 .\Debug\SyncThrdView.obj
 .\Debug\SyncThrd.res
 ]
-Creating command line "link.exe @C:\Users\Paopao\AppData\Local\Temp\RSP90E7.tmp"
+Creating command line "link.exe @C:\Users\Paopao\AppData\Local\Temp\RSP78EF.tmp"
 <h3>Output Window</h3>
 Linking...
 
