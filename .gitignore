@@ -1,0 +1,9 @@
+*.pdb
+*.idb
+*.obj
+*.res
+*.pch
+*.aps
+*.ncb
+*.OPT
+*.ilk
