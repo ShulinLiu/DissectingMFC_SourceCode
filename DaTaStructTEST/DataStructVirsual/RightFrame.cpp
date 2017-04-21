@@ -46,10 +46,43 @@ BOOL CRightFrame::OnCreateClient(LPCREATESTRUCT lpcs, CCreateContext* pContext)
 
 	m_pSplitter2 = new CSplitter2;
 	((CView*)m_pSplitter2)->Create(NULL,NULL,0L,CFrameWnd::rectDefault,this,VIEW_SPLITTER2,pContext);
-	m_pSplitter2->ShowWindow(SW_HIDE);
+	m_pSplitter2->ShowWindow(SW_SHOW);
 	m_pSplitter2->SetDlgCtrlID(VIEW_SPLITTER1);
 
 	RecalcLayout();
 
-	return CFrameWnd::OnCreateClient(lpcs, pContext);
+//	return CFrameWnd::OnCreateClient(lpcs, pContext);
+	return true;
+}
+
+
+void CRightFrame::SwitchToView(UINT nView)
+{
+	CView* pOldActiveView = GetActiveView();
+	CView* pNewActiveView = NULL;
+	
+	switch (nView)
+	{
+	case VIEW_SPLITTER1:
+		pNewActiveView = (CView*) m_pSplitter1;
+		break;
+	case VIEW_SPLITTER2:
+		pNewActiveView = (CView*) m_pSplitter2;
+		break;
+	}
+
+	if (pNewActiveView)
+	{
+		//dont switch when view are the same
+		if(pOldActiveView == pNewActiveView) return;
+
+		SetActiveView(pNewActiveView);
+		pNewActiveView->ShowWindow(SW_SHOW);
+		pNewActiveView->SetDlgCtrlID(AFX_IDW_PANE_FIRST);
+		pOldActiveView->ShowWindow(SW_HIDE);
+		pOldActiveView->SetDlgCtrlID(m_nCurrentViewID);
+		m_nCurrentViewID = nView;
+
+		RecalcLayout();
+	}
 }

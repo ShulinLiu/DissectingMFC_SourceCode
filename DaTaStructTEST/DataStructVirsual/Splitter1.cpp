@@ -68,12 +68,12 @@ int CSplitter1::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	
 	// TODO: Add your specialized creation code here
 	CRect rect;
-	GetClientRect(rect);
+	GetClientRect(&rect);
 	m_wndSplitter1.CreateStatic(this,2,1);
 	CCreateContext *pContext = (CCreateContext*)
 								lpCreateStruct->lpCreateParams;
 	m_wndSplitter1.CreateView(0,0,RUNTIME_CLASS(CDraw1),CSize(rect.Width(),rect.Height()/2),pContext);
-	m_wndSplitter1.CreateView(0,0,RUNTIME_CLASS(CControl1),CSize(rect.Width(),rect.Height()/2),pContext);
+	m_wndSplitter1.CreateView(1,0,RUNTIME_CLASS(CControl1),CSize(rect.Width(),rect.Height()/2),pContext);
 	return 0;
 }
 

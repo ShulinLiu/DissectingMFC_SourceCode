@@ -24,6 +24,7 @@ public:
 
 // Operations
 public:
+	void SwitchToView(UINT nView);
 
 // Overrides
 	// ClassWizard generated virtual function overrides
