@@ -147,13 +147,13 @@ void CLeftPane::InitTree()
 	hIcon = ::LoadIcon(AfxGetResourceHandle(),MAKEINTRESOURCE(IDC_ICON));
 	m_TreeImageList.Add(hIcon);
 	m_LeftTree.SetImageList(&m_TreeImageList,TVSIL_NORMAL);
-	////////////////////////////////////////////////////////////////////////
-	m_LeftTree.DeleteAllItems();
-	m_Root = m_LeftTree.InsertItem("动态切换图") ;
+	///////////////////////在树视图控件添加信息///////////////////////////////
+	m_LeftTree.DeleteAllItems();						//清空当前书控件所有节点
+	m_Root = m_LeftTree.InsertItem("动态切换图") ;		//插入根节点
 	TV_INSERTSTRUCT TCItem;
 
 	TCItem.item.mask = TVIF_TEXT|TVIF_PARAM|TVIF_IMAGE|TVIF_SELECTEDIMAGE;
-	TCItem.hInsertAfter = TVI_LAST;
+	TCItem.hInsertAfter = TVI_LAST;						//在最后项之后
 
 	CString strTreeNodeName = "测试一";
 	pszText = strTreeNodeName.LockBuffer();
@@ -173,7 +173,16 @@ void CLeftPane::InitTree()
 	hCurrent = m_LeftTree.InsertItem(&TCItem);
 	m_LeftTree.SetItemData(hCurrent,2);
 
-	m_LeftTree.Expand(m_Root,TVE_EXPAND);
+	strTreeNodeName = "测试三";
+	pszText = strTreeNodeName.LockBuffer();
+	TCItem.hParent = m_Root;
+	TCItem.item.pszText = pszText;
+	TCItem.item.iImage = 1;
+	TCItem.item.iSelectedImage = 2;
+	hCurrent = m_LeftTree.InsertItem(&TCItem);
+	m_LeftTree.SetItemData(hCurrent,3);
+
+	m_LeftTree.Expand(m_Root,TVE_EXPAND);			//展开根节点
 }
 
 //DEL void CLeftPane::OnSelchangedLeftpaneTree(NMHDR* pNMHDR, LRESULT* pResult) 
