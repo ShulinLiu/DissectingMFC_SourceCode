@@ -47,6 +47,12 @@ protected:
 
 // Generated message map functions
 protected:
+	void Text5(CDC* pDC);
+	void Fontstr(CDC* pDC,double x,double y,CString font,float nPoi,CString str);
+	void Text4(CDC* pDC);
+	void Text3(CDC* pDC);
+	void Text2(CDC* pDC);
+	void Text1();
 	//{{AFX_MSG(CMyVC1View)
 	afx_msg void OnWelcome();
 	//}}AFX_MSG
