@@ -1,4 +1,4 @@
-// Win3_4.cpp : Defines the entry point for the application.
+// CmdClass.cpp : Defines the entry point for the application.
 //
 
 #include "stdafx.h"
@@ -68,7 +68,7 @@ void CCmdTarget::On_Destroy(HWND hWnd, UINT message,
 }
 
 //窗体类-----------------------------------------------------------------------------------------
-class CFrameWnd:public CCmdTarget
+class CFrameWnd:public CCmdTarget//由CCmd类派生
 {		
 public:
 	HWND hWnd;
@@ -209,6 +209,10 @@ WPARAM wParam, LPARAM lParam)
 {
 	return AfxGetApp()->AfxWndProc(hWnd, message, wParam,lParam);
 }
+
+
+
+
 
 
 

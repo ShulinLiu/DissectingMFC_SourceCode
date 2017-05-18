@@ -8,6 +8,8 @@ HINSTANCE hInst;
 HINSTANCE hInstance;
 MSG msg;
 char lpszClassName[]="window_class";
+char lpWindowName[]="封装的Windows程序";
+char lpMyWindowName[]="应用窗体的派生类的程序";
 char*ShowText;
 //声明函数原型--------------------------------------------------------------------------------------
 LRESULT CALLBACK WndProc(HWND, UINT, WPARAM, LPARAM);//窗口函数
@@ -23,7 +25,7 @@ class CFrameWnd
 public:	
 	HWND hWnd;
 public:
-	int RegisterWindow();	
+	virtual int RegisterWindow();	
 	void Create(LPCTSTR lpClassName,
 				LPCTSTR lpWindowName
 				);	
@@ -93,7 +95,7 @@ CWinApp::CWinApp( )
 BOOL CWinApp::InitInstance(int nCmdShow)
 {
 	m_pMainWnd=new CFrameWnd;
-	m_pMainWnd->Create(NULL,"封装的Windows程序");
+	m_pMainWnd->Create(NULL,lpWindowName);
 	m_pMainWnd->ShowWindow(nCmdShow);
 	m_pMainWnd->UpdateWindow();
 	return TRUE;
@@ -112,7 +114,25 @@ CWinApp::~ CWinApp( ) { delete m_pMainWnd; }
 //程序员派生的窗体类-----------------------------------------------------------------------
 class CMyWnd:public CFrameWnd
 {
+public:
+	RegisterWindow();
 };
+
+int CMyWnd::RegisterWindow()
+{	
+	WNDCLASS wc;
+	wc.style=0;
+	wc.lpfnWndProc=WndProc;
+	wc.cbClsExtra=0;
+	wc.cbWndExtra=0;
+	wc.hInstance=hInstance;
+	wc.hIcon=LoadIcon(NULL,IDI_APPLICATION);
+	wc.hCursor=LoadCursor(NULL,IDC_ARROW);
+	wc.hbrBackground=(HBRUSH)GetStockObject(WHITE_BRUSH);
+	wc.lpszMenuName=NULL;
+	wc.lpszClassName=lpszClassName;
+	return RegisterClass(&wc);
+}
 
 //程序员由CWinApp类派生的CMyApp类-----------------------------------------------
 class CMyApp:public CWinApp
@@ -123,8 +143,8 @@ public:
 //派生类CMyApp的成员函数---------------------------------------------------------------
 CMyApp::InitInstance(int nCmdShow)
 {
-	CMyWnd*pMainWnd=new CMyWnd;//应用窗体的派生类定义窗体对象
-	pMainWnd->Create(NULL,"应用窗体的派生类的程序");
+	CFrameWnd*pMainWnd=new CFrameWnd;//应用窗体的派生类定义窗体对象
+	pMainWnd->Create(NULL,lpMyWindowName);
 	pMainWnd->ShowWindow(nCmdShow);
 	pMainWnd->UpdateWindow();
 	m_pMainWnd=pMainWnd;//把CMyWnd类的对象赋给m_pMainWnd

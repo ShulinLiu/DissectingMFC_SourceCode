@@ -1,5 +1,8 @@
 //需要包含的头文件---------------------------------------------------------------------------
 #include<afxwin.h>
+
+//need: Setting Project/Settings-General "use MFC as a static/shared Library"
+
 //由CFrameWnd派生的CMyWnd类------------------------------------------------------
 class CMyWnd:public CFrameWnd
 {
@@ -12,8 +15,8 @@ public:
 };
 //消息映射的实现------------------------------------------------------------------------------
 BEGIN_MESSAGE_MAP(CMyWnd,CFrameWnd)
-		ON_WM_PAINT()
-		ON_WM_LBUTTONDOWN()
+ON_WM_PAINT()
+ON_WM_LBUTTONDOWN()
 END_MESSAGE_MAP( )
 //WM_PAINT消息处理函数的实现--------------------------------------------------------
 void CMyWnd::OnPaint()
