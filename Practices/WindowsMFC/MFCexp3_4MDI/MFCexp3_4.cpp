@@ -81,6 +81,13 @@ BOOL CMFCexp3_4App::InitInstance()
 		RUNTIME_CLASS(CMFCexp3_4View));
 	AddDocTemplate(pDocTemplate);
 
+	pDocTemplate = new CMultiDocTemplate(
+		IDR_EXAMPLE,
+		RUNTIME_CLASS(CMFCexp3_4Doc),
+		RUNTIME_CLASS(CChildFrame), // custom MDI child frame
+		RUNTIME_CLASS(CMFCexp3_4View));
+	AddDocTemplate(pDocTemplate);
+
 	// create main MDI Frame window
 	CMainFrame* pMainFrame = new CMainFrame;
 	if (!pMainFrame->LoadFrame(IDR_MAINFRAME))
