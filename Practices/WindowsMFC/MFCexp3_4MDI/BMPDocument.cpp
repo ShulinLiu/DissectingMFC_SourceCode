@@ -5,6 +5,8 @@
 #include "MFCexp3_4.h"
 #include "BMPDocument.h"
 
+#include "BMPView.h"
+
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #undef THIS_FILE
