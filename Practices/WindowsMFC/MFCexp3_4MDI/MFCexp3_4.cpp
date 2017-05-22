@@ -9,6 +9,9 @@
 #include "MFCexp3_4Doc.h"
 #include "MFCexp3_4View.h"
 
+#include "BMPDocument.h"
+#include "BMPView.h"
+
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #undef THIS_FILE
@@ -82,10 +85,10 @@ BOOL CMFCexp3_4App::InitInstance()
 	AddDocTemplate(pDocTemplate);
 
 	pDocTemplate = new CMultiDocTemplate(
-		IDR_EXAMPLE,
-		RUNTIME_CLASS(CMFCexp3_4Doc),
+		IDR_BMPTYPE,
+		RUNTIME_CLASS(CBMPDocument),
 		RUNTIME_CLASS(CChildFrame), // custom MDI child frame
-		RUNTIME_CLASS(CMFCexp3_4View));
+		RUNTIME_CLASS(CBMPView));
 	AddDocTemplate(pDocTemplate);
 
 	// create main MDI Frame window

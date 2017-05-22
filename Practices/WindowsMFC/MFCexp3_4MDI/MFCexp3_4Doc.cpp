@@ -30,7 +30,7 @@ END_MESSAGE_MAP()
 CMFCexp3_4Doc::CMFCexp3_4Doc()
 {
 	// TODO: add one-time construction code here
-	m_Text="Hello!";	//在文档构造函数中初始化字符指针
+//	m_Text="Hello!text";	//在文档构造函数中初始化字符指针
 }
 
 CMFCexp3_4Doc::~CMFCexp3_4Doc()
@@ -62,6 +62,7 @@ void CMFCexp3_4Doc::Serialize(CArchive& ar)
 	else
 	{
 		// TODO: add loading code here
+		ar.ReadString(m_Text);
 	}
 }
 

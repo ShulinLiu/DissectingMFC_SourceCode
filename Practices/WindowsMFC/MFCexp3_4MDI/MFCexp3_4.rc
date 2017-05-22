@@ -69,7 +69,7 @@ END
 // remains consistent on all systems.
 IDR_MAINFRAME           ICON    DISCARDABLE     "res\\MFCexp3_4.ico"
 IDR_MFCEXPTYPE          ICON    DISCARDABLE     "res\\MFCexp3_4Doc.ico"
-IDR_EXAPLE              ICON    DISCARDABLE     "res\\icon1.ico"
+IDR_BMPTYPE             ICON    DISCARDABLE     "res\\icon1.ico"
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -285,6 +285,7 @@ STRINGTABLE PRELOAD DISCARDABLE
 BEGIN
     IDR_MAINFRAME           "MFCexp3_4"
     IDR_MFCEXPTYPE          "\nMFCexp\nMFCexp\n\n\nMFCexp34.Document\nMFCexp Document"
+    IDR_BMPTYPE             "\nBMP\nBMP\nExample1ÎÄ¼þ£¨*.bmp£©\n.bmp\nBMP\nBMP  Document"
 END
 
 STRINGTABLE PRELOAD DISCARDABLE 

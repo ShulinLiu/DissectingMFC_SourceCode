@@ -2,23 +2,25 @@
 
 [General Info]
 Version=1
-LastClass=CAboutDlg
-LastTemplate=CDialog
+LastClass=CBMPDocument
+LastTemplate=CDocument
 NewFileInclude1=#include "stdafx.h"
 NewFileInclude2=#include "MFCexp3_4.h"
 LastPage=0
 
-ClassCount=9
+ClassCount=8
 Class1=CMFCexp3_4App
 Class2=CMFCexp3_4Doc
 Class3=CMFCexp3_4View
 Class4=CMainFrame
-Class7=CChildFrame
-Class9=CAboutDlg
 
 ResourceCount=3
 Resource1=IDR_MFCEXPTYPE
 Resource2=IDR_MAINFRAME
+Class5=CChildFrame
+Class6=CAboutDlg
+Class7=CBMPView
+Class8=CBMPDocument
 Resource3=IDD_ABOUTBOX
 
 [CLS:CMFCexp3_4App]
@@ -59,6 +61,7 @@ Type=0
 HeaderFile=MFCexp3_4.cpp
 ImplementationFile=MFCexp3_4.cpp
 Filter=D
+LastObject=CAboutDlg
 
 [DLG:IDD_ABOUTBOX]
 Type=1
@@ -139,4 +142,20 @@ Command12=ID_EDIT_PASTE
 Command13=ID_NEXT_PANE
 Command14=ID_PREV_PANE
 CommandCount=14
+
+[CLS:CBMPView]
+Type=0
+HeaderFile=BMPView.h
+ImplementationFile=BMPView.cpp
+BaseClass=CView
+Filter=C
+LastObject=CBMPView
+
+[CLS:CBMPDocument]
+Type=0
+HeaderFile=BMPDocument.h
+ImplementationFile=BMPDocument.cpp
+BaseClass=CDocument
+Filter=N
+LastObject=CBMPDocument
 

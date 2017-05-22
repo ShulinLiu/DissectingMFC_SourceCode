@@ -58,8 +58,8 @@ void CMFCexp3_4View::OnDraw(CDC* pDC)
 	CMFCexp3_4Doc* pDoc = GetDocument();
 	ASSERT_VALID(pDoc);
 	// TODO: add draw code for native data here
-	pDC->TextOut(50,50,pDoc->m_Text,6);	//显示字符指针的数据
-	pDC->TextOut(190,50,pDoc->GetTitle( ));	//显示文档标题
+	pDC->TextOut(0,0,pDoc->m_Text);	//显示字符指针的数据
+	//pDC->TextOut(190,50,pDoc->GetTitle( ));	//显示文档标题
 }
 
 /////////////////////////////////////////////////////////////////////////////

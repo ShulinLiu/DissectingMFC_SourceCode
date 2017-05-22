@@ -6,6 +6,7 @@
 #define IDR_MAINFRAME                   128
 #define IDR_MFCEXPTYPE                  129
 #define IDR_EXAMPLE                     130
+#define IDR_BMPTYPE						131
 
 // Next default values for new objects
 // 

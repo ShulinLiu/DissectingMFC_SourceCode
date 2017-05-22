@@ -7,23 +7,7 @@
 </h3>
 <h3>Command Lines</h3>
 Creating command line "rc.exe /l 0x804 /fo"Debug/MFCexp3_4.res" /d "_DEBUG" /d "_AFXDLL" "E:\Codes\MFCexp3_4MDI\MFCexp3_4.rc"" 
-Creating temporary file "C:\Users\Paopao\AppData\Local\Temp\RSPF450.tmp" with contents
-[
-/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/MFCexp3_4.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
-"E:\Codes\MFCexp3_4MDI\ChildFrm.cpp"
-"E:\Codes\MFCexp3_4MDI\MainFrm.cpp"
-"E:\Codes\MFCexp3_4MDI\MFCexp3_4.cpp"
-"E:\Codes\MFCexp3_4MDI\MFCexp3_4Doc.cpp"
-"E:\Codes\MFCexp3_4MDI\MFCexp3_4View.cpp"
-]
-Creating command line "cl.exe @C:\Users\Paopao\AppData\Local\Temp\RSPF450.tmp" 
-Creating temporary file "C:\Users\Paopao\AppData\Local\Temp\RSPF451.tmp" with contents
-[
-/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/MFCexp3_4.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
-"E:\Codes\MFCexp3_4MDI\StdAfx.cpp"
-]
-Creating command line "cl.exe @C:\Users\Paopao\AppData\Local\Temp\RSPF451.tmp" 
-Creating temporary file "C:\Users\Paopao\AppData\Local\Temp\RSPF452.tmp" with contents
+Creating temporary file "C:\Users\Paopao\AppData\Local\Temp\RSP912C.tmp" with contents
 [
 /nologo /subsystem:windows /incremental:yes /pdb:"Debug/MFCexp3_4.pdb" /debug /machine:I386 /out:"Debug/MFCexp3_4.exe" /pdbtype:sept 
 .\Debug\ChildFrm.obj
@@ -33,19 +17,12 @@ Creating temporary file "C:\Users\Paopao\AppData\Local\Temp\RSPF452.tmp" with co
 .\Debug\MFCexp3_4View.obj
 .\Debug\StdAfx.obj
 .\Debug\MFCexp3_4.res
+.\Debug\BMPView.obj
+.\Debug\BMPDocument.obj
 ]
-Creating command line "link.exe @C:\Users\Paopao\AppData\Local\Temp\RSPF452.tmp"
+Creating command line "link.exe @C:\Users\Paopao\AppData\Local\Temp\RSP912C.tmp"
 <h3>Output Window</h3>
 Compiling resources...
-Compiling...
-StdAfx.cpp
-Compiling...
-ChildFrm.cpp
-MainFrm.cpp
-MFCexp3_4.cpp
-MFCexp3_4Doc.cpp
-MFCexp3_4View.cpp
-Generating Code...
 Linking...
 
 
