@@ -52,7 +52,7 @@ END_MESSAGE_MAP()
 void CStuInfoDlg::OnOK() 
 {
 	// TODO: Add extra validation here
-	UpdateData(NULL);
+	UpdateData(TRUE);
 
 	CDialog::OnOK();
 }

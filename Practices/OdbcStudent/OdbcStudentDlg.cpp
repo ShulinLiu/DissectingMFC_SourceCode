@@ -86,6 +86,8 @@ BEGIN_MESSAGE_MAP(COdbcStudentDlg, CDialog)
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
 	ON_BN_CLICKED(IDC_BUTTON_ADD, OnButtonAdd)
+	ON_BN_CLICKED(IDC_BUTTON_MODIFY, OnButtonModify)
+	ON_BN_CLICKED(IDC_BUTTON_DELETE, OnButtonDelete)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
@@ -217,13 +219,15 @@ void COdbcStudentDlg::ListStuInfo(CString strSQL)
 void COdbcStudentDlg::OnButtonAdd() 
 {
 	// TODO: Add your control notification handler code here
-	COdbcStudentDlg stuInfoDlg;
+	CStuInfoDlg stuInfoDlg;
 
 	if (stuInfoDlg.DoModal() != IDOK)
 	{
 		return;
 	}
 
+	//获得对话框类对象中的关联变量的数据，如果在ONOK中没有调用UpdateData(True)
+	//的话将无法获得
 	m_strNum = stuInfoDlg.m_strNum;
 	m_strName = stuInfoDlg.m_strName;
 	m_uintAge = stuInfoDlg.m_uintAge;
@@ -240,6 +244,105 @@ void COdbcStudentDlg::OnButtonAdd()
 	CString strSQL;
 	strSQL.Format("INSERT INTO 学生信息表 VALUES('%s','%s','%s','%d','%s')",
 		m_strNum,m_strName,m_strSex,m_uintAge,m_strDept);
+	db.ExecuteSQL(strSQL);
+	db.Close();
+
+	/*通过记录集完成数据添加操作
+	CStuInfoSet* pSet = new CStuInfoSet;
+	pSet->Open();
+
+	if (pSet->CanAppend())
+	{
+		pSet->AddNew();
+		pSet->m_StudentID = m_strNum;
+		pSet->m_StuName = m_strName;
+		pSet->m_StuSex = m_strSex;
+		pSet->m_StuAge = m_uintAge;
+		pSet->m_StuDept = m_strDept;
+		pSet->Update();
+	}
+	pSet->Close();
+	delete pSet;
+	*/
+
+	ListStuInfo("SELECT * FROM 学生信息表");
+}
+
+void COdbcStudentDlg::OnButtonModify() 
+{
+	// TODO: Add your control notification handler code here
+	int n = m_listStuInfo.GetSelectionMark();
+	if(n == -1)
+		return;
+
+	m_strNum = m_listStuInfo.GetItemText(n,0);
+	m_strName = m_listStuInfo.GetItemText(n,1);
+	m_strSex = m_listStuInfo.GetItemText(n,2);
+	m_uintAge = atoi(m_listStuInfo.GetItemText(n,3));
+	m_strDept = m_listStuInfo.GetItemText(n,4);
+
+	CStuInfoDlg stuInfoDlg;
+
+	stuInfoDlg.m_strNum = m_strNum;
+	stuInfoDlg.m_strName = m_strName;
+	stuInfoDlg.m_uintAge = m_uintAge;
+	stuInfoDlg.m_strSex = m_strSex;
+	stuInfoDlg.m_strDept = m_strDept;
+
+	if (stuInfoDlg.DoModal() != IDOK)
+	{
+		return;
+	}
+	
+	CString m_strOldNum = m_strNum;
+
+	m_strNum = stuInfoDlg.m_strNum;
+	m_strName = stuInfoDlg.m_strName;
+	m_uintAge = stuInfoDlg.m_uintAge;
+	m_strSex = stuInfoDlg.m_strSex;
+	m_strDept = stuInfoDlg.m_strDept;
+
+	CDatabase db;
+	if (!db.Open("学生信息数据源"))
+	{
+		AfxMessageBox("连接到数据源失败！");
+		return;
+	}
+	
+	CString strSQL = "", strTmp;
+	strTmp.Format("UPDATE 学生信息表 SET StudentID='%s',StuName='%s',",
+		m_strNum,m_strName);
+	strSQL += strTmp;
+
+	strTmp.Format("StuSex='%s',StuAge=%d,StuDept='%s' WHERE StudentID='%s'",
+		m_strSex,m_uintAge,m_strDept,m_strOldNum);
+	strSQL += strTmp;
+
+	db.ExecuteSQL(strSQL);
+	db.Close();
+
+	ListStuInfo("SELECT * FROM 学生信息表");
+}
+
+void COdbcStudentDlg::OnButtonDelete() 
+{
+	// TODO: Add your control notification handler code here
+	int n = m_listStuInfo.GetSelectionMark();
+	if(n == -1)
+		return;
+
+	m_strNum = m_listStuInfo.GetItemText(n,0);
+
+	CDatabase db;
+	if (!db.Open("学生信息数据源"))
+	{
+		AfxMessageBox("连接到数据源失败！");
+		return;
+	}
+
+	CString strSQL;
+	strSQL.Format("DELETE FROM 学生信息表 WHERE StudentID='%s'",
+		m_strNum);
 	db.ExecuteSQL(strSQL);
 	db.Close();
 

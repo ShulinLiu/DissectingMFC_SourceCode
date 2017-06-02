@@ -46,6 +46,8 @@ protected:
 	afx_msg void OnPaint();
 	afx_msg HCURSOR OnQueryDragIcon();
 	afx_msg void OnButtonAdd();
+	afx_msg void OnButtonModify();
+	afx_msg void OnButtonDelete();
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
 };
